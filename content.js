@@ -80,7 +80,10 @@ window.FIELD_GUIDE = {
       documented: ["Hundreds of newspaper reports from 1896 and 1897 survive.", "Several newspapers later admitted to printing hoaxes, including fake letters and staged 'airship' lights."],
       claimed: ["A secret inventor had built a flying machine.", "Visitors from Mars."],
       explanation: "Historians point to a mix of hoaxes, newspaper competition, kites and balloons carrying lanterns, and bright planets such as Venus. The wave is a useful preview of 1947: people describe what the technology of their era makes them expect.",
-      sources: [{ title: "Library of Congress: Chronicling America (search 'airship 1897')", url: "https://chroniclingamerica.loc.gov" }],
+      sources: [
+        { title: "Chronicling America: 1896–97 newspaper pages mentioning 'airship' (Library of Congress)", url: "https://chroniclingamerica.loc.gov/search/pages/results/?andtext=airship&date1=1896&date2=1897&dateFilterType=yearRange" },
+        { title: "Mystery airship (Wikipedia overview)", url: "https://en.wikipedia.org/wiki/Mystery_airship" }
+      ],
       related: ["kenneth-arnold", "foo-fighters", "battle-of-los-angeles"]
     },
 
@@ -97,7 +100,9 @@ window.FIELD_GUIDE = {
       documented: ["The barrage, the blackout and the casualties are well recorded.", "The Army and Navy gave conflicting statements at the time."],
       claimed: ["The famous photo shows a solid craft under fire.", "The military covered up an unknown object."],
       explanation: "Most historians point to wartime jitters, a stray weather balloon and anti-aircraft bursts mistaken for targets. The photo was heavily retouched for publication.",
-      sources: [{ title: "Search 'Los Angeles air raid 1942' in the National Archives catalog", url: "https://catalog.archives.gov" }],
+      sources: [
+        { title: "Battle of Los Angeles (Wikipedia overview, with period sources)", url: "https://en.wikipedia.org/wiki/Battle_of_Los_Angeles" }
+      ],
       related: ["foo-fighters", "ghost-rockets"]
     },
     {
@@ -112,7 +117,10 @@ window.FIELD_GUIDE = {
       documented: ["Unit histories and press reports from 1945 describe the sightings.", "The CIA's 1953 Robertson Panel discussed the foo fighters as an earlier puzzle."],
       claimed: ["They were intelligent craft observing the war."],
       explanation: "Proposed causes include St. Elmo's fire, flares, reflections on canopies, ball lightning and fatigue. No single explanation covers every report.",
-      sources: [{ title: "Search 'foo fighters 415th' in the National Archives catalog", url: "https://catalog.archives.gov" }],
+      sources: [
+        { title: "Baltimore Sun, 2 January 1945: 'Foo fighter' report (transcription)", url: "https://ufologie.patrickgross.org/press/baltimoresun2jan1945.htm" },
+        { title: "Foo fighter (Wikipedia overview)", url: "https://en.wikipedia.org/wiki/Foo_fighter" }
+      ],
       related: ["battle-of-los-angeles", "robertson-panel"]
     },
     {
@@ -127,7 +135,9 @@ window.FIELD_GUIDE = {
       documented: ["The Swedish defense staff investigated, and U.S. intelligence followed the reports closely."],
       claimed: ["Soviet missile tests.", "Craft from elsewhere."],
       explanation: "Investigators concluded most reports were meteors (a meteor shower peaked that August) and misidentified ordinary objects. A small remainder stayed unexplained.",
-      sources: [{ title: "CIA Reading Room: search 'ghost rockets'", url: "https://www.cia.gov/readingroom/" }],
+      sources: [
+        { title: "Project 1947: 1946 ghost rocket documents", url: "https://www.project1947.com/fig/1946a.htm" }
+      ],
       related: ["foo-fighters", "kenneth-arnold"]
     },
     {
@@ -143,8 +153,8 @@ window.FIELD_GUIDE = {
       claimed: ["Nine alien craft in formation."],
       explanation: "Blue Book eventually listed it as a mirage. Others have proposed a flock of pelicans, meteor fragments or distant aircraft. Arnold's speed estimate depends on a distance he could not measure.",
       sources: [
-        { title: "Project Blue Book records at the National Archives", url: "https://www.archives.gov/research/military/air-force/ufos" },
-        { title: "FBI Vault: UFO file", url: "https://vault.fbi.gov/UFO" }
+        { title: "Project Blue Book case file: Kenneth Arnold, 24 June 1947 (via The Black Vault)", url: "https://www.theblackvault.com/documentarchive/project-blue-book-the-kenneth-arnold-ufo-sighting-mt-rainier-washington-june-24-1947/" },
+        { title: "FBI Vault: the FBI's UFO file, 1947 onward", url: "https://vault.fbi.gov/UFO" }
       ],
       related: ["roswell", "maury-island", "twining-memo"]
     },
@@ -160,7 +170,9 @@ window.FIELD_GUIDE = {
       documented: ["The B-25 crash and the deaths of the two officers are real.", "FBI files record that Dahl and Crisman admitted the story was made up."],
       claimed: ["A genuine UFO encounter followed by a cover-up."],
       explanation: "A hoax. The slag was ordinary industrial waste. The plane crash was a tragic accident caused by an engine fire.",
-      sources: [{ title: "FBI Vault: UFO file (Maury Island material)", url: "https://vault.fbi.gov/UFO" }],
+      sources: [
+        { title: "FBI Vault: the FBI's UFO file, 1947 onward", url: "https://vault.fbi.gov/UFO" }
+      ],
       related: ["kenneth-arnold", "aztec-hoax"]
     },
     {
@@ -194,7 +206,9 @@ window.FIELD_GUIDE = {
       documented: ["The memo is genuine and widely published."],
       claimed: ["It proves the military knew the objects were alien craft."],
       explanation: "The memo shows the military took the reports seriously, mostly out of fear of Soviet technology. It makes no claim about origin and notes there was no physical evidence such as crash debris.",
-      sources: [{ title: "Project Blue Book records at the National Archives", url: "https://www.archives.gov/research/military/air-force/ufos" }],
+      sources: [
+        { title: "The Twining memo, reprinted as Appendix R of the Condon Report", url: "https://www.project1947.com/shg/condon/appndx-r.html" }
+      ],
       related: ["kenneth-arnold", "project-blue-book", "estimate-of-situation"]
     },
     {
@@ -209,7 +223,9 @@ window.FIELD_GUIDE = {
       documented: ["Mantell's crash and the radio exchanges before it are documented.", "Project Sign investigated."],
       claimed: ["Mantell was destroyed by an alien craft."],
       explanation: "The object was most likely a Navy Skyhook research balloon, then classified, which would have looked huge and metallic in sunlight. Mantell died from hypoxia.",
-      sources: [{ title: "Project Blue Book records at the National Archives", url: "https://www.archives.gov/research/military/air-force/ufos" }],
+      sources: [
+        { title: "Project Blue Book case file: Thomas Mantell, 7 January 1948 (via The Black Vault)", url: "https://www.theblackvault.com/documentarchive/project-blue-book-the-thomas-mantell-case-7-january-1948/" }
+      ],
       related: ["gorman-dogfight", "project-blue-book"]
     },
     {
@@ -224,7 +240,9 @@ window.FIELD_GUIDE = {
       documented: ["Both pilots gave statements to the Air Force."],
       claimed: ["A structured craft with windows."],
       explanation: "Astronomer J. Allen Hynek and others concluded it was a bright fireball. The 'windows' fit the glowing, fragmenting trail of a large meteor.",
-      sources: [{ title: "Project Blue Book records at the National Archives", url: "https://www.archives.gov/research/military/air-force/ufos" }],
+      sources: [
+        { title: "Project Blue Book case file: Chiles–Whitted, 24 July 1948 (via The Black Vault)", url: "https://www.theblackvault.com/documentarchive/project-blue-book-the-chiles-whitted-ufo-encounter-july-24-1948-montgomery-alabama/" }
+      ],
       related: ["estimate-of-situation", "mantell"]
     },
     {
@@ -239,7 +257,9 @@ window.FIELD_GUIDE = {
       documented: ["Ruppelt described the estimate in his 1956 book.", "The shift from Sign to Grudge is on the record."],
       claimed: ["Proof the Air Force privately concluded UFOs were alien."],
       explanation: "No copy has ever surfaced. Whether it existed as described depends on secondhand accounts.",
-      sources: [{ title: "Project Blue Book records at the National Archives", url: "https://www.archives.gov/research/military/air-force/ufos" }],
+      sources: [
+        { title: "Ruppelt, 'The Report on Unidentified Flying Objects' (1956, full text)", url: "https://www.gutenberg.org/ebooks/17346" }
+      ],
       related: ["twining-memo", "project-blue-book", "chiles-whitted"]
     },
     {
@@ -254,7 +274,10 @@ window.FIELD_GUIDE = {
       documented: ["Gorman's account and ground witnesses were recorded by Project Sign."],
       claimed: ["An intelligent craft engaged a fighter pilot."],
       explanation: "Investigators concluded he was chasing a lighted weather balloon. A balloon's apparent motion can look dramatic from a turning plane.",
-      sources: [{ title: "Project Blue Book records at the National Archives", url: "https://www.archives.gov/research/military/air-force/ufos" }],
+      sources: [
+        { title: "Gorman dogfight: Project Sign documents and timeline (Patrick Gross archive)", url: "https://ufologie.patrickgross.org/htm/gorman.htm" },
+        { title: "Ruppelt, 'The Report on Unidentified Flying Objects' (1956, full text)", url: "https://www.gutenberg.org/ebooks/17346" }
+      ],
       related: ["mantell", "chiles-whitted"]
     },
     {
@@ -270,8 +293,9 @@ window.FIELD_GUIDE = {
       claimed: ["Surveillance of U.S. nuclear sites by something unknown."],
       explanation: "Many scientists think they were unusually bright meteors, with green coloring from copper or other elements. The cluster near secret sites may partly reflect how many trained observers were posted there.",
       sources: [
+        { title: "Project Twinkle final report on the green fireballs (1951)", url: "https://mail.project1947.com/gfb/twinklereport.htm" },
         { title: "PURSUE: Department of War UAP file releases", url: "https://www.war.gov/UFO/" },
-        { title: "FBI Vault: UFO file", url: "https://vault.fbi.gov/UFO" }
+        { title: "FBI Vault: the FBI's UFO file, 1947 onward", url: "https://vault.fbi.gov/UFO" }
       ],
       related: ["pursue-2026", "project-blue-book"]
     },
@@ -288,8 +312,8 @@ window.FIELD_GUIDE = {
       claimed: ["Blue Book was a public-relations front while the real work happened elsewhere."],
       explanation: "This is the largest public archive of UFO reports in existence. Most cases have ordinary explanations, though the quality of the investigations varies a lot.",
       sources: [
-        { title: "Project Blue Book records at the National Archives", url: "https://www.archives.gov/research/military/air-force/ufos" },
-        { title: "Air Force fact sheet on Project Blue Book", url: "https://www.af.mil" }
+        { title: "Project Blue Book records (National Archives)", url: "https://www.archives.gov/research/military/air-force/ufos" },
+        { title: "Air Force fact sheet: UFOs and Project Blue Book", url: "https://www.af.mil/About-Us/Fact-Sheets/Display/Article/104590/unidentified-flying-objects-and-air-force-project-blue-book/" }
       ],
       related: ["twining-memo", "robertson-panel", "condon-committee", "blue-book-14"]
     },
@@ -305,7 +329,10 @@ window.FIELD_GUIDE = {
       documented: ["Newton and Leo GeBauer's fraud and Cahn's investigation are well documented."],
       claimed: ["A real crash and recovery covered up by the military."],
       explanation: "A con. It is still an important lesson because later crash stories, including parts of the Roswell legend, echo its details.",
-      sources: [{ title: "FBI Vault: UFO file", url: "https://vault.fbi.gov/UFO" }],
+      sources: [
+        { title: "FBI Vault: the FBI's UFO file, 1947 onward", url: "https://vault.fbi.gov/UFO" },
+        { title: "Aztec crashed saucer hoax (Wikipedia overview)", url: "https://en.wikipedia.org/wiki/Aztec_crashed_saucer_hoax" }
+      ],
       related: ["roswell", "maury-island", "mj-12"]
     },
 
@@ -322,7 +349,9 @@ window.FIELD_GUIDE = {
       documented: ["The books, lectures and conventions are well documented.", "The FBI kept files on Adamski and other contactees."],
       claimed: ["Direct meetings and rides with peaceful beings from Venus, Mars and Saturn."],
       explanation: "Space probes later showed Venus cannot support life as described. Adamski's photos were widely judged to be models. Serious researchers of the time saw the contactees as a problem that made the whole subject look ridiculous.",
-      sources: [{ title: "FBI Vault: search 'Adamski'", url: "https://vault.fbi.gov" }],
+      sources: [
+        { title: "George Adamski (Wikipedia overview)", url: "https://en.wikipedia.org/wiki/George_Adamski" }
+      ],
       related: ["civilian-investigators", "betty-barney-hill", "robertson-panel"]
     },
     {
@@ -337,7 +366,9 @@ window.FIELD_GUIDE = {
       documented: ["NICAP's publications, case files and congressional lobbying are on record.", "The Robertson Panel had recommended monitoring civilian UFO groups, and the CIA's files mention NICAP."],
       claimed: ["The Air Force was covering up evidence of alien craft."],
       explanation: "These groups shaped how UFOs were investigated and debated for decades. They kept the subject in front of Congress and helped bring about the 1966 hearing. NICAP declined in the 1970s.",
-      sources: [{ title: "CIA Reading Room: search 'NICAP'", url: "https://www.cia.gov/readingroom/" }],
+      sources: [
+        { title: "CIA: 'The National Investigations Committee on Aerial Phenomena (NICAP)'", url: "https://cia.gov/readingroom/document/cia-rdp81r00560r000100010001-0" }
+      ],
       related: ["contactees", "robertson-panel", "hearing-1966", "condon-committee"]
     },
     {
@@ -352,7 +383,9 @@ window.FIELD_GUIDE = {
       documented: ["The negatives survive and have been analyzed many times."],
       claimed: ["A genuine unknown craft photographed in daylight."],
       explanation: "Later analysts argue the disc is a small model, possibly a truck mirror, hung from overhead wires. Others defend the photos. Neither side has settled it.",
-      sources: [{ title: "Condon Report text (Case 46)", url: "https://catalog.archives.gov" }],
+      sources: [
+        { title: "Project Blue Book and Condon files on the Trent photos (Patrick Gross archive)", url: "https://ufologie.patrickgross.org/htm/bluepicstrent.htm" }
+      ],
       related: ["condon-committee", "gulf-breeze"]
     },
     {
@@ -367,7 +400,10 @@ window.FIELD_GUIDE = {
       documented: ["The professors' accounts and Hart's photos are in the Blue Book files."],
       claimed: ["Formations of craft."],
       explanation: "Ruppelt concluded the professors likely saw migrating birds (plovers) lit from below by new streetlights. Hart's photos were never fully explained.",
-      sources: [{ title: "Project Blue Book records at the National Archives", url: "https://www.archives.gov/research/military/air-force/ufos" }],
+      sources: [
+        { title: "Ruppelt, 'The Report on Unidentified Flying Objects' (1956, full text)", url: "https://www.gutenberg.org/ebooks/17346" },
+        { title: "Lubbock Lights (Wikipedia overview)", url: "https://en.wikipedia.org/wiki/Lubbock_Lights" }
+      ],
       related: ["project-blue-book", "washington-1952"]
     },
     {
@@ -382,7 +418,10 @@ window.FIELD_GUIDE = {
       documented: ["Radar logs, pilot statements and the press conference transcript survive."],
       claimed: ["Craft buzzed the Capitol and the White House."],
       explanation: "At the press conference, General John Samford blamed temperature inversions that bend radar beams and create false returns. Some radar operators disagreed at the time.",
-      sources: [{ title: "Project Blue Book records at the National Archives", url: "https://www.archives.gov/research/military/air-force/ufos" }],
+      sources: [
+        { title: "Gen. Samford's flying saucer press conference, July 1952 (National Archives)", url: "https://catalog.archives.gov/id/25738" },
+        { title: "Ruppelt, 'The Report on Unidentified Flying Objects' (1956, full text)", url: "https://www.gutenberg.org/ebooks/17346" }
+      ],
       related: ["robertson-panel", "tremonton", "project-blue-book"]
     },
     {
@@ -398,8 +437,9 @@ window.FIELD_GUIDE = {
       claimed: ["Unknown craft filmed by a trained military photographer."],
       explanation: "The Robertson Panel concluded the objects were most likely birds such as gulls reflecting sunlight. Not everyone has accepted that.",
       sources: [
-        { title: "PURSUE: Department of War UAP file releases", url: "https://www.war.gov/UFO/" },
-        { title: "CIA Reading Room: Robertson Panel report", url: "https://www.cia.gov/readingroom/" }
+        { title: "Project Blue Book: the Tremonton film and Newhouse report (via The Black Vault)", url: "https://www.theblackvault.com/casefiles/desks-project-blue-book-tremonton-utah-navy-warrant-officer-delbert-newhouse-1952/" },
+        { title: "CIA: Report of the Scientific Panel on Unidentified Flying Objects (1953)", url: "https://www.cia.gov/readingroom/document/cia-rdp78-02646r000600150001-5" },
+        { title: "PURSUE: Department of War UAP file releases", url: "https://www.war.gov/UFO/" }
       ],
       related: ["robertson-panel", "pursue-2026", "washington-1952"]
     },
@@ -415,7 +455,9 @@ window.FIELD_GUIDE = {
       documented: ["Multiple witnesses gave consistent accounts to reporters.", "A bright meteor was seen over several states that night."],
       claimed: ["An alien landed in rural West Virginia."],
       explanation: "Investigator Joe Nickell proposed a mix of the meteor, a pulsing aircraft beacon and a startled barn owl in a tree, magnified by fear in the dark.",
-      sources: [{ title: "Project Blue Book records at the National Archives", url: "https://www.archives.gov/research/military/air-force/ufos" }],
+      sources: [
+        { title: "The Flatwoods Monster UFO event: Blue Book records (via The Black Vault)", url: "https://www.theblackvault.com/casefiles/flatwoods-monster-ufo-event/" }
+      ],
       related: ["kelly-hopkinsville", "socorro"]
     },
     {
@@ -431,8 +473,9 @@ window.FIELD_GUIDE = {
       claimed: ["Proof of a deliberate debunking cover-up."],
       explanation: "The panel did recommend reducing public interest, which fed decades of cover-up suspicion. Its conclusions about the evidence itself were conventional.",
       sources: [
-        { title: "CIA Reading Room: search 'Robertson Panel'", url: "https://www.cia.gov/readingroom/" },
-        { title: "CIA's Role in the Study of UFOs, 1947–90 (Haines, 1997)", url: "https://www.cia.gov/readingroom/" }
+        { title: "CIA: Report of the Scientific Panel on Unidentified Flying Objects (1953)", url: "https://www.cia.gov/readingroom/document/cia-rdp78-02646r000600150001-5" },
+        { title: "Robertson Panel report, full PDF (via The Black Vault)", url: "https://documents3.theblackvault.com/documents/UFOFiles/pdf/CIA-UAP-002_Scientific-Advisory-Panel-on-Unidentified-Flying-Objects_Report_1952-1953.pdf" },
+        { title: "CIA's Role in the Study of UFOs, 1947–90 (Haines, 1997)", url: "https://www.cia.gov/resources/csi/studies-in-intelligence/archives/vol-40-no-5/the-cias-role-in-the-study-of-ufos-1947-90/" }
       ],
       related: ["washington-1952", "tremonton", "project-blue-book", "cia-haines"]
     },
@@ -448,7 +491,9 @@ window.FIELD_GUIDE = {
       documented: ["The full report is public."],
       claimed: ["Its own numbers contradict its conclusion."],
       explanation: "Both sides cite it. Skeptics note that 'unknown' means not enough data, not proof of anything exotic.",
-      sources: [{ title: "Project Blue Book records at the National Archives", url: "https://www.archives.gov/research/military/air-force/ufos" }],
+      sources: [
+        { title: "Project Blue Book Special Report No. 14, 5 May 1955 (via The Black Vault)", url: "https://www.theblackvault.com/documentarchive/project-blue-book-special-report-14-may-5-1955/" }
+      ],
       related: ["project-blue-book", "condon-committee"]
     },
     {
@@ -463,7 +508,9 @@ window.FIELD_GUIDE = {
       documented: ["Police and Air Force officers visited the scene the same night."],
       claimed: ["A siege by alien beings."],
       explanation: "Some suggest great horned owls, which are aggressive, silvery in moonlight and have glowing eyes. The witnesses' fear was clearly genuine.",
-      sources: [{ title: "Project Blue Book records at the National Archives", url: "https://www.archives.gov/research/military/air-force/ufos" }],
+      sources: [
+        { title: "Project Blue Book file on Kelly–Hopkinsville (Patrick Gross archive)", url: "https://ufologie.patrickgross.org/htm/kelly55blu.htm" }
+      ],
       related: ["flatwoods", "socorro"]
     },
     {
@@ -478,7 +525,9 @@ window.FIELD_GUIDE = {
       documented: ["Crew accounts and Condon Committee analysis survive."],
       claimed: ["A craft paced a military aircraft and was tracked by several systems."],
       explanation: "Later researchers argued the signal came from a ground radar station and the light was an airliner, but the match is debated.",
-      sources: [{ title: "Condon Report text (Case 5)", url: "https://catalog.archives.gov" }],
+      sources: [
+        { title: "Project Blue Book case file: RB-47, 17 July 1957 (via The Black Vault)", url: "https://www.theblackvault.com/documentarchive/project-blue-book-the-rb-47-ufo-incident-july-17-1957/" }
+      ],
       related: ["condon-committee", "levelland"]
     },
     {
@@ -493,7 +542,9 @@ window.FIELD_GUIDE = {
       documented: ["Police logs and multiple independent calls."],
       claimed: ["A craft with an electromagnetic effect on cars."],
       explanation: "Blue Book blamed ball lightning and wet electrical systems after rain. The stalled-engine pattern has never been convincingly explained.",
-      sources: [{ title: "Project Blue Book records at the National Archives", url: "https://www.archives.gov/research/military/air-force/ufos" }],
+      sources: [
+        { title: "The Levelland UFO incident: Blue Book records (via The Black Vault)", url: "https://www.theblackvault.com/casefiles/the-vault-files-the-levelland-ufo-incident-1957/" }
+      ],
       related: ["rb-47", "exeter"]
     },
 
@@ -510,7 +561,9 @@ window.FIELD_GUIDE = {
       documented: ["They reported the light to the Air Force soon after.", "The hypnosis session recordings survive."],
       claimed: ["They were abducted and examined.", "The star map points to the Zeta Reticuli system."],
       explanation: "Dr. Simon himself thought the abduction story was more likely a shared dream. Critics note memories recovered under hypnosis are unreliable, and some details resemble a TV episode that aired shortly before Barney's session. The light may have been Jupiter or a satellite.",
-      sources: [{ title: "Project Blue Book records at the National Archives", url: "https://www.archives.gov/research/military/air-force/ufos" }],
+      sources: [
+        { title: "Betty and Barney Hill Papers, University of New Hampshire Library (MC 197)", url: "https://library.unh.edu/find/archives/collections/betty-barney-hill-papers-1961-2006" }
+      ],
       related: ["pascagoula", "travis-walton", "ariel-school"]
     },
     {
@@ -525,7 +578,9 @@ window.FIELD_GUIDE = {
       documented: ["Physical traces were photographed and measured.", "Blue Book listed it as unidentified, one of its best-known unknowns."],
       claimed: ["A landed alien craft with occupants."],
       explanation: "A theory that it was a student prank at New Mexico Tech has circulated for decades, along with suggestions of a secret test vehicle. Neither has been proven.",
-      sources: [{ title: "Project Blue Book records at the National Archives", url: "https://www.archives.gov/research/military/air-force/ufos" }],
+      sources: [
+        { title: "Project Blue Book: Socorro, New Mexico landing, 24 April 1964 (via The Black Vault)", url: "https://www.theblackvault.com/casefiles/desks-project-blue-book-socorro-new-mexico-ufo-landing-24-april-1964/" }
+      ],
       related: ["project-blue-book", "kelly-hopkinsville", "trans-en-provence"]
     },
     {
@@ -540,7 +595,9 @@ window.FIELD_GUIDE = {
       documented: ["Police reports and the officers' written statements."],
       claimed: ["A structured craft at low altitude."],
       explanation: "The Air Force first said it was a military refueling exercise, then changed the case to unidentified. Some researchers think the lights matched a refueling aircraft.",
-      sources: [{ title: "Project Blue Book records at the National Archives", url: "https://www.archives.gov/research/military/air-force/ufos" }],
+      sources: [
+        { title: "Exeter incident (Wikipedia overview)", url: "https://en.wikipedia.org/wiki/Exeter_incident" }
+      ],
       related: ["levelland", "michigan-1966"]
     },
     {
@@ -555,7 +612,9 @@ window.FIELD_GUIDE = {
       documented: ["The fireball was widely seen and is well documented.", "A journalist's FOIA lawsuit against NASA in the 2000s produced some records but no object."],
       claimed: ["A craft, or a Soviet probe, was secretly recovered."],
       explanation: "Astronomers concluded the fireball was a meteor. The Soviet Kosmos 96 probe theory fails because orbital tracking shows it reentered hours earlier. The object stories grew mostly after decades.",
-      sources: [{ title: "Project Blue Book records at the National Archives", url: "https://www.archives.gov/research/military/air-force/ufos" }],
+      sources: [
+        { title: "The 1965 Kecksburg crash: records and FOIA history (via The Black Vault)", url: "https://www.theblackvault.com/casefiles/the-vault-files-the-1965-kecksburg-pennsylvania-crash/" }
+      ],
       related: ["roswell", "shag-harbour"]
     },
     {
@@ -570,7 +629,9 @@ window.FIELD_GUIDE = {
       documented: ["Hynek's press conference and Ford's letter are on record.", "The House Armed Services Committee held a hearing on April 5, 1966."],
       claimed: ["The explanation was a deliberate brush-off."],
       explanation: "Hynek later said he only offered marsh gas for a few of the reports. The real legacy was political: the backlash led to the Condon Committee.",
-      sources: [{ title: "Project Blue Book records at the National Archives", url: "https://www.archives.gov/research/military/air-force/ufos" }],
+      sources: [
+        { title: "Flying Saucers and Swamp Gas (Bentley Historical Library, University of Michigan)", url: "https://bentley.umich.edu/news-events/magazine/flying-saucers-and-swamp-gas" }
+      ],
       related: ["condon-committee", "hearing-1966"]
     },
     {
@@ -585,7 +646,9 @@ window.FIELD_GUIDE = {
       documented: ["The hearing transcript is public."],
       claimed: [],
       explanation: "The hearing led to the Condon study and, indirectly, to the end of Project Blue Book.",
-      sources: [{ title: "Search 'Unidentified Flying Objects hearing 1966' at congress.gov or GovInfo", url: "https://www.govinfo.gov" }],
+      sources: [
+        { title: "Hearing transcript: Unidentified Flying Objects, House Armed Services, 5 April 1966 (GovInfo)", url: "https://www.govinfo.gov/app/details/CHRG-89hhrg50066O" }
+      ],
       related: ["michigan-1966", "condon-committee", "symposium-1968"]
     },
     {
@@ -600,7 +663,9 @@ window.FIELD_GUIDE = {
       documented: ["Local newspapers covered it at the time, and witnesses gathered for a 2016 reunion."],
       claimed: ["A craft landed and officials told students to keep quiet."],
       explanation: "Researchers have proposed a balloon from a joint Australian–U.S. high-altitude research program that was launching from the area in 1966. It is a plausible fit but not proven.",
-      sources: [{ title: "National Archives of Australia: search 'UFO'", url: "https://www.naa.gov.au" }],
+      sources: [
+        { title: "An Ongoing Mystery: The Westall Flying Saucer Incident (City of Kingston local history)", url: "https://localhistory.kingston.vic.gov.au/articles/528" }
+      ],
       related: ["ariel-school", "shag-harbour"]
     },
     {
@@ -615,7 +680,9 @@ window.FIELD_GUIDE = {
       documented: ["The Echo Flight shutdown is real and was investigated."],
       claimed: ["UFOs disabled nuclear weapons."],
       explanation: "Records from the time describe the shutdown but do not mention UFOs. The UFO link rests on recollections that surfaced years later and differ in their details.",
-      sources: [{ title: "Search 'Echo Flight 1967' in the National Archives catalog", url: "https://catalog.archives.gov" }],
+      sources: [
+        { title: "Malmstrom AFB missile incident, 16 March 1967: documents (via The Black Vault)", url: "https://www.theblackvault.com/documentarchive/ufo-case-malmstrom-afb-ufomissile-incident-march-16-1967/" }
+      ],
       related: ["rendlesham", "nimitz"]
     },
     {
@@ -630,7 +697,9 @@ window.FIELD_GUIDE = {
       documented: ["RCMP and military records confirm the search and that no aircraft was missing."],
       claimed: ["A craft went underwater and moved away."],
       explanation: "No convincing explanation has emerged. A meteor or flare is possible but does not account for every account.",
-      sources: [{ title: "Library and Archives Canada: UFO files", url: "https://www.bac-lac.gc.ca" }],
+      sources: [
+        { title: "1967 Shag Harbour UFO Sighting and Related Research (Library and Archives Canada)", url: "https://recherche-research.bac-lac.gc.ca/eng/public/list/43130" }
+      ],
       related: ["kecksburg", "westall"]
     },
     {
@@ -645,7 +714,10 @@ window.FIELD_GUIDE = {
       documented: ["The full report, 'Scientific Study of Unidentified Flying Objects,' is public.", "The leaked 'Low memorandum' controversy was covered by Look magazine in 1968."],
       claimed: ["The study was rigged."],
       explanation: "The report gave the Air Force its reason to close Blue Book. It remains the most detailed scientific UFO study of its era, and both skeptics and believers quote it.",
-      sources: [{ title: "Search 'Condon Report' in the National Archives catalog", url: "https://catalog.archives.gov" }],
+      sources: [
+        { title: "Condon Report: Conclusions and Recommendations", url: "https://www.project1947.com/shg/condon/sec-i.html" },
+        { title: "Condon Report: full table of contents", url: "https://www.project1947.com/shg/condon/contents.html" }
+      ],
       related: ["project-blue-book", "symposium-1968", "mcminnville", "rb-47"]
     },
     {
@@ -660,7 +732,9 @@ window.FIELD_GUIDE = {
       documented: ["The proceedings were published."],
       claimed: [],
       explanation: "The last congressional session on UFOs for 54 years.",
-      sources: [{ title: "Search 'Symposium on Unidentified Flying Objects 1968' at GovInfo", url: "https://www.govinfo.gov" }],
+      sources: [
+        { title: "Symposium on Unidentified Flying Objects, 29 July 1968 (GovInfo)", url: "https://www.govinfo.gov/content/pkg/CHRG-90hhrg97818/pdf/CHRG-90hhrg97818.pdf" }
+      ],
       related: ["hearing-1966", "condon-committee", "hearing-2022"]
     },
     {
@@ -675,7 +749,10 @@ window.FIELD_GUIDE = {
       documented: ["The announcement and Air Force fact sheet are public."],
       claimed: ["Investigations moved underground."],
       explanation: "After 1969 there was no public U.S. government UFO program until the 2000s.",
-      sources: [{ title: "Project Blue Book records at the National Archives", url: "https://www.archives.gov/research/military/air-force/ufos" }],
+      sources: [
+        { title: "Air Force fact sheet: UFOs and Project Blue Book", url: "https://www.af.mil/About-Us/Fact-Sheets/Display/Article/104590/unidentified-flying-objects-and-air-force-project-blue-book/" },
+        { title: "Project Blue Book records (National Archives)", url: "https://www.archives.gov/research/military/air-force/ufos" }
+      ],
       related: ["project-blue-book", "condon-committee"]
     },
 
@@ -692,7 +769,9 @@ window.FIELD_GUIDE = {
       documented: ["The secret recording survives.", "Hickson took a polygraph test, though its methods were criticized."],
       claimed: ["A real abduction."],
       explanation: "No physical evidence was found. The recording is strong evidence they believed something happened, which is different from evidence of what happened.",
-      sources: [{ title: "Search 'Pascagoula 1973' in the National Archives catalog", url: "https://catalog.archives.gov" }],
+      sources: [
+        { title: "Pascagoula incident (Wikipedia overview)", url: "https://en.wikipedia.org/wiki/Pascagoula_incident" }
+      ],
       related: ["betty-barney-hill", "travis-walton"]
     },
     {
@@ -707,7 +786,9 @@ window.FIELD_GUIDE = {
       documented: ["The crew's statements; ground witnesses came forward later."],
       claimed: ["A craft lifted the helicopter."],
       explanation: "Skeptic Philip Klass argued it was a bright fireball during the Orionid meteor shower and that the climb came from the pilot's own reaction. The case remains debated.",
-      sources: [{ title: "Search 'Coyne helicopter' in the National Archives catalog", url: "https://catalog.archives.gov" }],
+      sources: [
+        { title: "The Army crew's report on the Coyne encounter (Patrick Gross archive)", url: "https://ufologie.patrickgross.org/htm/coynereport.htm" }
+      ],
       related: ["tehran-1976", "rb-47"]
     },
     {
@@ -722,7 +803,9 @@ window.FIELD_GUIDE = {
       documented: ["A five-day missing-person search took place.", "Polygraph results were mixed; crew members passed some tests."],
       claimed: ["A genuine abduction with many witnesses."],
       explanation: "Critics argue the crew had a motive to break a logging contract they were behind on. Walton and the crew have stood by the story for decades.",
-      sources: [{ title: "Search 'Travis Walton' at the FBI Vault", url: "https://vault.fbi.gov" }],
+      sources: [
+        { title: "Travis Walton incident (Wikipedia overview)", url: "https://en.wikipedia.org/wiki/Travis_Walton_incident" }
+      ],
       related: ["betty-barney-hill", "pascagoula"]
     },
     {
@@ -737,7 +820,9 @@ window.FIELD_GUIDE = {
       documented: ["The DIA report was released through FOIA.", "Pilot interviews were conducted by Iranian and U.S. officers."],
       claimed: ["Craft disabled fighter jets."],
       explanation: "Klass argued the light was Jupiter and the failures were coincident equipment problems in poorly maintained jets. The detailed reports keep it on most lists of strong cases.",
-      sources: [{ title: "Search 'Tehran 1976' in the CIA Reading Room", url: "https://www.cia.gov/readingroom/" }],
+      sources: [
+        { title: "The 1976 Iran incident: Defense Intelligence Agency report and cables (via The Black Vault)", url: "https://www.theblackvault.com/documentarchive/the-1976-iran-incident-ufo-encounter-over-tehran-iran/" }
+      ],
       related: ["coyne-helicopter", "jal-1628"]
     },
     {
@@ -752,7 +837,9 @@ window.FIELD_GUIDE = {
       documented: ["The air traffic control transcript was released by Australian officials."],
       claimed: ["He was taken by a UFO."],
       explanation: "Investigators considered disorientation, in which a pilot flying inverted can see his own lights reflected, a crash at sea, or a deliberate disappearance. The truth is unknown.",
-      sources: [{ title: "National Archives of Australia: search 'Valentich'", url: "https://www.naa.gov.au" }],
+      sources: [
+        { title: "Flight into Oblivion: the Valentich files (Dr David Clarke)", url: "https://drdavidclarke.co.uk/2012/07/01/flight-into-oblivion/" }
+      ],
       related: ["westall", "tehran-1976"]
     },
 
@@ -769,7 +856,9 @@ window.FIELD_GUIDE = {
       documented: ["The Halt memo and Halt's audio tape exist.", "UK Ministry of Defence files on the case have been released."],
       claimed: ["A craft landed and was examined by servicemen."],
       explanation: "Skeptics note the flashing light lines up with the Orford Ness lighthouse and that a bright fireball crossed southern England the first night. Witness stories also grew a lot over time. Supporters say that does not cover everything.",
-      sources: [{ title: "UK National Archives: UFO files", url: "https://www.nationalarchives.gov.uk" }],
+      sources: [
+        { title: "Top 10 UFO documents at The National Archives, including the Halt memo (Dr David Clarke)", url: "https://drdavidclarke.co.uk/2018/03/15/top-10-ufo-documents-at-the-national-archives/" }
+      ],
       related: ["malmstrom", "uk-mod-files", "belgian-wave"]
     },
     {
@@ -784,7 +873,9 @@ window.FIELD_GUIDE = {
       documented: ["Medical records and the lawsuit are public."],
       claimed: ["An experimental or unknown craft injured civilians."],
       explanation: "The helicopter detail suggests a military operation, but none has been identified. The medical link is also debated.",
-      sources: [{ title: "Search 'Cash-Landrum' in the National Archives catalog", url: "https://catalog.archives.gov" }],
+      sources: [
+        { title: "Cash–Landrum incident (Wikipedia overview)", url: "https://en.wikipedia.org/wiki/Cash%E2%80%93Landrum_incident" }
+      ],
       related: ["rendlesham", "travis-walton"]
     },
     {
@@ -799,7 +890,9 @@ window.FIELD_GUIDE = {
       documented: ["GEPAN's technical report is public."],
       claimed: ["Physical proof of a landing."],
       explanation: "Critics argue the trace could have come from a vehicle and the lab work was not as rigorous as presented. It is still one of the most scientifically studied trace cases.",
-      sources: [{ title: "GEIPAN (French space agency UAP unit) case archive", url: "https://www.cnes-geipan.fr" }],
+      sources: [
+        { title: "Review of the Trans-en-Provence case (INA, French national broadcast archive)", url: "https://mediaclip.ina.fr/en/r21173645-review-of-the-trans-en-provence-case.html" }
+      ],
       related: ["socorro", "geipan", "hessdalen"]
     },
     {
@@ -814,7 +907,10 @@ window.FIELD_GUIDE = {
       documented: ["Decades of instrument data and scientific papers."],
       claimed: [],
       explanation: "Scientists suspect a natural phenomenon, possibly glowing plasma tied to the valley's geology, mixed with car lights and aircraft. It is a rare example of a UAP studied with ongoing instruments.",
-      sources: [{ title: "Search 'Project Hessdalen'", url: "https://www.google.com/search?q=Project+Hessdalen" }],
+      sources: [
+        { title: "Erling Strand, Project Hessdalen: summary of results (GEIPAN workshop paper)", url: "https://www.geipan.fr/sites/default/files/23_STRAND_abs.pdf" },
+        { title: "Hessdalen AMS (Wikipedia overview)", url: "https://en.wikipedia.org/wiki/Hessdalen_AMS" }
+      ],
       related: ["trans-en-provence", "nasa-uap-study"]
     },
     {
@@ -829,7 +925,9 @@ window.FIELD_GUIDE = {
       documented: ["Huge numbers of reports, including from police."],
       claimed: ["A single enormous craft."],
       explanation: "Investigators found a group of private pilots flying light planes in tight formation at night, sometimes turning their lights off and on. Not every report fits, but most do.",
-      sources: [{ title: "Search 'Hudson Valley UFO 1983'", url: "https://www.google.com/search?q=Hudson+Valley+UFO+1983" }],
+      sources: [
+        { title: "1984 Hudson Valley UFO sightings (Wikipedia overview)", url: "https://en.wikipedia.org/wiki/1984_Hudson_Valley_UFO_sightings" }
+      ],
       related: ["phoenix-lights", "belgian-wave"]
     },
     {
@@ -859,7 +957,9 @@ window.FIELD_GUIDE = {
       documented: ["FAA records, radar data and crew interviews."],
       claimed: ["A giant mothership."],
       explanation: "The FAA said the radar returns were likely a split image. Skeptics suggested the crew saw Jupiter and Mars. The crew's experience was clearly vivid.",
-      sources: [{ title: "Search 'JAL 1628' at the National Archives catalog", url: "https://catalog.archives.gov" }],
+      sources: [
+        { title: "JAL Flight 1628: FAA records and radar data (via The Black Vault)", url: "https://www.theblackvault.com/casefiles/the-vault-files-1986-alaska-jal-flight-1628/" }
+      ],
       related: ["tehran-1976", "ohare-2006"]
     },
     {
@@ -874,7 +974,9 @@ window.FIELD_GUIDE = {
       documented: ["The photos and the discovered model were widely reported."],
       claimed: ["Genuine craft photographed over months."],
       explanation: "Most investigators concluded the photos were faked. Walters denied it.",
-      sources: [{ title: "Search 'Gulf Breeze model 1990'", url: "https://www.google.com/search?q=Gulf+Breeze+UFO+model+1990" }],
+      sources: [
+        { title: "Gulf Breeze UFO incident (Wikipedia overview)", url: "https://en.wikipedia.org/wiki/Gulf_Breeze_UFO_incident" }
+      ],
       related: ["mcminnville", "belgian-wave"]
     },
     {
@@ -889,7 +991,9 @@ window.FIELD_GUIDE = {
       documented: ["Lazar has given many interviews.", "Element 115 (moscovium) was created in a lab in 2003; it lasts a fraction of a second."],
       claimed: ["He worked on alien technology."],
       explanation: "No records support the degrees he says he earned at MIT and Caltech, and the element 115 he described does not match real moscovium. His supporters say records were erased.",
-      sources: [{ title: "Search 'Bob Lazar' at the FBI Vault", url: "https://vault.fbi.gov" }],
+      sources: [
+        { title: "Bob Lazar (Wikipedia overview)", url: "https://en.wikipedia.org/wiki/Bob_Lazar" }
+      ],
       related: ["mj-12", "grusch-2023"]
     },
     {
@@ -904,7 +1008,9 @@ window.FIELD_GUIDE = {
       documented: ["The Belgian Air Force released radar data and held a press conference."],
       claimed: ["Triangular craft of unknown origin."],
       explanation: "The famous Petit-Rechain triangle photo was admitted to be a styrofoam model in 2011. The F-16 radar locks were likely weather effects. Many ground sightings remain unexplained.",
-      sources: [{ title: "Search 'Belgian UFO wave 1990'", url: "https://www.google.com/search?q=Belgian+UFO+wave+1990+report" }],
+      sources: [
+        { title: "Belgian UFO wave (Wikipedia overview)", url: "https://en.wikipedia.org/wiki/Belgian_UFO_wave" }
+      ],
       related: ["hudson-valley", "rendlesham", "gulf-breeze"]
     },
 
@@ -936,7 +1042,9 @@ window.FIELD_GUIDE = {
       documented: ["Children's drawings and interviews were recorded soon after."],
       claimed: ["A landing with a telepathic message about the environment."],
       explanation: "Explanations range from shared imagination after the fireball to a misunderstood event. Many former students still stand by what they saw.",
-      sources: [{ title: "Search 'Ariel School Ruwa 1994'", url: "https://www.google.com/search?q=Ariel+School+Ruwa+1994" }],
+      sources: [
+        { title: "Ariel School UFO incident (Wikipedia overview)", url: "https://en.wikipedia.org/wiki/Ariel_School_UFO_incident" }
+      ],
       related: ["westall", "betty-barney-hill"]
     },
     {
@@ -951,7 +1059,9 @@ window.FIELD_GUIDE = {
       documented: ["Santilli's 2006 admission and the sculptor's account."],
       claimed: ["Genuine footage of a recovered alien."],
       explanation: "A staged film. A good lesson in how convincing production can be.",
-      sources: [{ title: "Search 'alien autopsy Santilli 2006'", url: "https://www.google.com/search?q=alien+autopsy+Santilli+2006" }],
+      sources: [
+        { title: "Won't Get Fooled Again? The alien autopsy film (Dr David Clarke)", url: "https://drdavidclarke.co.uk/2020/08/15/wont-get-fooled-again-the-alien-autopsy-film-2006/" }
+      ],
       related: ["roswell", "mj-12"]
     },
     {
@@ -966,7 +1076,9 @@ window.FIELD_GUIDE = {
       documented: ["A Brazilian army inquiry was conducted."],
       claimed: ["Aliens were captured by the army."],
       explanation: "The army inquiry concluded the women saw a local man known for crouching in the rain. Ufologists reject that and point to other witnesses.",
-      sources: [{ title: "Search 'Varginha 1996 army inquiry'", url: "https://www.google.com/search?q=Varginha+1996+army+inquiry" }],
+      sources: [
+        { title: "Varginha UFO incident (Wikipedia overview)", url: "https://en.wikipedia.org/wiki/Varginha_UFO_incident" }
+      ],
       related: ["roswell", "ariel-school"]
     },
     {
@@ -981,7 +1093,9 @@ window.FIELD_GUIDE = {
       documented: ["Many videos of the 10 p.m. lights.", "The Air National Guard confirmed dropping flares that night."],
       claimed: ["A mile-wide craft passed over the city."],
       explanation: "The 10 p.m. lights match LUU-2 flares dropped by A-10 jets over the Barry Goldwater range. The 8 p.m. V is widely thought to be planes flying in formation, though some witnesses insist it was one solid object.",
-      sources: [{ title: "Search 'Phoenix Lights 1997 flares'", url: "https://www.google.com/search?q=Phoenix+Lights+1997+flares" }],
+      sources: [
+        { title: "Phoenix Lights (Wikipedia overview)", url: "https://en.wikipedia.org/wiki/Phoenix_Lights" }
+      ],
       related: ["hudson-valley", "stephenville"]
     },
     {
@@ -996,7 +1110,9 @@ window.FIELD_GUIDE = {
       documented: ["The article is public in the CIA Reading Room."],
       claimed: [],
       explanation: "A rare official admission that the government misled the public about sightings, but for secret aircraft rather than aliens.",
-      sources: [{ title: "CIA Reading Room: Haines, 'CIA's Role in the Study of UFOs'", url: "https://www.cia.gov/readingroom/" }],
+      sources: [
+        { title: "CIA's Role in the Study of UFOs, 1947–90 (CIA, Studies in Intelligence)", url: "https://www.cia.gov/resources/csi/studies-in-intelligence/archives/vol-40-no-5/the-cias-role-in-the-study-of-ufos-1947-90/" }
+      ],
       related: ["robertson-panel", "project-blue-book"]
     },
     {
@@ -1011,7 +1127,10 @@ window.FIELD_GUIDE = {
       documented: ["The report is public."],
       claimed: [],
       explanation: "Often cited as an 'official' French report, but it was written by a private association, not the French government.",
-      sources: [{ title: "Search 'COMETA report 1999'", url: "https://www.google.com/search?q=COMETA+report+1999" }],
+      sources: [
+        { title: "The COMETA Report (1999), English PDF (Internet Archive)", url: "https://ia804708.us.archive.org/20/items/the-cometa-report-1999/The%20Cometa%20Report%20%281999%29.pdf" },
+        { title: "COMETA report (Wikipedia overview)", url: "https://en.wikipedia.org/wiki/COMETA_report" }
+      ],
       related: ["geipan", "uk-mod-files"]
     },
     {
@@ -1026,7 +1145,10 @@ window.FIELD_GUIDE = {
       documented: ["Thousands of case files are searchable online."],
       claimed: [],
       explanation: "A model of open, scientific case-handling. Only a small percentage of its cases stay unidentified after investigation.",
-      sources: [{ title: "GEIPAN case archive", url: "https://www.cnes-geipan.fr" }],
+      sources: [
+        { title: "GEIPAN case archive (CNES)", url: "https://www.cnes-geipan.fr" },
+        { title: "GEIPAN (Wikipedia overview)", url: "https://en.wikipedia.org/wiki/GEIPAN" }
+      ],
       related: ["trans-en-provence", "cometa"]
     },
 
@@ -1043,7 +1165,10 @@ window.FIELD_GUIDE = {
       documented: ["Condign and the MoD files are public."],
       claimed: [],
       explanation: "One of the most complete national UFO archives available online.",
-      sources: [{ title: "UK National Archives: UFO files", url: "https://www.nationalarchives.gov.uk" }],
+      sources: [
+        { title: "Project Condign: the full report (via The Black Vault)", url: "https://www.theblackvault.com/documentarchive/project-condign-the-full-condign-report" },
+        { title: "Top 10 UFO documents at The National Archives (Dr David Clarke)", url: "https://drdavidclarke.co.uk/2018/03/15/top-10-ufo-documents-at-the-national-archives/" }
+      ],
       related: ["rendlesham", "cometa"]
     },
     {
@@ -1058,7 +1183,9 @@ window.FIELD_GUIDE = {
       documented: ["The press conference and testimony are recorded."],
       claimed: ["A decades-long secret government program."],
       explanation: "The testimony was not under oath and mostly lacked documents. Congress did not act at the time. Similar claims returned in the 2023 hearing.",
-      sources: [{ title: "Search 'Disclosure Project 2001 National Press Club'", url: "https://www.google.com/search?q=Disclosure+Project+2001" }],
+      sources: [
+        { title: "ABC News, May 2001: 'Group Calls for Disclosure of UFO Info'", url: "https://abcnews.go.com/Technology/story?id=98572" }
+      ],
       related: ["grusch-2023", "malmstrom"]
     },
     {
@@ -1075,7 +1202,7 @@ window.FIELD_GUIDE = {
       explanation: "The visual sighting is the strongest part, and no explanation fits well. The FLIR1 video alone is low detail, and some analysts argue it shows a distant aircraft.",
       sources: [
         { title: "Navy FOIA reading room: UAP videos", url: "https://www.navair.navy.mil/foia/documents" },
-        { title: "AARO official site", url: "https://www.aaro.mil" }
+        { title: "The Navy's official release of FLIR1, Gimbal and GoFast, April 2020 (via The Black Vault)", url: "https://www.theblackvault.com/documentarchive/navy-officially-releases-ufo-uap-videos-calls-them-historical/" }
       ],
       related: ["gimbal-gofast", "nyt-2017", "grusch-2023"]
     },
@@ -1091,7 +1218,10 @@ window.FIELD_GUIDE = {
       documented: ["Employee accounts reported in the press.", "The FAA confirmed it received inquiries."],
       claimed: ["A craft over a major airport."],
       explanation: "The FAA attributed it to a weather phenomenon. Witnesses were not satisfied, but no radar data supports an object.",
-      sources: [{ title: "Search 'O'Hare UFO 2006 FAA'", url: "https://www.google.com/search?q=O%27Hare+UFO+2006+FAA" }],
+      sources: [
+        { title: "The 2006 O'Hare airport UFO sighting: FAA records (via The Black Vault)", url: "https://www.theblackvault.com/casefiles/the-vault-files-2006-ohare-international-airport-ufo-sighting/" },
+        { title: "2006 O'Hare International Airport UFO sighting (Wikipedia overview)", url: "https://en.wikipedia.org/wiki/2006_O%27Hare_International_Airport_UFO_sighting" }
+      ],
       related: ["jal-1628", "stephenville"]
     },
     {
@@ -1124,7 +1254,9 @@ window.FIELD_GUIDE = {
       documented: ["Witness reports and the Air Force's corrected statement."],
       claimed: ["A giant craft trailed by jets."],
       explanation: "The F-16s likely explain some sightings, especially if flares were used. Not every report fits.",
-      sources: [{ title: "Search 'Stephenville lights 2008 F-16'", url: "https://www.google.com/search?q=Stephenville+lights+2008+F-16" }],
+      sources: [
+        { title: "Stephenville, Texas, 8 January 2008: records (via The Black Vault)", url: "https://www.theblackvault.com/documentarchive/ufo-case-stephenville-texas-january-08-2008/" }
+      ],
       related: ["phoenix-lights", "ohare-2006"]
     },
 
@@ -1174,7 +1306,9 @@ window.FIELD_GUIDE = {
       documented: ["The Pentagon confirmed the source of the footage."],
       claimed: ["Craft that move from air into water."],
       explanation: "The triangle shape matches the aperture of the night-vision camera, which turns any point of light into a triangle. The ships were also swarmed by drones in the same period. The sphere has been suggested to be a balloon or drone.",
-      sources: [{ title: "AARO official site", url: "https://www.aaro.mil" }],
+      sources: [
+        { title: "Pentagon confirms leaked UFO images are authentic (The Debrief)", url: "https://thedebrief.org/pentagon-confirms-leaked-ufo-images-are-authentic/" }
+      ],
       related: ["gimbal-gofast", "odni-2021"]
     },
     {
@@ -1221,7 +1355,9 @@ window.FIELD_GUIDE = {
       documented: ["The hearing video and transcript are public."],
       claimed: [],
       explanation: "It marked Congress returning to the subject on the public record.",
-      sources: [{ title: "Search 'May 17 2022 UAP hearing' at congress.gov", url: "https://www.congress.gov" }],
+      sources: [
+        { title: "Hearing transcript: Unidentified Aerial Phenomena, House Intelligence subcommittee, 17 May 2022", url: "https://www.congress.gov/117/meeting/house/114761/documents/HHRG-117-IG05-Transcript-20220517.pdf" }
+      ],
       related: ["symposium-1968", "odni-2021", "aaro-founded"]
     },
     {
@@ -1236,7 +1372,10 @@ window.FIELD_GUIDE = {
       documented: ["AARO's charter and reports are posted on its website."],
       claimed: ["Critics say AARO is designed to debunk."],
       explanation: "The main U.S. government UAP office today.",
-      sources: [{ title: "AARO official site", url: "https://www.aaro.mil" }],
+      sources: [
+        { title: "DoD memo establishing the All-domain Anomaly Resolution Office, 20 July 2022", url: "https://media.defense.gov/2022/Jul/20/2003039074/-1/-1/1/ESTABLISHMENT-OF-THE-ALL-DOMAIN-ANOMALY-RESOLUTION-OFFICE.PDF" },
+        { title: "AARO official site", url: "https://www.aaro.mil" }
+      ],
       related: ["odni-2021", "aaro-reports", "aaro-hrr"]
     },
     {
@@ -1251,7 +1390,9 @@ window.FIELD_GUIDE = {
       documented: ["The shootdowns were confirmed by the White House and Pentagon."],
       claimed: [],
       explanation: "A real-time lesson: once you tune sensors to look for small, slow things, the sky is full of them.",
-      sources: [{ title: "AARO official site", url: "https://www.aaro.mil" }],
+      sources: [
+        { title: "ABC News: military shoots down object over Lake Huron, officials say", url: "https://www.goodmorningamerica.com/news/story/military-shoots-high-altitude-object-lake-huron-officials-97068247" }
+      ],
       related: ["odni-2021", "nj-drones-2024"]
     },
     {
@@ -1266,7 +1407,9 @@ window.FIELD_GUIDE = {
       documented: ["Grusch's sworn testimony and his complaint to the Inspector General.", "The hearing video is public."],
       claimed: ["A secret crash-retrieval program and recovered bodies."],
       explanation: "Grusch said his claims were based on interviews, not direct observation, and offered more detail only in closed sessions. AARO's 2024 review found no verifiable evidence of such a program. Supporters say AARO lacked access.",
-      sources: [{ title: "House Oversight Committee", url: "https://oversight.house.gov" }],
+      sources: [
+        { title: "House Oversight hearing page, 26 July 2023 (video and testimony)", url: "https://oversight.house.gov/hearing/unidentified-anomalous-phenomena-implications-on-national-security-public-safety-and-government-transparency/" }
+      ],
       related: ["aaro-hrr", "disclosure-act", "nimitz", "bob-lazar"]
     },
     {
@@ -1297,8 +1440,8 @@ window.FIELD_GUIDE = {
       claimed: [],
       explanation: "The law that created a permanent public home for UAP records.",
       sources: [
-        { title: "National Archives UAP Records Collection", url: "https://www.archives.gov/research/topics/uaps" },
-        { title: "Congress.gov", url: "https://www.congress.gov" }
+        { title: "Text of the UAP Disclosure Act amendment (Senate Democrats)", url: "https://www.democrats.senate.gov/imo/media/doc/uap_amendment.pdf" },
+        { title: "National Archives UAP Records Collection", url: "https://www.archives.gov/research/topics/uaps" }
       ],
       related: ["grusch-2023", "pursue-2026"]
     },
@@ -1329,7 +1472,10 @@ window.FIELD_GUIDE = {
       documented: ["The hearing video is public."],
       claimed: ["Secret UAP programs exist and are hidden from Congress."],
       explanation: "Testimony was largely about secrecy rather than new evidence.",
-      sources: [{ title: "House Oversight Committee", url: "https://oversight.house.gov" }],
+      sources: [
+        { title: "House Oversight hearing page, 13 November 2024", url: "https://oversight.house.gov/hearing/unidentified-anomalous-phenomena-exposing-the-truth/" },
+        { title: "Hearing transcript (GovInfo)", url: "https://www.govinfo.gov/content/pkg/CHRG-118hhrg57440/html/CHRG-118hhrg57440.htm" }
+      ],
       related: ["grusch-2023", "hearing-2025"]
     },
     {
@@ -1344,7 +1490,10 @@ window.FIELD_GUIDE = {
       documented: ["The reports are public on AARO's website."],
       claimed: [],
       explanation: "The rise in reports reflects better reporting systems, not necessarily more objects.",
-      sources: [{ title: "AARO official site", url: "https://www.aaro.mil" }],
+      sources: [
+        { title: "AARO FY2024 Consolidated Annual Report on UAP (PDF)", url: "https://odni.gov/files/ODNI/documents/assessments/DOD-AARO-Consolidated-Annual-Report-on-UAP-Nov2024.pdf" },
+        { title: "AARO official site", url: "https://www.aaro.mil" }
+      ],
       related: ["aaro-founded", "nj-drones-2024", "pursue-2026"]
     },
     {
@@ -1359,7 +1508,9 @@ window.FIELD_GUIDE = {
       documented: ["FAA flight restrictions and federal statements are public."],
       claimed: ["Foreign drones or something stranger."],
       explanation: "In January 2025, the White House said the drones were authorized by the FAA for research and other purposes, and that many sightings were hobbyists and manned aircraft.",
-      sources: [{ title: "AARO official site", url: "https://www.aaro.mil" }],
+      sources: [
+        { title: "ABC News: White House says New Jersey drones were authorized by the FAA", url: "https://abc7ny.com/post/white-house-says-many-drones-spotted-new-jersey-east-coast-were-flown-faa-was-not-enemy/15844019/" }
+      ],
       related: ["balloons-2023", "aaro-reports"]
     },
     {
@@ -1374,7 +1525,10 @@ window.FIELD_GUIDE = {
       documented: ["The hearing and video were broadcast."],
       claimed: ["The orb survived a direct missile hit."],
       explanation: "The video shows the missile reaching the object, but from one sensor at long range it is hard to judge what happened. No official analysis has been released.",
-      sources: [{ title: "House Oversight Committee", url: "https://oversight.house.gov" }],
+      sources: [
+        { title: "House Oversight hearing page, 9 September 2025", url: "https://oversight.house.gov/hearing/restoring-public-trust-through-uap-transparency-and-whistleblower-protection/" },
+        { title: "Hearing transcript (GovInfo)", url: "https://www.govinfo.gov/content/pkg/CHRG-119hhrg61718/html/CHRG-119hhrg61718.htm" }
+      ],
       related: ["hearing-2024", "pursue-2026"]
     },
     {
@@ -1542,7 +1696,7 @@ window.FIELD_GUIDE = {
       cases: ["kenneth-arnold", "airship-wave-1896", "foo-fighters", "washington-1952", "maury-island", "twining-memo"],
       links: [
         { title: "Project Blue Book records (National Archives)", url: "https://www.archives.gov/research/military/air-force/ufos" },
-        { title: "Chronicling America: 1896–97 airship newspaper reports", url: "https://chroniclingamerica.loc.gov" }
+        { title: "Chronicling America: 1896–97 airship newspaper reports", url: "https://chroniclingamerica.loc.gov/search/pages/results/?andtext=airship&date1=1896&date2=1897&dateFilterType=yearRange" }
       ]
     },
     {
@@ -1563,7 +1717,7 @@ window.FIELD_GUIDE = {
       cases: ["twining-memo", "project-blue-book", "mantell", "chiles-whitted", "estimate-of-situation", "gorman-dogfight", "lubbock-lights", "washington-1952", "robertson-panel"],
       links: [
         { title: "Project Blue Book records (National Archives)", url: "https://www.archives.gov/research/military/air-force/ufos" },
-        { title: "CIA Reading Room: Robertson Panel", url: "https://www.cia.gov/readingroom/" }
+        { title: "CIA: Robertson Panel report (1953)", url: "https://www.cia.gov/readingroom/document/cia-rdp78-02646r000600150001-5" }
       ]
     },
     {
@@ -1572,8 +1726,8 @@ window.FIELD_GUIDE = {
       listenUrl: "/podcast/#episodes",
       cases: ["contactees", "civilian-investigators", "flatwoods", "kelly-hopkinsville", "robertson-panel", "aztec-hoax"],
       links: [
-        { title: "FBI Vault: search 'Adamski' and 'NICAP'", url: "https://vault.fbi.gov" },
-        { title: "CIA Reading Room: search 'NICAP'", url: "https://www.cia.gov/readingroom/" }
+        { title: "George Adamski (Wikipedia overview)", url: "https://en.wikipedia.org/wiki/George_Adamski" },
+        { title: "CIA: 'The National Investigations Committee on Aerial Phenomena (NICAP)'", url: "https://cia.gov/readingroom/document/cia-rdp81r00560r000100010001-0" }
       ]
     },
     {
@@ -1582,8 +1736,9 @@ window.FIELD_GUIDE = {
       listenUrl: "/podcast/#episodes",
       cases: ["michigan-1966", "hearing-1966", "condon-committee", "symposium-1968", "blue-book-closes", "mcminnville", "rb-47"],
       links: [
-        { title: "GovInfo: 1966 and 1968 congressional UFO sessions", url: "https://www.govinfo.gov" },
-        { title: "National Archives Catalog: 'Condon Report'", url: "https://catalog.archives.gov" }
+        { title: "1966 House Armed Services UFO hearing (GovInfo)", url: "https://www.govinfo.gov/app/details/CHRG-89hhrg50066O" },
+        { title: "1968 House UFO symposium (GovInfo)", url: "https://www.govinfo.gov/content/pkg/CHRG-90hhrg97818/pdf/CHRG-90hhrg97818.pdf" },
+        { title: "Condon Report: Conclusions and Recommendations", url: "https://www.project1947.com/shg/condon/sec-i.html" }
       ]
     },
     {
@@ -1592,7 +1747,7 @@ window.FIELD_GUIDE = {
       listenUrl: "/podcast/#episodes",
       cases: ["socorro", "betty-barney-hill", "levelland", "kelly-hopkinsville", "pascagoula", "travis-walton", "trans-en-provence"],
       links: [
-        { title: "Project Blue Book records: Socorro and Levelland", url: "https://www.archives.gov/research/military/air-force/ufos" },
+        { title: "Project Blue Book: Socorro, 1964 (via The Black Vault)", url: "https://www.theblackvault.com/casefiles/desks-project-blue-book-socorro-new-mexico-ufo-landing-24-april-1964/" },
         { title: "GEIPAN case archive (France)", url: "https://www.cnes-geipan.fr" }
       ]
     },
@@ -1613,7 +1768,7 @@ window.FIELD_GUIDE = {
       listenUrl: "/podcast/#episodes",
       cases: ["bob-lazar", "travis-walton", "gulf-breeze", "alien-autopsy", "phoenix-lights", "cia-haines", "disclosure-project"],
       links: [
-        { title: "CIA Reading Room: Haines, 'CIA's Role in the Study of UFOs'", url: "https://www.cia.gov/readingroom/" }
+        { title: "CIA's Role in the Study of UFOs, 1947–90 (Haines)", url: "https://www.cia.gov/resources/csi/studies-in-intelligence/archives/vol-40-no-5/the-cias-role-in-the-study-of-ufos-1947-90/" }
       ]
     },
     {
@@ -1632,7 +1787,7 @@ window.FIELD_GUIDE = {
       listenUrl: "/podcast/#episodes",
       cases: ["hearing-2022", "aaro-founded", "grusch-2023", "disclosure-act", "aaro-hrr", "hearing-2024", "hearing-2025", "aaro-reports", "pursue-2026"],
       links: [
-        { title: "House Oversight Committee", url: "https://oversight.house.gov" },
+        { title: "House Oversight hearings: 2023, 2024 and 2025", url: "https://oversight.house.gov/hearing/restoring-public-trust-through-uap-transparency-and-whistleblower-protection/" },
         { title: "AARO official site", url: "https://www.aaro.mil" },
         { title: "PURSUE: Department of War UAP file releases", url: "https://www.war.gov/UFO/" }
       ]
