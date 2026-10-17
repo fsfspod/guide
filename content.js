@@ -18,7 +18,9 @@
    - `related` lists other case ids. They show up as "Next exhibits".
    - Timeline entries come from each case automatically (using `date`
      and `year`). Use `extraTimeline` for events without a case page.
-   - Reading Room items list the `cases` they belong to.
+   - Sources (the readingRoom list) items list the `cases` they belong to.
+   - Document Room files live in `documents`. See the Twining memo for the
+     pattern; `cases` links a file to its exhibits.
    - Episodes in `episodes` list research by case id or by any link.
    Commas matter: every item ends with a comma except where shown.
    ===================================================================== */
@@ -1444,37 +1446,88 @@ window.FIELD_GUIDE = {
   ],
 
   /* ------------------------------------------------------------------
-     FIELD NOTES: the skeptic's toolkit
+     DOCUMENT ROOM: guided walkthroughs of real files
+     Each note `n` matches a pin with data-pin="n" on the document.
+     Use `pages: [{ src: "docs/file.jpg", alt: "...", pins: [{ n: 1, x: 40, y: 12 }] }]`
+     for scanned pages (x and y are percentages across and down the page).
+     Without pages, the `facsimile` layout is shown instead.
      ------------------------------------------------------------------ */
-  toolkit: [
-    { title: "Separate the report from the event", text: "A report is what someone said happened. The event is what happened. Most of the history of UFOs is the history of reports." },
-    { title: "Find the earliest account", text: "Stories grow. Compare what witnesses said in the first days with what they said years later. Roswell's alien bodies appear 30 years after the debris." },
-    { title: "Ask what the sensor can see", text: "Infrared cameras, night vision and radar each have quirks. A triangle can be a lens shape, and a fast object can be parallax." },
-    { title: "'Unidentified' means not enough data", text: "An unknown case is a case without a solution yet. It is not evidence for any one explanation, including aliens." },
-    { title: "Check who released it and why", text: "Agencies, promoters and researchers all have reasons to release material. Note the source before you judge the content." },
-    { title: "Look for the boring answer first", text: "Planets, balloons, satellites, flares, birds and secret aircraft explain most cases. When they truly fail, the case gets interesting." },
-    { title: "Stay curious, not gullible", text: "Debunking every case is as lazy as believing every case. The friendly skeptic stays open and asks for evidence." }
+  documents: [
+    {
+      id: "twining-memo",
+      number: 1,
+      title: "The Twining Memo",
+      year: 1947,
+      teaser: "A general is asked whether the flying discs are real. His answer is one of the most quoted pages in UFO history, and one of the most misread.",
+      skills: "dates, routing lines, copies, hedges",
+      intro: "Three months after Kenneth Arnold's sighting, the general in charge of the Air Force's engineering and intelligence center was asked a simple question: are the flying discs real? This is his answer.",
+      facts: [
+        { label: "Written by", value: "Lt. Gen. Nathan F. Twining, Air Materiel Command" },
+        { label: "Sent to", value: "Brig. Gen. George Schulgen, Air Force intelligence" },
+        { label: "Date", value: "23 September 1947" },
+        { label: "Length", value: "One letter, four numbered paragraphs" }
+      ],
+      caption: "Layout of the memo. The header and highlighted line are quoted from it; grey lines stand in for the rest until the scanned page is added. Tap a pin or a note.",
+      startNote: 4,
+      facsimile: `
+        <span class="dr-copy">COPY</span>
+        <button class="dr-pin r" style="top:12px" data-pin="3" aria-pressed="false" aria-label="Note 3">3</button>
+        <div class="dr-center">HEADQUARTERS<br>AIR MATERIEL COMMAND<br>WRIGHT FIELD, DAYTON, OHIO</div>
+        <div class="dr-gap"></div>
+        <div style="text-align:right">23 September 1947</div>
+        <button class="dr-pin l" style="top:116px" data-pin="1" aria-pressed="false" aria-label="Note 1">1</button>
+        <div class="dr-gap"></div>
+        <div class="dr-row"><span>SUBJECT:</span><span>AMC Opinion Concerning "Flying Discs"</span></div>
+        <div class="dr-gap"></div>
+        <div class="dr-row" style="position:relative"><span>TO:</span><span>Commanding General<br>Army Air Forces<br>Washington 25, D. C.<br>ATTENTION: Brig. General George Schulgen<br>AC/AS-2</span>
+          <button class="dr-pin l" style="top:62px" data-pin="2" aria-pressed="false" aria-label="Note 2">2</button></div>
+        <div class="dr-para"><span class="dr-num">1.</span><span class="dr-sum">[What the opinion is based on]</span><span class="dr-ln l"></span><span class="dr-ln l"></span><span class="dr-ln m"></span></div>
+        <div class="dr-para"><span class="dr-num">2.</span><span class="dr-sum">[The command's opinions, items a–h]</span><br>
+          <span style="position:relative;display:block">a. <span class="dr-mark">The phenomenon reported is something real and not visionary or fictitious.</span>
+            <button class="dr-pin l" style="top:-2px;left:-62px" data-pin="4" aria-pressed="false" aria-label="Note 4">4</button></span>
+          <span class="dr-ln l"></span><span class="dr-ln m"></span>
+          <span style="position:relative;display:block"><span class="dr-sum">c. [Some incidents may be natural, such as meteors]</span>
+            <button class="dr-pin l" style="top:-6px;left:-62px" data-pin="5" aria-pressed="false" aria-label="Note 5">5</button></span>
+          <span class="dr-ln l"></span><span class="dr-ln l"></span><span class="dr-ln s"></span>
+          <span style="position:relative;display:block"><span class="dr-sum">h. [Things to weigh: a secret U.S. project, no crash-recovered evidence, a foreign design]</span>
+            <button class="dr-pin l" style="top:-6px;left:-62px" data-pin="6" aria-pressed="false" aria-label="Note 6">6</button></span>
+          <span class="dr-ln l"></span><span class="dr-ln m"></span></div>
+        <div class="dr-para" style="position:relative"><span class="dr-num">3.</span><span class="dr-sum">[Recommends a priority study with a code name and a security classification]</span>
+          <button class="dr-pin r" style="top:-4px" data-pin="7" aria-pressed="false" aria-label="Note 7">7</button>
+          <span class="dr-ln l"></span><span class="dr-ln l"></span><span class="dr-ln m"></span></div>
+        <div class="dr-para"><span class="dr-num">4.</span><span class="dr-sum">[Meanwhile, keep investigating with current resources]</span><span class="dr-ln m"></span></div>
+        <div class="dr-gap"></div>
+        <div style="margin-left:52%;position:relative">N. F. TWINING<br>Lieutenant General, U.S.A.<br>Commanding
+          <button class="dr-pin r" style="top:6px;right:-24px" data-pin="8" aria-pressed="false" aria-label="Note 8">8</button></div>`,
+      notes: [
+        { n: 1, title: "Check the date first", skill: "place it in time", text: "23 September 1947 is three months after Kenneth Arnold's sighting and about eleven weeks after the Roswell press release. Whatever the Air Force knew about Roswell, this general knew it by now." },
+        { n: 2, title: "Read the \"ATTENTION\" line", skill: "follow the routing", text: "The letter goes to the head of the Army Air Forces, but the ATTENTION line names who actually asked: Brig. Gen. Schulgen of AC/AS-2, the Air Staff's intelligence office. Twining is answering an intelligence question, not making an announcement." },
+        { n: 3, title: "This is a copy", skill: "know which copy you have", text: "Most people know this memo from the version printed in the 1969 Condon Report, stamped COPY. Stamps and markings tell you which copy you're holding and where it came from, which matters when people argue over wording." },
+        { n: 4, title: "The famous line", skill: "read the next sentence too", text: "\"Something real and not visionary or fictitious\" means people were seeing actual objects, not imagining them. It does not say what the objects were. Notice how often this sentence is quoted on its own." },
+        { n: 5, title: "The part nobody quotes", skill: "look for the hedges", text: "A few lines later, the same paragraph allows that some sightings may be natural events such as meteors. The memo keeps ordinary explanations on the table." },
+        { n: 6, title: "\"No physical evidence\"", skill: "notice what's missing", text: "Item h lists what to weigh: a secret American project, a foreign design, and the lack of any crash-recovered objects. Skeptics point to this when discussing Roswell. Believers reply that a memo at this level wouldn't mention a secret recovery." },
+        { n: 7, title: "What happened next", skill: "follow the paper trail", text: "Twining asks for a formal study with a priority, a classification and a code name. The result was Project Sign in early 1948, the first official U.S. UFO investigation and the ancestor of Project Blue Book." },
+        { n: 8, title: "Who signed it", skill: "weigh the author", text: "Nathan Twining went on to become Air Force Chief of Staff and then Chairman of the Joint Chiefs. This was a senior officer putting his name to a cautious, practical opinion." }
+      ],
+      says: ["People are seeing real objects, not imagining them.", "Some sightings may be natural, such as meteors.", "A secret U.S. project or a foreign design should be considered.", "There is no crash-recovered physical evidence.", "The Air Force should open a formal study."],
+      claims: ["The military privately admitted saucers were alien craft.", "It proves a cover-up began in 1947.", "The \"no physical evidence\" line was a cover for Roswell."],
+      why: "It shows the Air Force took the reports seriously from the start, mostly out of concern about Soviet technology. It started the paper trail that led to Projects Sign, Grudge and Blue Book.",
+      find: {
+        text: "The memo is reprinted as Appendix R of the 1969 Condon Report, \"Scientific Study of Unidentified Flying Objects.\"",
+        steps: ["Open Appendix R of the Condon Report.", "Read paragraph 2 all the way through, items a to h.", "Compare it with this page: which lines get quoted, and which don't?"],
+        url: "https://www.project1947.com/shg/condon/appndx-r.html",
+        label: "Open Appendix R"
+      },
+      cases: ["twining-memo", "kenneth-arnold", "roswell", "estimate-of-situation", "project-blue-book"]
+    }
   ],
 
-  glossary: [
-    { term: "UFO", def: "Unidentified Flying Object. Coined by the Air Force's Edward Ruppelt in the early 1950s." },
-    { term: "UAP", def: "Originally Unidentified Aerial Phenomena, now Unidentified Anomalous Phenomena, covering air, space and sea." },
-    { term: "AARO", def: "All-domain Anomaly Resolution Office, the Pentagon's UAP office since 2022." },
-    { term: "PURSUE", def: "Presidential Unsealing and Reporting System for UAP Encounters, the 2026 file release program." },
-    { term: "Project Blue Book", def: "The Air Force's UFO investigation from 1952 to 1969." },
-    { term: "Close encounter", def: "Hynek's scale: CE1 is a close sighting, CE2 leaves physical traces, CE3 involves beings." },
-    { term: "FOIA", def: "Freedom of Information Act. The law that lets the public request government records." },
-    { term: "FLIR", def: "Forward-Looking Infrared, a heat-sensing camera on military aircraft." },
-    { term: "Parallax", def: "The apparent movement of a distant object caused by the motion of the viewer." },
-    { term: "Temperature inversion", def: "Warm air over cool air that can bend radar and light and create false targets." },
-    { term: "Fireball", def: "An extra-bright meteor, often colored and fragmenting. Behind many 'craft with windows.'" },
-    { term: "Project Mogul", def: "A secret 1940s balloon program to detect Soviet nuclear tests. The source of the Roswell debris." },
-    { term: "Skyhook", def: "Large Navy research balloons of the late 1940s and 1950s, often mistaken for craft." },
-    { term: "Transmedium", def: "A claimed ability to move between air, space and water." },
-    { term: "Bokeh", def: "Out-of-focus light blur that takes the shape of a camera's aperture." },
-    { term: "Hypnotic regression", def: "Recovering memories under hypnosis. Known to produce false memories." },
-    { term: "Crash retrieval", def: "The claim that governments have recovered non-human craft." },
-    { term: "Non-human intelligence (NHI)", def: "A term used in recent legislation and testimony for intelligent beings not from Earth." }
+  upcomingDocuments: [
+    "The Roswell FBI Teletype (1947)",
+    "The Robertson Panel Report (1953)",
+    "A Project Blue Book case file",
+    "The Halt Memo (1980)",
+    "The ODNI Preliminary Assessment (2021)"
   ],
 
   /* ------------------------------------------------------------------

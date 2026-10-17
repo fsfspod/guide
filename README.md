@@ -47,3 +47,7 @@ Add an entry to `extraTimeline` with `year`, `date`, `title`, `text`, and `link`
 - Every item in a list needs a comma after it.
 - Text goes inside double quotes. If your text contains a double quote, use a single quote or `\"` instead.
 - `year` is a plain number: `year: 1952`, not `year: "1952"`.
+
+### Add a Document Room file
+
+Copy the Twining memo block inside `documents: [ ... ]`. Each guide note has a number `n` that matches a pin on the document. To use a scanned page, add the image to the repository (for example `docs/roswell-teletype.jpg`) and list it under `pages` with each pin's position as percentages across (`x`) and down (`y`) the page. Remove a title from `upcomingDocuments` once its file is live.
