@@ -49,6 +49,7 @@ window.FIELD_GUIDE = {
     { id: "hoaxes",     title: "Hoaxes & Hard Lessons",   blurb: "Fakes, cons and honest mistakes, and how each one was caught." },
     { id: "world",      title: "Around the World",        blurb: "Cases from outside the United States and the agencies that studied them." },
     { id: "science",    title: "Science & the Skeptics",  blurb: "Instruments, studies and the explanations that solved many cases." },
+    { id: "space",      title: "Space & Astronauts",      blurb: "What astronauts saw, what the cameras caught, and what it turned out to be." },
     { id: "uap",        title: "The UAP Era",             blurb: "From the 2017 videos to the 2026 file releases: the modern chapter." }
   ],
 
@@ -1150,7 +1151,7 @@ window.FIELD_GUIDE = {
         { title: "GEIPAN case archive (CNES)", url: "https://www.cnes-geipan.fr" },
         { title: "GEIPAN (Wikipedia overview)", url: "https://en.wikipedia.org/wiki/GEIPAN" }
       ],
-      related: ["trans-en-provence", "cometa"]
+      related: ["trans-en-provence", "cometa", "cefaa", "cridovni"]
     },
 
     /* ---------- 2000s ---------- */
@@ -1418,7 +1419,7 @@ window.FIELD_GUIDE = {
       title: "NASA's UAP Study",
       date: "2022–2023", year: 2023,
       place: "NASA Headquarters",
-      galleries: ["science", "government", "uap"],
+      galleries: ["science", "government", "uap", "space"],
       status: "record",
       teaser: "A panel of scientists asks how to study UAP properly. The answer: better data.",
       story: "NASA formed an independent study team led by astrophysicist David Spergel, held a public meeting on May 31, 2023, and released its report on September 14, 2023. It found no evidence of extraterrestrial origin, called for better calibrated data and less stigma, and recommended using satellites and crowdsourcing. NASA named a director of UAP research.",
@@ -1548,7 +1549,272 @@ window.FIELD_GUIDE = {
         { title: "PURSUE: Department of War UAP file releases", url: "https://www.war.gov/UFO/" },
         { title: "National Archives UAP Records Collection", url: "https://www.archives.gov/research/topics/uaps" }
       ],
-      related: ["tremonton", "green-fireballs", "disclosure-act", "hearing-2025"]
+      related: ["tremonton", "green-fireballs", "apollo-lunar-photos", "gemini-7", "disclosure-act", "hearing-2025"]
+    },
+    /* ---------- SPACE & ASTRONAUTS ---------- */
+    {
+      id: "glenn-fireflies",
+      title: "John Glenn's Fireflies",
+      date: "February 20, 1962", year: 1962,
+      place: "Earth orbit, aboard Friendship 7",
+      galleries: ["space", "science"],
+      status: "explained",
+      teaser: "The first American to orbit Earth sees thousands of glowing specks dancing around his capsule.",
+      story: "As Friendship 7 came out of the night side of its orbit, John Glenn reported thousands of tiny, luminous particles drifting around the capsule. He called them fireflies and told Mission Control he had never seen anything like it. The sighting fed early speculation about life in space. Three months later, astronaut Scott Carpenter bumped the inside wall of his Aurora 7 capsule and set off the same shower of glowing flecks.",
+      documented: ["Glenn's description is in the mission's air-to-ground transcript.", "Carpenter reproduced the effect on Aurora 7 in May 1962 by striking the capsule wall."],
+      claimed: ["Living organisms or something unknown in orbit."],
+      explanation: "Frost and ice flakes breaking off the capsule's outer surface and catching the sunrise. Carpenter called them 'frostflies.'",
+      sources: [
+        { title: "Exploration Mysteries: John Glenn and the 'Fireflies' in Space (ExplorersWeb)", url: "https://explorersweb.com/exploration-mysteries-john-glenn-and-the-fireflies-in-space/" },
+        { title: "The Mystery of John Glenn's Fireflies Returns (Universe Today)", url: "https://www.universetoday.com/articles/the-mystery-of-john-glenns-fireflies-returns" }
+      ],
+      related: ["gemini-4", "gemini-7", "sts-48"]
+    },
+    {
+      id: "gemini-4",
+      title: "McDivitt's Gemini 4 Object",
+      date: "June 1965", year: 1965,
+      place: "Earth orbit, over Hawaii",
+      galleries: ["space"],
+      status: "likely",
+      teaser: "An astronaut photographs a cylinder with an arm sticking out of it. The photo NASA released showed something else.",
+      story: "On Gemini 4, while Ed White slept, command pilot James McDivitt saw a white, cylindrical object with what looked like a pole or arm sticking out of it. He took a few photographs. After the flight, a frame showing a bright tadpole-shaped streak was released as the object, but it turned out to be sunlight glaring on the window. McDivitt said for the rest of his life that he saw something real, but probably a piece of man-made debris, not a spacecraft from elsewhere.",
+      documented: ["McDivitt's own accounts and interviews.", "NASA's mission photography, including the frame later identified as window glare."],
+      claimed: ["A structured alien craft photographed by an astronaut."],
+      explanation: "Space historian James Oberg argues it was most likely the spent Titan II second stage flying nearby, made hard to recognize by glare, dirty windows and viewing angle. McDivitt agreed it was probably man-made.",
+      sources: [
+        { title: "The Gemini 4 'UFO' (James Oberg)", url: "https://jamesoberg.com/gemini4.html" },
+        { title: "McDivitt's explanation for his Gemini 4 object (PDF, James Oberg)", url: "https://www.jamesoberg.com/mcdivitt's_explanation_for_his_Gemini-4_object.pdf" }
+      ],
+      related: ["gemini-7", "glenn-fireflies", "apollo-11-light"]
+    },
+    {
+      id: "gemini-7",
+      title: "The Gemini 7 'Bogey'",
+      date: "December 1965", year: 1965,
+      place: "Earth orbit",
+      galleries: ["space", "uap"],
+      status: "likely",
+      teaser: "Frank Borman reports a 'bogey' and hundreds of little particles. The transcript reappeared in the 2026 file release.",
+      story: "During the two-week Gemini 7 mission, Frank Borman radioed that he had a 'bogey' in sight, along with a field of hundreds of small particles. The word comes from military pilot slang for an unidentified aircraft, and UFO writers later held it up as an astronaut sighting. The transcript was included in the first PURSUE release in May 2026.",
+      documented: ["The air-to-ground transcript.", "Its inclusion in PURSUE Release 01 (May 8, 2026)."],
+      claimed: ["NASA astronauts encountered an unknown craft."],
+      explanation: "James Oberg's analysis of the orbits points to 'a brighter-than-average piece of booster-associated debris,' most likely the rocket stage that launched them. Borman himself later said it was not a UFO.",
+      sources: [
+        { title: "Pentagon releases UFO files that go back to the Apollo moon missions (Universe Today, May 2026)", url: "https://www.universetoday.com/articles/pentagon-releases-ufo-files-that-go-back-to-the-apollo-moon-missions" },
+        { title: "PURSUE: Department of War UAP file releases", url: "https://www.war.gov/UFO/" }
+      ],
+      related: ["gemini-4", "apollo-lunar-photos", "pursue-2026"]
+    },
+    {
+      id: "apollo-11-light",
+      title: "Apollo 11's Traveling Light",
+      date: "July 1969", year: 1969,
+      place: "On the way to the Moon",
+      galleries: ["space", "hoaxes"],
+      status: "likely",
+      teaser: "Buzz Aldrin sees a light pacing the spacecraft. A science fiction writer's hoax made the story much bigger.",
+      story: "On the way to the Moon, the Apollo 11 crew saw a light out the window that seemed to travel alongside them. They asked Mission Control where their discarded rocket stage was and were told it was thousands of miles away. Aldrin talked about the sighting in later interviews and said his words were often taken out of context. Separately, a fabricated story that Neil Armstrong saw alien craft on the lunar surface spread widely; it has been traced to a hoax by science fiction writer Otto Binder.",
+      documented: ["The crew's sighting and their question to Mission Control.", "Aldrin's later interviews about it."],
+      claimed: ["Alien craft followed Apollo 11 to the Moon.", "Armstrong reported aliens watching from a crater."],
+      explanation: "The most likely candidates are panels that separated from the rocket when the spacecraft pulled away, which would have traveled along a similar path. Aldrin has said it was probably one of them. The Armstrong quote is a hoax.",
+      sources: [
+        { title: "UFO sightings in outer space (Wikipedia overview)", url: "https://en.wikipedia.org/wiki/UFO_sightings_in_outer_space" }
+      ],
+      related: ["gemini-4", "apollo-lunar-photos", "gemini-7"]
+    },
+    {
+      id: "apollo-lunar-photos",
+      title: "The Apollo 12 & 17 Photos in the 2026 Files",
+      date: "1969 and 1972, released May 2026", year: 1972,
+      place: "The lunar surface",
+      galleries: ["space", "uap"],
+      status: "unresolved",
+      teaser: "The Pentagon's first PURSUE release circled bright specks in photos taken on the Moon.",
+      story: "PURSUE Release 01 included NASA photographs from the Apollo 12 and Apollo 17 lunar surface missions, with enlarged insets highlighting bright spots or streaks in the black sky. One Apollo 17 image of a lunar mountain range shows three light-colored specks in a rough triangle. The release presented them as unresolved. Other material in later releases mentioned 'green orbs' during Apollo 12.",
+      documented: ["The photographs are genuine NASA images.", "They were included and highlighted in PURSUE Release 01 (May 8, 2026)."],
+      claimed: ["Objects were watching the Moon landings."],
+      explanation: "No analysis has been published with the release. Specks and streaks in film photography are often dust, scratches, lens reflections or debris near the camera. The original high-resolution scans are public, so these can be checked.",
+      sources: [
+        { title: "Pentagon releases UFO files that go back to the Apollo moon missions (Universe Today, May 2026)", url: "https://www.universetoday.com/articles/pentagon-releases-ufo-files-that-go-back-to-the-apollo-moon-missions" },
+        { title: "PURSUE: Department of War UAP file releases", url: "https://www.war.gov/UFO/" }
+      ],
+      related: ["apollo-11-light", "gemini-7", "pursue-2026"]
+    },
+    {
+      id: "sts-48",
+      title: "The STS-48 'Zigzag' Video",
+      date: "September 15, 1991", year: 1991,
+      place: "Space Shuttle Discovery, in orbit",
+      galleries: ["space", "science"],
+      status: "explained",
+      teaser: "Shuttle video shows dots drifting, then darting away after a flash. It became a UFO classic.",
+      story: "A camera in Discovery's payload bay recorded several small lights drifting near the Earth's horizon. After a flash, one of the dots appears to change direction sharply and others speed away. The clip spread widely on television in the 1990s as proof of craft maneuvering near the shuttle.",
+      documented: ["NASA's downlinked video and the shuttle's flight records."],
+      claimed: ["Craft dodging a weapon or reacting to the shuttle."],
+      explanation: "James Oberg matched the flash to a steering jet firing as the autopilot corrected a slow drift. The dots are small pieces of debris and ice near the shuttle, lit as it came out of Earth's shadow, and the jet's exhaust pushed them in new directions.",
+      sources: [
+        { title: "STS-48 'UFO' video explained (James Oberg)", url: "https://jamesoberg.com/sts48.html" }
+      ],
+      related: ["glenn-fireflies", "iss-lights", "gimbal-gofast"]
+    },
+    {
+      id: "iss-lights",
+      title: "Lights from the Space Station",
+      date: "2005 – 2020", year: 2005,
+      place: "International Space Station",
+      galleries: ["space"],
+      status: "explained",
+      teaser: "Astronauts on the ISS report and film strange lights. Each one has a down-to-earth answer.",
+      story: "Life on the space station has produced a steady trickle of sightings. During a 2005 spacewalk Leroy Chiao saw a line of lights below him. In 2013 Christopher Cassidy reported an object near a cargo ship. In 2020 cosmonaut Ivan Vagner posted a video of 'space guests' crossing the sky.",
+      documented: ["The astronauts' own posts and interviews."],
+      claimed: ["Craft observing the space station."],
+      explanation: "Chiao later identified his lights as fishing boats hundreds of miles below. Russian controllers identified Cassidy's object as an antenna cover from the Zvezda module. Vagner's lights were later matched to satellites.",
+      sources: [
+        { title: "UFO sightings in outer space (Wikipedia overview)", url: "https://en.wikipedia.org/wiki/UFO_sightings_in_outer_space" }
+      ],
+      related: ["sts-48", "kaikoura", "nasa-uap-study"]
+    },
+
+    /* ---------- OFFICIAL RECORDS AROUND THE WORLD ---------- */
+    {
+      id: "petrozavodsk",
+      title: "The Petrozavodsk 'Jellyfish'",
+      date: "September 20, 1977", year: 1977,
+      place: "Petrozavodsk, Soviet Union (now Russia)",
+      galleries: ["world", "sightings", "government"],
+      status: "explained",
+      teaser: "A glowing jellyfish hangs over a Soviet city before dawn and sets off a state UFO program.",
+      story: "Before dawn, residents of Petrozavodsk in Karelia saw a huge glowing object, described as a jellyfish, spreading rays of light over the city before it faded. The Soviet news agency TASS reported it, which was unusual, and the sighting is credited with prompting the Soviet Academy of Sciences and the military to start formal research into anomalous phenomena.",
+      documented: ["TASS and Soviet newspaper coverage at the time.", "Later Soviet research programs into anomalous phenomena."],
+      claimed: ["An alien craft over a Soviet city."],
+      explanation: "The time and appearance match the launch of the Kosmos 955 satellite from the secret Plesetsk launch site, whose exhaust plume spread out in sunlight high above the dark ground. The launch site's existence was secret, which helped keep the mystery alive.",
+      sources: [
+        { title: "Kosmos 955 (Wikipedia overview)", url: "https://en.wikipedia.org/wiki/Kosmos_955" }
+      ],
+      related: ["ghost-rockets", "phoenix-lights", "kaikoura"]
+    },
+    {
+      id: "operacao-prato",
+      title: "Operação Prato",
+      date: "October – December 1977", year: 1977,
+      place: "Colares island, Pará, Brazil",
+      galleries: ["world", "military", "encounters", "government"],
+      status: "unresolved",
+      teaser: "Brazil's Air Force sends a team to a river island where residents say lights are attacking them.",
+      story: "Residents of Colares and nearby towns in the Amazon state of Pará reported lights they called 'chupa-chupa' (sucker) that they said left marks on their bodies. Families held all-night vigils and lit fires to keep them away. At the mayor's request, the Brazilian Air Force sent a team under Captain Uyrangê Hollanda, which spent weeks photographing and logging lights. In 1997 Hollanda gave a long interview to ufologists describing what his men saw. He died three months later, which drew conspiracy theories.",
+      documented: ["The Air Force's reports and photographs, now held by Brazil's National Archives.", "Medical and press accounts of residents' injuries."],
+      claimed: ["Lights attacked and drained blood from villagers.", "The military recovered evidence it never released."],
+      explanation: "The operation closed after concluding it had found nothing unusual. Fear spread quickly in a remote, poor area, and some injuries may have had ordinary causes, but the many reports and photos have never been fully explained.",
+      sources: [
+        { title: "Operação Prato (Wikipedia overview)", url: "https://en.wikipedia.org/wiki/Opera%C3%A7%C3%A3o_Prato" },
+        { title: "Colares 1977: military documents and reports (Patrick Gross archive)", url: "https://ufology.patrickgross.org/htm/colaresmilitary.htm" }
+      ],
+      related: ["brazil-1986", "cash-landrum", "kelly-hopkinsville"]
+    },
+    {
+      id: "kaikoura",
+      title: "The Kaikōura Lights",
+      date: "December 21 and 31, 1978", year: 1978,
+      place: "Off Kaikōura, New Zealand",
+      galleries: ["world", "military", "sightings"],
+      status: "likely",
+      teaser: "Cargo pilots see lights off the coast, radar tracks targets, and a TV crew films them.",
+      story: "On December 21, Safe Air pilots flying an Argosy freighter reported lights near their aircraft, and Wellington air traffic control tracked unknown targets on radar. Ten days later an Australian TV crew led by reporter Quentin Fogarty flew the same route and filmed bright lights on 16mm film for about fifteen minutes while the plane's own radar showed returns. The footage was broadcast around the world.",
+      documented: ["The film, audio recording and crew accounts.", "Investigations by the Air Force, police and Carter Observatory, now at the National Archives in Wellington."],
+      claimed: ["Craft followed the aircraft along the coast."],
+      explanation: "New Zealand's scientists and Defence officials favored the powerful lights of squid fishing boats, reflected by clouds and distorted by weather, along with Venus. A 2000 analysis supported the squid boats. American physicist Bruce Maccabee argued at least part of it stayed unexplained.",
+      sources: [
+        { title: "Kaikōura lights (Wikipedia overview)", url: "https://en.wikipedia.org/wiki/Kaik%C5%8Dura_lights" },
+        { title: "Ghost Squid Boats in the Sky (NZ Skeptics, 2000)", url: "https://articles.skeptics.nz/2000/11/01/ghost-squid-boats-in-the-sky" }
+      ],
+      related: ["valentich", "jal-1628", "petrozavodsk"]
+    },
+    {
+      id: "cridovni",
+      title: "Uruguay's Air Force UFO Commission",
+      date: "1979 – present", year: 1979,
+      place: "Montevideo, Uruguay",
+      galleries: ["world", "government"],
+      status: "record",
+      teaser: "One of the longest-running official UFO investigation units in the world.",
+      story: "Uruguay's Air Force set up the Comisión Receptora e Investigadora de Denuncias de Objetos Voladores No Identificados (CRIDOVNI) in 1979 to collect and investigate reports. It continues to take public reports and issue findings, and most of its cases are resolved as aircraft, satellites, planets and other ordinary objects.",
+      documented: ["The commission's public statements and press coverage in Uruguay."],
+      claimed: [],
+      explanation: "A quiet example of a government treating UFO reports as routine work for decades.",
+      sources: [
+        { title: "Commission statement on recent reports (Montevideo Portal, in Spanish)", url: "https://www.montevideo.com.uy/Noticias/Comision-Investigadora-de-Denuncias-de-OVNI-aclara-que-posibles-sucesos-no-son-reales--uc795107" }
+      ],
+      related: ["cefaa", "geipan", "peru-ufo-office"]
+    },
+    {
+      id: "brazil-1986",
+      title: "Brazil's Official UFO Night",
+      date: "May 19, 1986", year: 1986,
+      place: "São Paulo, Rio de Janeiro, Minas Gerais and Goiás, Brazil",
+      galleries: ["world", "military", "government"],
+      status: "unresolved",
+      teaser: "Radar tracks 21 objects, five fighter jets scramble, and the Air Minister says he has no explanation.",
+      story: "On the night of May 19, civilian and military witnesses across southeastern Brazil reported lights, and the Air Force's air defense radar tracked targets. Five fighter jets were sent to intercept. Some pilots saw lights the radar didn't register, and the Air Force counted only sightings confirmed both ways. Four days later, Air Minister Brigadier Octávio Moreira Lima told reporters, 'Technically, I would tell you that we have no explanation.'",
+      documented: ["The minister's televised press conference.", "An Air Force report dated June 2, 1986, released in 2009. It described the objects as solid and showing a degree of intelligence.", "Most of the Air Force's UFO files were later moved to Brazil's National Archives."],
+      claimed: ["Brazil's military chased alien craft for hours."],
+      explanation: "No full explanation has been published. Skeptics point to radar effects, bright stars and planets, and the difficulty of pilots judging distant lights at night.",
+      sources: [
+        { title: "Official UFO Night in Brazil (Government of Brazil)", url: "https://www.gov.br/en/government-of-brazil/latest-news/2022/official-ufo-night-in-brazil" }
+      ],
+      related: ["operacao-prato", "belgian-wave", "tehran-1976"]
+    },
+    {
+      id: "cefaa",
+      title: "Chile's CEFAA and the Navy Helicopter Video",
+      date: "1997 – present (video: November 11, 2014)", year: 2014,
+      place: "Chile",
+      galleries: ["world", "military", "government", "science"],
+      status: "explained",
+      teaser: "Chile's official UFO committee releases a Navy video it calls unexplained. Online analysts found the airliner.",
+      story: "Chile's civil aviation authority runs the Committee for the Study of Anomalous Aerial Phenomena (CEFAA), which has investigated reports since the late 1990s. In January 2017 it released infrared and color video taken from a Chilean Navy helicopter in November 2014, showing an object leaving a dark trail over the ocean. After two years of study, the committee said it could not identify the object.",
+      documented: ["The video and CEFAA's statement on its release."],
+      claimed: ["A Navy crew filmed an unknown craft dumping something into the air."],
+      explanation: "Within weeks, analysts at Metabunk matched the timing and direction to Iberia flight IB6830, an Airbus A340 climbing out of Santiago. The bright 'object' is the engines' heat in infrared, and the trail is a contrail. It's a lesson in how an official 'unidentified' can mean 'not yet identified.'",
+      sources: [
+        { title: "Explained: Chilean Navy 'UFO' video (Metabunk)", url: "https://www.metabunk.org/goto/post?id=198276" }
+      ],
+      related: ["mexico-2004", "gimbal-gofast", "cridovni"]
+    },
+    {
+      id: "peru-ufo-office",
+      title: "Peru's Air Force UFO Office",
+      date: "2001 – 2008, reopened 2013", year: 2001,
+      place: "Lima, Peru",
+      galleries: ["world", "government"],
+      status: "record",
+      teaser: "Peru's Air Force opens, closes and reopens an office dedicated to anomalous aerial phenomena.",
+      story: "The Peruvian Air Force created a department to investigate anomalous aerial phenomena in 2001, after a wave of sightings including the Chulucanas case that year. It brought together Air Force personnel with astronomers, sociologists and archaeologists. The office closed a few years later because of administrative problems and was reopened in 2013 after an increase in reports.",
+      documented: ["Air Force announcements and international press coverage in 2001 and 2013."],
+      claimed: [],
+      explanation: "Part of a pattern across Latin America, where several air forces have treated UFO reports as a normal part of their work.",
+      sources: [
+        { title: "Peru's Air Force opens a UFO office (Foreign Policy, 2013)", url: "https://foreignpolicy.com/2013/10/29/perus-air-force-opens-a-ufo-office-and-its-twitter-friendly" }
+      ],
+      related: ["cefaa", "cridovni", "geipan"]
+    },
+    {
+      id: "mexico-2004",
+      title: "The Mexican Air Force Infrared Video",
+      date: "March 5, 2004", year: 2004,
+      place: "Over Campeche, Mexico",
+      galleries: ["world", "military", "science"],
+      status: "explained",
+      teaser: "A drug-surveillance plane films eleven glowing objects on infrared. They didn't move.",
+      story: "A Mexican Air Force surveillance aircraft on an anti-drug patrol recorded a group of bright lights on its infrared camera over the state of Campeche. The crew could not see them with the naked eye, and radar briefly showed targets. Mexico's Defense Ministry allowed the video to be released in May 2004, and it made international headlines as an official UFO video.",
+      documented: ["The infrared video and the crew's account, released with Defense Ministry approval."],
+      claimed: ["Invisible craft surrounded a military aircraft."],
+      explanation: "Researchers matched the lights to gas flares burning on oil platforms in the Cantarell offshore field, far over the horizon. Infrared cameras pick up their heat even when the eye can't see them. The 'objects' kept a fixed pattern because they were fixed.",
+      sources: [
+        { title: "Mexican Air Force UFO video: oil rig flares (Metabunk)", url: "https://www.metabunk.org/mexican-ufo-video.t10837/" },
+        { title: "Arizona Republic, May 2004: news coverage (transcription)", url: "https://ufologie.patrickgross.org/press/arizonarepublic13may2004.htm" }
+      ],
+      related: ["cefaa", "gimbal-gofast", "phoenix-lights"]
     }
   ],
 

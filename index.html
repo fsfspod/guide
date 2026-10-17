@@ -476,7 +476,7 @@ a.tl-item:hover { border-color: var(--mustard); }
     const pickable = cases.filter(c => c.status !== "record");
     const f = pickable[dayIndex % pickable.length];
     const wings = [
-      { href: "#galleries", room: "Browse by subject", title: "Topics", text: "Nine topics, from crashes and close encounters to hoaxes and the science.", count: `${D.galleries.length} topics · ${cases.length} entries` },
+      { href: "#galleries", room: "Browse by subject", title: "Topics", text: `${D.galleries.length} topics, from crashes and close encounters to space, hoaxes and the science.`, count: `${D.galleries.length} topics · ${cases.length} entries` },
       { href: "#corridor", room: "Browse by year", title: "The Timeline", text: `Walk from ${minYear} to ${maxYear}, era by era, and step into any case on the way.`, count: `${D.eras.length} eras` },
       { href: "#listening-booth", room: "For listeners", title: "Listening Booth", text: `Research lists for each episode of ${D.site.podcastName}.`, count: `${D.episodes.length} episodes` },
       { href: "#sources", room: "Check the originals", title: "Sources", text: "The primary archives: FBI, CIA, National Archives, AARO, NASA, PURSUE and more.", count: `${D.readingRoom.length} archives & documents` }
@@ -536,7 +536,7 @@ a.tl-item:hover { border-color: var(--mustard); }
     <section class="page-head"><div class="wrap">
       <p class="crumbs"><a href="#lobby">Home</a> / Topics</p>
       <h1>Topics</h1>
-      <p class="lede">Nine topics, each built around one kind of story. Many cases appear under more than one topic.</p>
+      <p class="lede">${D.galleries.length} topics, each built around one kind of story. Many cases appear under more than one topic.</p>
     </div></section>
     <section class="section"><div class="wrap">
       <div class="wings">${D.galleries.map(g => {
