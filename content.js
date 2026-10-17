@@ -33,7 +33,8 @@ window.FIELD_GUIDE = {
     tagline: "A self-guided tour of UFOs, UAP and the declassified record.",
     podcastName: "Flying Saucers for the Friendly Skeptic",
     podcastUrl: "/podcast/",
-    lastUpdated: "October 2026"
+    lastUpdated: "October 2026",
+    showDocumentRoom: false   // set to true to bring back the Document Room
   },
 
   /* ------------------------------------------------------------------

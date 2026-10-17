@@ -365,7 +365,6 @@ a.tl-item:hover { border-color: var(--mustard); }
     <nav class="nav" aria-label="Museum wings">
       <a href="#galleries" data-nav="galleries">Galleries</a>
       <a href="#corridor" data-nav="corridor">Timeline</a>
-      <a href="#documents" data-nav="documents">Document Room</a>
       <a href="#listening-booth" data-nav="listening-booth">Listening Booth</a>
       <a href="#sources" data-nav="sources">Sources</a>
     </nav>
@@ -396,6 +395,8 @@ a.tl-item:hover { border-color: var(--mustard); }
 <script>
 (function () {
   const D = window.FIELD_GUIDE;
+  const SHOW_DOCS = !!(D.site && D.site.showDocumentRoom);
+  if (SHOW_DOCS) document.querySelector('.nav a[href="#listening-booth"]').insertAdjacentHTML("beforebegin", '<a href="#documents" data-nav="documents">Document Room</a>');
   const app = document.getElementById("app");
   const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
@@ -477,10 +478,10 @@ a.tl-item:hover { border-color: var(--mustard); }
     const wings = [
       { href: "#galleries", room: "East Wing", title: "The Galleries", text: "Nine subject rooms, from crashes and close encounters to hoaxes and the science.", count: `${D.galleries.length} rooms · ${cases.length} exhibits` },
       { href: "#corridor", room: "The Long Corridor", title: "The Timeline", text: `Walk from ${minYear} to ${maxYear}, era by era, and step into any case on the way.`, count: `${D.eras.length} eras` },
-      { href: "#documents", room: "North Wing", title: "The Document Room", text: "Guided walkthroughs of real declassified documents. Learn to read the stamps, routing lines and redactions yourself.", count: `${D.documents.length} ${D.documents.length === 1 ? "file" : "files"} · more on the way` },
       { href: "#listening-booth", room: "Gift Shop Annex", title: "Listening Booth", text: `Research lists for each episode of ${D.site.podcastName}.`, count: `${D.episodes.length} episodes` },
       { href: "#sources", room: "West Wing", title: "Sources", text: "The primary archives: FBI, CIA, National Archives, AARO, NASA, PURSUE and more.", count: `${D.readingRoom.length} archives & documents` }
     ];
+    if (SHOW_DOCS) wings.splice(2, 0, { href: "#documents", room: "North Wing", title: "The Document Room", text: "Guided walkthroughs of real declassified documents. Learn to read the stamps, routing lines and redactions yourself.", count: `${D.documents.length} ${D.documents.length === 1 ? "file" : "files"} · more on the way` });
     return `
     <section class="hero">
       <div class="wrap">
@@ -591,7 +592,7 @@ a.tl-item:hover { border-color: var(--mustard); }
     const rel = (c.related || []).map(r => byId[r]).filter(Boolean);
     const files = D.readingRoom.filter(s => s.cases.includes(c.id));
     const era = eraOf(c.year);
-    const docs = D.documents.filter(d => d.cases.includes(c.id));
+    const docs = SHOW_DOCS ? D.documents.filter(d => d.cases.includes(c.id)) : [];
     return `
     <section class="exhibit-head"><div class="wrap">
       <p class="crumbs"><a href="#lobby">Lobby</a> / <a href="#gallery-${c.galleries[0]}">${esc(gal[c.galleries[0]].title)}</a> / ${esc(c.cat)}</p>
@@ -867,8 +868,9 @@ a.tl-item:hover { border-color: var(--mustard); }
     else if (h.startsWith("era-")) { pendingEra = h.slice(4); html = viewCorridor(); nav = "corridor"; }
     else if (h === "sources" || h === "reading-room") { html = viewReadingRoom(); nav = "sources"; }
     else if (h === "field-notes") { html = viewLobby(); }
-    else if (h === "documents") { html = viewDocuments(); nav = "documents"; }
-    else if (h.startsWith("doc-")) { html = viewDocument(h.slice(4)); nav = "documents"; }
+    else if (h === "documents" && SHOW_DOCS) { html = viewDocuments(); nav = "documents"; }
+    else if (h.startsWith("doc-") && SHOW_DOCS) { html = viewDocument(h.slice(4)); nav = "documents"; }
+    else if (h === "documents" || h.startsWith("doc-")) { html = viewLobby(); }
     else if (h === "listening-booth") { html = viewBooth(); nav = "listening-booth"; }
     else html = viewMissing();
     app.innerHTML = `<div class="fade-in">${html}</div>`;
@@ -885,7 +887,7 @@ a.tl-item:hover { border-color: var(--mustard); }
   const index = [
     ...cases.map(c => ({ kind: `Exhibit · ${c.cat} · ${c.date}`, title: c.title, text: c.teaser, href: "#case-" + c.id, hay: [c.title, c.place, c.date, c.teaser, c.story, c.explanation, ...(c.documented || []), ...(c.claimed || [])].join(" ") })),
     ...D.readingRoom.map(s => ({ kind: `Sources · ${s.agency}`, title: s.title, text: s.about, href: "#sources", rr: s.id, hay: [s.title, s.agency, s.about].join(" ") })),
-    ...D.documents.map(d => ({ kind: `Document Room · File ${String(d.number).padStart(2, "0")}`, title: d.title, text: d.teaser, href: "#doc-" + d.id, hay: [d.title, d.teaser, d.intro, ...d.notes.map(n => n.title + " " + n.text)].join(" ") })),
+    ...(SHOW_DOCS ? D.documents : []).map(d => ({ kind: `Document Room · File ${String(d.number).padStart(2, "0")}`, title: d.title, text: d.teaser, href: "#doc-" + d.id, hay: [d.title, d.teaser, d.intro, ...d.notes.map(n => n.title + " " + n.text)].join(" ") })),
     ...D.galleries.map(g => ({ kind: `Gallery · ${g.room}`, title: g.title, text: g.blurb, href: "#gallery-" + g.id, hay: g.title + " " + g.blurb }))
   ];
   function runSearch() {
