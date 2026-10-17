@@ -53,7 +53,7 @@ window.FIELD_GUIDE = {
      ERAS: the sections of the timeline corridor
      ------------------------------------------------------------------ */
   eras: [
-    { id: "war",     title: "Foo Fighters & Ghost Rockets", span: "1942–1946", from: 1900, to: 1946, blurb: "Wartime nerves, strange lights and the first official worries." },
+    { id: "war",     title: "Before the Saucers",           span: "1896–1946", from: 1800, to: 1946, blurb: "Phantom airships, wartime nerves and the first official worries." },
     { id: "saucer",  title: "The Flying Saucer Age",        span: "1947–1969", from: 1947, to: 1969, blurb: "A new phrase, a national craze and twenty-two years of Air Force investigation." },
     { id: "close",   title: "Close Encounters",             span: "1970–1999", from: 1970, to: 1999, blurb: "The government steps back. Civilian researchers, abduction stories and Hollywood step in." },
     { id: "secret",  title: "Quiet Programs",               span: "2000–2016", from: 2000, to: 2016, blurb: "Pilot encounters and a small, little-known Pentagon study." },
@@ -64,6 +64,23 @@ window.FIELD_GUIDE = {
      CASES: every exhibit in the museum
      ------------------------------------------------------------------ */
   cases: [
+
+    /* ---------- 1890s ---------- */
+    {
+      id: "airship-wave-1896",
+      title: "The Great Airship Wave",
+      date: "November 1896 – May 1897", year: 1896,
+      place: "California, then across the Midwest and Texas",
+      galleries: ["sightings", "hoaxes"],
+      status: "likely",
+      teaser: "Fifty years before 'flying saucers,' Americans saw mysterious airships.",
+      story: "Starting in Sacramento in November 1896, people reported a lighted, cigar-shaped airship moving slowly across the night sky. By spring 1897 the reports had spread east through Nebraska, Kansas, Iowa, Illinois and Texas. Newspapers printed eyewitness accounts next to tall tales of secret inventors, crash landings and even a dead 'Martian' pilot buried in Aurora, Texas. Nobody had built a working powered airship in America yet.",
+      documented: ["Hundreds of newspaper reports from 1896 and 1897 survive.", "Several newspapers later admitted to printing hoaxes, including fake letters and staged 'airship' lights."],
+      claimed: ["A secret inventor had built a flying machine.", "Visitors from Mars."],
+      explanation: "Historians point to a mix of hoaxes, newspaper competition, kites and balloons carrying lanterns, and bright planets such as Venus. The wave is a useful preview of 1947: people describe what the technology of their era makes them expect.",
+      sources: [{ title: "Library of Congress: Chronicling America (search 'airship 1897')", url: "https://chroniclingamerica.loc.gov" }],
+      related: ["kenneth-arnold", "foo-fighters", "battle-of-los-angeles"]
+    },
 
     /* ---------- 1940s ---------- */
     {
@@ -291,6 +308,36 @@ window.FIELD_GUIDE = {
     },
 
     /* ---------- 1950s ---------- */
+    {
+      id: "contactees",
+      title: "The Contactees",
+      date: "1952 – 1970s", year: 1952,
+      place: "Desert Center and Giant Rock, California",
+      galleries: ["encounters", "hoaxes"],
+      status: "disputed",
+      teaser: "Friendly 'Space Brothers' from Venus, desert conventions and a new kind of UFO believer.",
+      story: "In November 1952, George Adamski said he met a tall, long-haired man from Venus in the desert near Desert Center, California, who warned him about nuclear weapons. His 1953 book 'Flying Saucers Have Landed' became a bestseller. Others followed with their own messages from benevolent aliens. George Van Tassel hosted Giant Rock Spacecraft Conventions in the Mojave Desert from the mid-1950s, drawing thousands of people.",
+      documented: ["The books, lectures and conventions are well documented.", "The FBI kept files on Adamski and other contactees."],
+      claimed: ["Direct meetings and rides with peaceful beings from Venus, Mars and Saturn."],
+      explanation: "Space probes later showed Venus cannot support life as described. Adamski's photos were widely judged to be models. Serious researchers of the time saw the contactees as a problem that made the whole subject look ridiculous.",
+      sources: [{ title: "FBI Vault: search 'Adamski'", url: "https://vault.fbi.gov" }],
+      related: ["civilian-investigators", "betty-barney-hill", "robertson-panel"]
+    },
+    {
+      id: "civilian-investigators",
+      title: "APRO, NICAP and the Civilian Investigators",
+      date: "1952 – 1970s", year: 1956,
+      place: "Wisconsin, Arizona and Washington, D.C.",
+      galleries: ["government", "science"],
+      status: "record",
+      teaser: "Ordinary citizens organize to investigate UFOs and push the government for answers.",
+      story: "Coral and Jim Lorenzen founded the Aerial Phenomena Research Organization (APRO) in 1952. The National Investigations Committee on Aerial Phenomena (NICAP) followed in 1956, and retired Marine Major Donald Keyhoe, author of 'The Flying Saucers Are Real,' became its director. NICAP collected reports, recruited scientists and former officers, and lobbied Congress for hearings, arguing the Air Force was hiding what it knew.",
+      documented: ["NICAP's publications, case files and congressional lobbying are on record.", "The Robertson Panel had recommended monitoring civilian UFO groups, and the CIA's files mention NICAP."],
+      claimed: ["The Air Force was covering up evidence of alien craft."],
+      explanation: "These groups shaped how UFOs were investigated and debated for decades. They kept the subject in front of Congress and helped bring about the 1966 hearing. NICAP declined in the 1970s.",
+      sources: [{ title: "CIA Reading Room: search 'NICAP'", url: "https://www.cia.gov/readingroom/" }],
+      related: ["contactees", "robertson-panel", "hearing-1966", "condon-committee"]
+    },
     {
       id: "mcminnville",
       title: "The McMinnville Photos",
@@ -1355,6 +1402,7 @@ window.FIELD_GUIDE = {
     { year: 1952, date: "March 1952", title: "Project Blue Book begins", text: "Captain Edward Ruppelt takes over the Air Force study and coins the term 'unidentified flying object.'", link: "project-blue-book" },
     { year: 1972, date: "1972", title: "Hynek's 'close encounters' scale", text: "J. Allen Hynek's book 'The UFO Experience' introduces close encounters of the first, second and third kinds.", link: null },
     { year: 1973, date: "1973", title: "CUFOS founded", text: "Hynek founds the Center for UFO Studies, a civilian research group.", link: null },
+    { year: 1993, date: "September 1993", title: "The X-Files premieres", text: "The TV series about two FBI agents investigating the paranormal makes UFOs and government secrets prime-time viewing.", link: null },
     { year: 1977, date: "November 1977", title: "Close Encounters of the Third Kind", text: "Steven Spielberg's film, with Hynek as an adviser, turns UFOs into mainstream culture.", link: null },
     { year: 1978, date: "1978", title: "Roswell returns", text: "Jesse Marcel tells researcher Stanton Friedman the 1947 debris was not from Earth. A legend restarts.", link: "roswell" },
     { year: 2009, date: "December 2009", title: "UK closes its UFO desk", text: "The Ministry of Defence stops investigating reports after more than 50 years.", link: "uk-mod-files" },
@@ -1431,35 +1479,110 @@ window.FIELD_GUIDE = {
 
   /* ------------------------------------------------------------------
      LISTENING BOOTH: research companions for each podcast episode
-     Replace the samples below with your real episodes.
+     Add a block for each new episode. Set listenUrl once it's out.
      ------------------------------------------------------------------ */
   episodes: [
     {
-      number: 1,
-      title: "Sample: The Summer of the Saucer",
-      sample: true,
-      summary: "Kenneth Arnold's sighting and how a newspaper phrase launched a craze.",
+      number: 1, title: "Summer of Saucers", length: "16:10", released: true,
+      summary: "Kenneth Arnold's 1947 sighting gives us the flying saucer, with stops at the 1896 airships, WWII foo fighters and the 1952 Washington radar blips along the way.",
       listenUrl: "/podcast/#episodes",
-      cases: ["kenneth-arnold", "maury-island", "twining-memo"],
-      links: [{ title: "Project Blue Book records", url: "https://www.archives.gov/research/military/air-force/ufos" }]
+      cases: ["kenneth-arnold", "airship-wave-1896", "foo-fighters", "washington-1952", "maury-island", "twining-memo"],
+      links: [
+        { title: "Project Blue Book records (National Archives)", url: "https://www.archives.gov/research/military/air-force/ufos" },
+        { title: "Chronicling America: 1896–97 airship newspaper reports", url: "https://chroniclingamerica.loc.gov" }
+      ]
     },
     {
-      number: 2,
-      title: "Sample: What Fell at Roswell",
-      sample: true,
-      summary: "The press release, the retraction and the legend.",
+      number: 2, title: "What Fell in Roswell?",
+      summary: "Two weeks after Arnold, something comes down in the New Mexico desert. We sort the 1947 record from the story that grew around it.",
       listenUrl: "/podcast/#episodes",
-      cases: ["roswell", "roswell-reports", "aaro-hrr", "alien-autopsy"],
-      links: [{ title: "GAO Roswell report", url: "https://www.gao.gov/products/nsiad-95-187" }]
+      cases: ["roswell", "roswell-reports", "aztec-hoax", "twining-memo"],
+      links: [
+        { title: "Roswell Reports sound recordings (National Archives, NAID 566843)", url: "https://catalog.archives.gov/id/566843" },
+        { title: "FBI Vault: Roswell teletype", url: "https://vault.fbi.gov/Roswell%20UFO" },
+        { title: "GAO report on Roswell records (1995)", url: "https://www.gao.gov/products/nsiad-95-187" }
+      ]
     },
     {
-      number: 3,
-      title: "Sample: The Navy Videos",
-      sample: true,
-      summary: "Tic Tac, Gimbal and GoFast, and what the analysts found.",
+      number: 3, title: "The Book Is Opened",
+      summary: "The Air Force starts keeping files on flying saucers, and Project Blue Book begins.",
       listenUrl: "/podcast/#episodes",
-      cases: ["nimitz", "gimbal-gofast", "nyt-2017", "navy-release-2020"],
-      links: [{ title: "Navy FOIA videos", url: "https://www.navair.navy.mil/foia/documents" }]
+      cases: ["twining-memo", "project-blue-book", "mantell", "chiles-whitted", "estimate-of-situation", "gorman-dogfight", "lubbock-lights", "washington-1952", "robertson-panel"],
+      links: [
+        { title: "Project Blue Book records (National Archives)", url: "https://www.archives.gov/research/military/air-force/ufos" },
+        { title: "CIA Reading Room: Robertson Panel", url: "https://www.cia.gov/readingroom/" }
+      ]
+    },
+    {
+      number: 4, title: "True Believers",
+      summary: "Contactees, saucer clubs and civilian investigators build a movement of their own.",
+      listenUrl: "/podcast/#episodes",
+      cases: ["contactees", "civilian-investigators", "flatwoods", "kelly-hopkinsville", "robertson-panel", "aztec-hoax"],
+      links: [
+        { title: "FBI Vault: search 'Adamski' and 'NICAP'", url: "https://vault.fbi.gov" },
+        { title: "CIA Reading Room: search 'NICAP'", url: "https://www.cia.gov/readingroom/" }
+      ]
+    },
+    {
+      number: 5, title: "Case Closed",
+      summary: "The Condon Report and the end of Project Blue Book in 1969.",
+      listenUrl: "/podcast/#episodes",
+      cases: ["michigan-1966", "hearing-1966", "condon-committee", "symposium-1968", "blue-book-closes", "mcminnville", "rb-47"],
+      links: [
+        { title: "GovInfo: 1966 and 1968 congressional UFO sessions", url: "https://www.govinfo.gov" },
+        { title: "National Archives Catalog: 'Condon Report'", url: "https://catalog.archives.gov" }
+      ]
+    },
+    {
+      number: 6, title: "Close Encounters",
+      summary: "Landings, abductions and the scientist who gave us a scale for them.",
+      listenUrl: "/podcast/#episodes",
+      cases: ["socorro", "betty-barney-hill", "levelland", "kelly-hopkinsville", "pascagoula", "travis-walton", "trans-en-provence"],
+      links: [
+        { title: "Project Blue Book records: Socorro and Levelland", url: "https://www.archives.gov/research/military/air-force/ufos" },
+        { title: "GEIPAN case archive (France)", url: "https://www.cnes-geipan.fr" }
+      ]
+    },
+    {
+      number: 7, title: "Revival",
+      summary: "Decades later, Roswell comes back, and the Air Force goes back to interview the witnesses.",
+      listenUrl: "/podcast/#episodes",
+      cases: ["roswell", "roswell-reports", "mj-12", "alien-autopsy", "aaro-hrr"],
+      links: [
+        { title: "Roswell Reports sound recordings (National Archives, NAID 566843)", url: "https://catalog.archives.gov/id/566843" },
+        { title: "GAO report on Roswell records (1995)", url: "https://www.gao.gov/products/nsiad-95-187" },
+        { title: "FBI Vault: Majestic 12", url: "https://vault.fbi.gov/Majestic%2012" }
+      ]
+    },
+    {
+      number: 8, title: "The Truth Is Out There",
+      summary: "UFOs move into prime time and popular culture.",
+      listenUrl: "/podcast/#episodes",
+      cases: ["bob-lazar", "travis-walton", "gulf-breeze", "alien-autopsy", "phoenix-lights", "cia-haines", "disclosure-project"],
+      links: [
+        { title: "CIA Reading Room: Haines, 'CIA's Role in the Study of UFOs'", url: "https://www.cia.gov/readingroom/" }
+      ]
+    },
+    {
+      number: 9, title: "Confirmation",
+      summary: "Navy cockpit videos, a secret Pentagon program and the 2017 story that changed the conversation.",
+      listenUrl: "/podcast/#episodes",
+      cases: ["nimitz", "aatip", "gimbal-gofast", "nyt-2017", "pyramids-2019", "navy-release-2020", "odni-2021"],
+      links: [
+        { title: "Navy FOIA reading room: UAP videos", url: "https://www.navair.navy.mil/foia/documents" },
+        { title: "ODNI Preliminary Assessment (2021)", url: "https://www.dni.gov/files/ODNI/documents/assessments/Prelimary-Assessment-UAP-20210625.pdf" }
+      ]
+    },
+    {
+      number: 10, title: "Full Disclosure",
+      summary: "Congress holds hearings and witnesses testify under oath. What we know now, and what's still claim.",
+      listenUrl: "/podcast/#episodes",
+      cases: ["hearing-2022", "aaro-founded", "grusch-2023", "disclosure-act", "aaro-hrr", "hearing-2024", "hearing-2025", "aaro-reports", "pursue-2026"],
+      links: [
+        { title: "House Oversight Committee", url: "https://oversight.house.gov" },
+        { title: "AARO official site", url: "https://www.aaro.mil" },
+        { title: "PURSUE: Department of War UAP file releases", url: "https://www.war.gov/UFO/" }
+      ]
     }
   ]
 };
