@@ -38,18 +38,18 @@ window.FIELD_GUIDE = {
   },
 
   /* ------------------------------------------------------------------
-     GALLERIES: the field guide's subject sections
+     GALLERIES: the field guide's topics (shown as Topics on the site)
      ------------------------------------------------------------------ */
   galleries: [
-    { id: "sightings",  title: "Lights in the Sky",       room: "Section A", blurb: "Mass sightings, famous photographs and the nights whole towns looked up." },
-    { id: "military",   title: "Pilots & Radar",          room: "Section B", blurb: "Encounters reported by trained observers, often backed by instruments." },
-    { id: "crashes",    title: "Crashes & Retrievals",    room: "Section C", blurb: "Stories of things that came down, and what was actually found." },
-    { id: "encounters", title: "Close Encounters",        room: "Section D", blurb: "Landings, beings and abduction accounts: the most personal testimony." },
-    { id: "government", title: "The Official Record",     room: "Section E", blurb: "Programs, panels, reports and hearings: what governments did and said." },
-    { id: "hoaxes",     title: "Hoaxes & Hard Lessons",   room: "Section F", blurb: "Fakes, cons and honest mistakes, and how each one was caught." },
-    { id: "world",      title: "Around the World",        room: "Section G", blurb: "Cases from outside the United States and the agencies that studied them." },
-    { id: "science",    title: "Science & the Skeptics",  room: "Section H", blurb: "Instruments, studies and the explanations that solved many cases." },
-    { id: "uap",        title: "The UAP Era",             room: "Section I", blurb: "From the 2017 videos to the 2026 file releases: the modern chapter." }
+    { id: "sightings",  title: "Lights in the Sky",       blurb: "Mass sightings, famous photographs and the nights whole towns looked up." },
+    { id: "military",   title: "Pilots & Radar",          blurb: "Encounters reported by trained observers, often backed by instruments." },
+    { id: "crashes",    title: "Crashes & Retrievals",    blurb: "Stories of things that came down, and what was actually found." },
+    { id: "encounters", title: "Close Encounters",        blurb: "Landings, beings and abduction accounts: the most personal testimony." },
+    { id: "government", title: "The Official Record",     blurb: "Programs, panels, reports and hearings: what governments did and said." },
+    { id: "hoaxes",     title: "Hoaxes & Hard Lessons",   blurb: "Fakes, cons and honest mistakes, and how each one was caught." },
+    { id: "world",      title: "Around the World",        blurb: "Cases from outside the United States and the agencies that studied them." },
+    { id: "science",    title: "Science & the Skeptics",  blurb: "Instruments, studies and the explanations that solved many cases." },
+    { id: "uap",        title: "The UAP Era",             blurb: "From the 2017 videos to the 2026 file releases: the modern chapter." }
   ],
 
   /* ------------------------------------------------------------------

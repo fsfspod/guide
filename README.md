@@ -26,13 +26,13 @@ Copy any block inside `cases: [ ... ]` (from `{` to the matching `},`), paste it
 
 - `id`: unique, lowercase, dashes only (e.g. `"lake-michigan-1994"`)
 - `title`, `date`, `year` (a number, no quotes), `place`
-- `galleries` (the sections it appears in): one or more of `sightings`, `military`, `crashes`, `encounters`, `government`, `hoaxes`, `world`, `science`, `uap`
+- `galleries` (the topics it appears under): one or more of `sightings`, `military`, `crashes`, `encounters`, `government`, `hoaxes`, `world`, `science`, `uap`
 - `status`: one of `explained`, `likely`, `unresolved`, `disputed`, `hoax`, `record`
 - `teaser`, `story`, `documented`, `claimed`, `explanation`
 - `sources`: `{ title: "...", url: "https://..." }`
 - `related`: ids of other cases
 
-The case appears automatically in its sections, on the timeline and in search, and gets a catalog number.
+The case appears automatically under its topics, on the timeline and in search, and gets a catalog number.
 
 ### Release a podcast episode
 

@@ -126,7 +126,7 @@ p { margin: 0; }
 .ticks li::before { content: "\2726"; color: var(--mustard); margin-right: 8px; }
 @media (max-width: 820px) { .hero .wrap { padding-block: 36px 44px; } .hero .copy { grid-template-columns: 1fr; } }
 
-/* ---------- Sections ---------- */
+/* ---------- Topics ---------- */
 .section { padding-block: 64px; }
 .section + .section { border-top: 1px solid var(--line); }
 .sec-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px 48px; align-items: end; margin-bottom: 36px; }
@@ -362,8 +362,8 @@ a.tl-item:hover { border-color: var(--mustard); }
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg>
       Search
     </button>
-    <nav class="nav" aria-label="Field guide sections">
-      <a href="#galleries" data-nav="galleries">Sections</a>
+    <nav class="nav" aria-label="Field guide menu">
+      <a href="#galleries" data-nav="galleries">Topics</a>
       <a href="#corridor" data-nav="corridor">Timeline</a>
       <a href="#listening-booth" data-nav="listening-booth">Listening Booth</a>
       <a href="#sources" data-nav="sources">Sources</a>
@@ -476,7 +476,7 @@ a.tl-item:hover { border-color: var(--mustard); }
     const pickable = cases.filter(c => c.status !== "record");
     const f = pickable[dayIndex % pickable.length];
     const wings = [
-      { href: "#galleries", room: "Browse by subject", title: "Sections", text: "Nine subjects, from crashes and close encounters to hoaxes and the science.", count: `${D.galleries.length} sections · ${cases.length} entries` },
+      { href: "#galleries", room: "Browse by subject", title: "Topics", text: "Nine topics, from crashes and close encounters to hoaxes and the science.", count: `${D.galleries.length} topics · ${cases.length} entries` },
       { href: "#corridor", room: "Browse by year", title: "The Timeline", text: `Walk from ${minYear} to ${maxYear}, era by era, and step into any case on the way.`, count: `${D.eras.length} eras` },
       { href: "#listening-booth", room: "For listeners", title: "Listening Booth", text: `Research lists for each episode of ${D.site.podcastName}.`, count: `${D.episodes.length} episodes` },
       { href: "#sources", room: "Check the originals", title: "Sources", text: "The primary archives: FBI, CIA, National Archives, AARO, NASA, PURSUE and more.", count: `${D.readingRoom.length} archives & documents` }
@@ -534,14 +534,14 @@ a.tl-item:hover { border-color: var(--mustard); }
   function viewGalleries() {
     return `
     <section class="page-head"><div class="wrap">
-      <p class="crumbs"><a href="#lobby">Home</a> / Sections</p>
-      <h1>Sections</h1>
-      <p class="lede">Nine sections, each built around one kind of story. Many cases appear in more than one section.</p>
+      <p class="crumbs"><a href="#lobby">Home</a> / Topics</p>
+      <h1>Topics</h1>
+      <p class="lede">Nine topics, each built around one kind of story. Many cases appear under more than one topic.</p>
     </div></section>
     <section class="section"><div class="wrap">
       <div class="wings">${D.galleries.map(g => {
         const n = cases.filter(c => c.galleries.includes(g.id)).length;
-        return `<a class="wing" href="#gallery-${g.id}"><span class="room">${esc(g.room)}</span><h3>${esc(g.title)}</h3><p>${esc(g.blurb)}</p><span class="count">${n} exhibits</span></a>`;
+        return `<a class="wing" href="#gallery-${g.id}"><h3>${esc(g.title)}</h3><p>${esc(g.blurb)}</p><span class="count">${n} entries</span></a>`;
       }).join("")}</div>
     </div></section>`;
   }
@@ -565,7 +565,7 @@ a.tl-item:hover { border-color: var(--mustard); }
     const next = D.galleries[(i + 1) % D.galleries.length];
     return `
     <section class="page-head"><div class="wrap">
-      <p class="crumbs"><a href="#lobby">Home</a> / <a href="#galleries">Sections</a> / ${esc(g.room)}</p>
+      <p class="crumbs"><a href="#lobby">Home</a> / <a href="#galleries">Topics</a> / ${esc(g.title)}</p>
       <h1>${esc(g.title)}</h1>
       <p class="lede">${esc(g.blurb)} <span class="mono">${list.length} entries, oldest first.</span></p>
     </div></section>
@@ -577,8 +577,8 @@ a.tl-item:hover { border-color: var(--mustard); }
       <div class="cards" id="gal-cards">${list.map(caseCard).join("")}</div>
     </div></section>
     <section class="section"><div class="wrap pager">
-      <a href="#gallery-${prev.id}"><span>&larr; ${esc(prev.room)}</span><b>${esc(prev.title)}</b></a>
-      <a class="next" href="#gallery-${next.id}"><span>${esc(next.room)} &rarr;</span><b>${esc(next.title)}</b></a>
+      <a href="#gallery-${prev.id}"><span>&larr; Previous topic</span><b>${esc(prev.title)}</b></a>
+      <a class="next" href="#gallery-${next.id}"><span>Next topic &rarr;</span><b>${esc(next.title)}</b></a>
     </div></section>`;
   }
 
@@ -888,7 +888,7 @@ a.tl-item:hover { border-color: var(--mustard); }
     ...cases.map(c => ({ kind: `Entry · ${c.cat} · ${c.date}`, title: c.title, text: c.teaser, href: "#case-" + c.id, hay: [c.title, c.place, c.date, c.teaser, c.story, c.explanation, ...(c.documented || []), ...(c.claimed || [])].join(" ") })),
     ...D.readingRoom.map(s => ({ kind: `Sources · ${s.agency}`, title: s.title, text: s.about, href: "#sources", rr: s.id, hay: [s.title, s.agency, s.about].join(" ") })),
     ...(SHOW_DOCS ? D.documents : []).map(d => ({ kind: `Document Room · File ${String(d.number).padStart(2, "0")}`, title: d.title, text: d.teaser, href: "#doc-" + d.id, hay: [d.title, d.teaser, d.intro, ...d.notes.map(n => n.title + " " + n.text)].join(" ") })),
-    ...D.galleries.map(g => ({ kind: `Section · ${g.room}`, title: g.title, text: g.blurb, href: "#gallery-" + g.id, hay: g.title + " " + g.blurb }))
+    ...D.galleries.map(g => ({ kind: "Topic", title: g.title, text: g.blurb, href: "#gallery-" + g.id, hay: g.title + " " + g.blurb }))
   ];
   function runSearch() {
     const t = input.value.trim().toLowerCase();
