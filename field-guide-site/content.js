@@ -30,7 +30,7 @@ window.FIELD_GUIDE = {
     short: "FGFS",
     tagline: "A self-guided tour of UFOs, UAP and the declassified record.",
     podcastName: "Flying Saucers for the Friendly Skeptic",
-    podcastUrl: "https://fsfspod.netlify.app",
+    podcastUrl: "/podcast/",
     lastUpdated: "October 2026"
   },
 
@@ -1439,7 +1439,7 @@ window.FIELD_GUIDE = {
       title: "Sample: The Summer of the Saucer",
       sample: true,
       summary: "Kenneth Arnold's sighting and how a newspaper phrase launched a craze.",
-      listenUrl: "https://fsfspod.netlify.app/#episodes",
+      listenUrl: "/podcast/#episodes",
       cases: ["kenneth-arnold", "maury-island", "twining-memo"],
       links: [{ title: "Project Blue Book records", url: "https://www.archives.gov/research/military/air-force/ufos" }]
     },
@@ -1448,7 +1448,7 @@ window.FIELD_GUIDE = {
       title: "Sample: What Fell at Roswell",
       sample: true,
       summary: "The press release, the retraction and the legend.",
-      listenUrl: "https://fsfspod.netlify.app/#episodes",
+      listenUrl: "/podcast/#episodes",
       cases: ["roswell", "roswell-reports", "aaro-hrr", "alien-autopsy"],
       links: [{ title: "GAO Roswell report", url: "https://www.gao.gov/products/nsiad-95-187" }]
     },
@@ -1457,7 +1457,7 @@ window.FIELD_GUIDE = {
       title: "Sample: The Navy Videos",
       sample: true,
       summary: "Tic Tac, Gimbal and GoFast, and what the analysts found.",
-      listenUrl: "https://fsfspod.netlify.app/#episodes",
+      listenUrl: "/podcast/#episodes",
       cases: ["nimitz", "gimbal-gofast", "nyt-2017", "navy-release-2020"],
       links: [{ title: "Navy FOIA videos", url: "https://www.navair.navy.mil/foia/documents" }]
     }
