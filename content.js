@@ -15,12 +15,12 @@
        disputed    = the key facts themselves are argued over
        hoax        = shown or admitted to be faked
        record      = a government program, report or hearing
-   - `related` lists other case ids. They show up as "Next exhibits".
+   - `related` lists other case ids. They show up as "Related entries".
    - Timeline entries come from each case automatically (using `date`
      and `year`). Use `extraTimeline` for events without a case page.
    - Sources (the readingRoom list) items list the `cases` they belong to.
    - Document Room files live in `documents`. See the Twining memo for the
-     pattern; `cases` links a file to its exhibits.
+     pattern; `cases` links a file to its entries.
    - Episodes in `episodes` list research by case id or by any link.
    Commas matter: every item ends with a comma except where shown.
    ===================================================================== */
@@ -38,18 +38,18 @@ window.FIELD_GUIDE = {
   },
 
   /* ------------------------------------------------------------------
-     GALLERIES: the field guide's subject wings
+     GALLERIES: the field guide's subject sections
      ------------------------------------------------------------------ */
   galleries: [
-    { id: "sightings",  title: "Lights in the Sky",       room: "Gallery A", blurb: "Mass sightings, famous photographs and the nights whole towns looked up." },
-    { id: "military",   title: "Pilots & Radar",          room: "Gallery B", blurb: "Encounters reported by trained observers, often backed by instruments." },
-    { id: "crashes",    title: "Crashes & Retrievals",    room: "Gallery C", blurb: "Stories of things that came down, and what was actually found." },
-    { id: "encounters", title: "Close Encounters",        room: "Gallery D", blurb: "Landings, beings and abduction accounts: the most personal testimony." },
-    { id: "government", title: "The Official Record",     room: "Gallery E", blurb: "Programs, panels, reports and hearings: what governments did and said." },
-    { id: "hoaxes",     title: "Hoaxes & Hard Lessons",   room: "Gallery F", blurb: "Fakes, cons and honest mistakes, and how each one was caught." },
-    { id: "world",      title: "Around the World",        room: "Gallery G", blurb: "Cases from outside the United States and the agencies that studied them." },
-    { id: "science",    title: "Science & the Skeptics",  room: "Gallery H", blurb: "Instruments, studies and the explanations that solved many cases." },
-    { id: "uap",        title: "The UAP Era",             room: "Gallery I", blurb: "From the 2017 videos to the 2026 file releases: the modern chapter." }
+    { id: "sightings",  title: "Lights in the Sky",       room: "Section A", blurb: "Mass sightings, famous photographs and the nights whole towns looked up." },
+    { id: "military",   title: "Pilots & Radar",          room: "Section B", blurb: "Encounters reported by trained observers, often backed by instruments." },
+    { id: "crashes",    title: "Crashes & Retrievals",    room: "Section C", blurb: "Stories of things that came down, and what was actually found." },
+    { id: "encounters", title: "Close Encounters",        room: "Section D", blurb: "Landings, beings and abduction accounts: the most personal testimony." },
+    { id: "government", title: "The Official Record",     room: "Section E", blurb: "Programs, panels, reports and hearings: what governments did and said." },
+    { id: "hoaxes",     title: "Hoaxes & Hard Lessons",   room: "Section F", blurb: "Fakes, cons and honest mistakes, and how each one was caught." },
+    { id: "world",      title: "Around the World",        room: "Section G", blurb: "Cases from outside the United States and the agencies that studied them." },
+    { id: "science",    title: "Science & the Skeptics",  room: "Section H", blurb: "Instruments, studies and the explanations that solved many cases." },
+    { id: "uap",        title: "The UAP Era",             room: "Section I", blurb: "From the 2017 videos to the 2026 file releases: the modern chapter." }
   ],
 
   /* ------------------------------------------------------------------
@@ -64,7 +64,7 @@ window.FIELD_GUIDE = {
   ],
 
   /* ------------------------------------------------------------------
-     CASES: every exhibit in the field guide
+     CASES: every entry in the field guide
      ------------------------------------------------------------------ */
   cases: [
 
