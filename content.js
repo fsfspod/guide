@@ -38,7 +38,7 @@ window.FIELD_GUIDE = {
   },
 
   /* ------------------------------------------------------------------
-     GALLERIES: the museum's subject wings
+     GALLERIES: the field guide's subject wings
      ------------------------------------------------------------------ */
   galleries: [
     { id: "sightings",  title: "Lights in the Sky",       room: "Gallery A", blurb: "Mass sightings, famous photographs and the nights whole towns looked up." },
@@ -64,7 +64,7 @@ window.FIELD_GUIDE = {
   ],
 
   /* ------------------------------------------------------------------
-     CASES: every exhibit in the museum
+     CASES: every exhibit in the field guide
      ------------------------------------------------------------------ */
   cases: [
 

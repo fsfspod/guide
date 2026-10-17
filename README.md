@@ -1,6 +1,6 @@
 # Field Guide for the Friendly Skeptic
 
-A self-guided museum of UFOs, UAP and the declassified record. Live at **friendlyskeptic.com/guide**, published by GitHub Pages. Companion to the podcast at friendlyskeptic.com/podcast.
+A field guide to UFOs, UAP and the declassified record. Live at **friendlyskeptic.com/guide**, published by GitHub Pages. Companion to the podcast at friendlyskeptic.com/podcast.
 
 ## What's in this repository
 
