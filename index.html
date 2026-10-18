@@ -865,7 +865,7 @@ a.tl-item:hover { border-color: var(--mustard); }
     </div></section>`;
   }
 
-  const MAP_VERSION = "1";
+  const MAP_VERSION = "2";
   const loaded = {};
   const loadScript = src => loaded[src] || (loaded[src] = new Promise((res, rej) => { const s = document.createElement("script"); s.src = src; s.onload = res; s.onerror = () => { delete loaded[src]; rej(new Error(src)); }; document.head.appendChild(s); }));
   function viewMap() {
@@ -884,7 +884,7 @@ a.tl-item:hover { border-color: var(--mustard); }
     <section class="page-head"><div class="wrap">
       <p class="crumbs"><a href="#lobby">Home</a> / Map</p>
       <h1>The Map</h1>
-      <p class="lede">Every entry, pinned where it happened. Zoom into a region, filter by stamp or era, and tap a pin to open the cases there. Switch to Orbit for the sightings in space and on the Moon.</p>
+      <p class="lede">Every entry, pinned where it happened. Pick a region, filter by stamp or era, and tap a pin to open the cases there. Switch to Orbit for the sightings in space and on the Moon.</p>
     </div></section>
     <section class="section"><div class="mp-wide" id="map-root"><div class="mp-loading">Loading the map…</div></div></section>`;
   }

@@ -165,7 +165,7 @@ window.FGMap = (function () {
     }
     function show(items) {
       const n = items.length, c = items[0].c;
-      $(".mp-dhead").innerHTML = `<span class="eyebrow">${n > 1 ? "Cluster" : "Pin"}</span><h2>${esc(n > 1 ? `${n} entries here` : c.title)}</h2><p>${n > 1 ? "Entries pinned close together. Zoom into a region to separate them." : esc(c.place)}</p>`;
+      $(".mp-dhead").innerHTML = `<span class="eyebrow">${n > 1 ? "Cluster" : "Pin"}</span><h2>${esc(n > 1 ? `${n} entries here` : c.title)}</h2><p>${n > 1 ? "Entries pinned close together at this spot." : esc(c.place)}</p>`;
       $(".mp-list").innerHTML = items.slice().sort((a, b) => a.y - b.y).map(p => caseCard(p.c)).join("");
     }
     function overview(list) {
