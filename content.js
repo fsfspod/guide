@@ -30,11 +30,12 @@
 window.FIELD_GUIDE = {
 
   site: {
-    name: "Field Guide for the Friendly Skeptic",
-    short: "FGFS",
+    name: "Flying Saucers for the Friendly Skeptic",
+    short: "FSFS",
     tagline: "A self-guided tour of UFOs, UAP and the declassified record.",
     podcastName: "Flying Saucers for the Friendly Skeptic",
-    podcastUrl: "/podcast/",
+    podcastUrl: "#podcast",
+    shareImage: "https://friendlyskeptic.com/guide/images/cover.jpg",
     lastUpdated: "October 2026",
     showDocumentRoom: false   // set to true to bring back the Document Room
   },
@@ -2053,26 +2054,66 @@ window.FIELD_GUIDE = {
     "The ODNI Preliminary Assessment (2021)"
   ],
 
+
   /* ------------------------------------------------------------------
-     LISTENING BOOTH: research companions for each podcast episode
+     PODCAST: show notes and merch for the Podcast page
+     recordings = every archival clip used on the show (the "Sources"
+     section of the Podcast page). Episode `tags` match recording topics.
+     ------------------------------------------------------------------ */
+  recordingTopics: ["Roswell", "Astronauts", "Air Force", "Navy", "Congress", "Culture"],
+  recordings: [
+    { name: "Gemini 7 Bogey", topic: "Astronauts", where: "NASA, via the War Department's PURSUE release 1 on DVIDS", credit: "Audio: NASA, released by the U.S. Department of War (PURSUE), via DVIDS", url: "https://www.dvidshub.net/", link: "DVIDS" },
+    { name: "Mercury 9 Excerpt D010", topic: "Astronauts", where: "NASA, via PURSUE release 2", credit: "Audio: NASA, via DVIDS", extra: "Includes the discussion of “John’s fireflies.”", url: "https://www.dvidshub.net/", link: "DVIDS" },
+    { name: "Mercury 9 Excerpt D011", topic: "Astronauts", where: "NASA, via PURSUE release 2", credit: "Audio: NASA, via DVIDS", url: "https://www.dvidshub.net/", link: "DVIDS" },
+    { name: "NASA UAP Independent Study Debrief, 2023", topic: "Astronauts", where: "NASA", credit: "Audio: NASA", url: "https://science.nasa.gov/uap/", link: "NASA UAP" },
+    { name: "Ruppelt Briefing, 1952", topic: "Air Force", where: "U.S. Air Force, via PURSUE release 6 on DVIDS", credit: "Audio: U.S. Air Force / All-domain Anomaly Resolution Office, via DVIDS", url: "https://www.dvidshub.net/", link: "DVIDS" },
+    { name: "Gen. Samford on Flying Saucers", topic: "Air Force", where: "National Archives, Record Group 111", credit: "Courtesy U.S. National Archives, NAID 25738", url: "https://catalog.archives.gov/id/25738", link: "National Archives catalog" },
+    { name: "USAF UFO Interview", topic: "Air Force", where: "National Archives, Record Group 342 (U.S. Air Force)", credit: "Courtesy U.S. National Archives, NAID 70511", url: "https://catalog.archives.gov/id/70511", link: "National Archives catalog" },
+    { name: "UFO Sighting over Alaska", topic: "Air Force", where: "National Archives, Record Group 517 (Voice of America)", credit: "Voice of America, courtesy U.S. National Archives", url: "https://catalog.archives.gov/", link: "National Archives catalog" },
+    { name: "Glenn Dennis Interview", topic: "Roswell", where: "National Archives, Roswell Reports files", credit: "Courtesy U.S. National Archives, NAID 2788762", url: "https://catalog.archives.gov/id/2788762", link: "National Archives catalog" },
+    { name: "Roswell Reports Sound Recordings", topic: "Roswell", where: "National Archives, Record Group 341", credit: "Courtesy U.S. National Archives, NAID 566843", extra: "Interviews including Glenn Dennis, Col. David Fulgham, Lt. Col. Sheridan Cavitt, Bernard Gildenberg, MSgt. Ole Jorgenson and others, recorded for the Air Force's Roswell report.", url: "https://catalog.archives.gov/id/566843", link: "National Archives catalog" },
+    { name: "GIMBAL and GOFAST Videos", topic: "Navy", where: "U.S. Navy FOIA Reading Room", credit: "U.S. Navy video, released by the Department of Defense, April 2020", url: "https://www.secnav.navy.mil/foia/", link: "Navy FOIA" },
+    { name: "House Hearing: Graves, Fravor, Grusch", topic: "Congress", where: "House Oversight Committee", credit: "Audio: U.S. House Committee on Oversight and Accountability, July 26, 2023", url: "https://oversight.house.gov/", link: "House Oversight" },
+    { name: "House Hearing: Gallaudet, Elizondo, Gold, Shellenberger", topic: "Congress", where: "House Oversight Committee", credit: "Audio: U.S. House Committee on Oversight and Accountability, Nov. 13, 2024", url: "https://oversight.house.gov/", link: "House Oversight" },
+    { name: "House Hearing: Nuccetelli, Wiggins, Borland, Knapp", topic: "Congress", where: "House Oversight, Task Force on the Declassification of Federal Secrets", credit: "Audio: U.S. House Committee on Oversight and Government Reform, Sept. 9, 2025", url: "https://oversight.house.gov/", link: "House Oversight" },
+    { name: "AARO Director Senate Hearing, April 19, 2023", topic: "Congress", where: "Department of Defense, via DVIDS", credit: "U.S. Department of Defense video, via DVIDS", url: "https://www.dvidshub.net/", link: "DVIDS" },
+    { name: "Reagan Address to the UN General Assembly", topic: "Culture", where: "Ronald Reagan Presidential Library", credit: "Courtesy Ronald Reagan Presidential Library", url: "https://www.reaganlibrary.gov/", link: "Reagan Library" }
+  ],
+
+  merch: {
+    shopUrl: "https://fsfspod.printful.me/",
+    note: "Printed on demand by Printful",
+    items: [
+      { name: "Sticker", desc: "Our round saucer badge on a bubble-free vinyl sticker.", img: "merch/sticker.jpg" },
+      { name: "Black Glossy Mug", desc: "The saucer badge on a glossy black ceramic mug.", img: "merch/mug.jpg" },
+      { name: "Dad Hat", desc: "A black dad hat with the badge on the front.", img: "merch/hat.jpg" },
+      { name: "Hoodie", desc: "A relaxed, mid-weight unisex hooded sweatshirt.", img: "merch/hoodie.jpg" },
+      { name: "Eco Tote Bag", desc: "A black tote bag with the full badge.", img: "merch/tote.jpg" }
+    ]
+  },
+
+  listenOn: ["Apple Podcasts", "Spotify", "YouTube", "RSS"],
+
+  /* ------------------------------------------------------------------
+     EPISODES: the Podcast page. `cases` and `links` form each episode's
+     "Explore this episode" research list. Add `audio: "https://..."` and
+     `length: "mm:ss"` when an episode is released to show its player.
      Add a block for each new episode. Set listenUrl once it's out.
      ------------------------------------------------------------------ */
   episodes: [
     {
-      number: 1, title: "Summer of Saucers",
+      number: 1, title: "Summer of Saucers", tags: ["Air Force"],
       summary: "Kenneth Arnold's 1947 sighting gives us the flying saucer, with stops at the 1896 airships, WWII foo fighters and the 1952 Washington radar blips along the way.",
-      listenUrl: "/podcast/#episodes",
-      cases: ["kenneth-arnold", "airship-wave-1896", "foo-fighters", "washington-1952", "maury-island", "twining-memo"],
+            cases: ["kenneth-arnold", "airship-wave-1896", "foo-fighters", "washington-1952", "maury-island", "twining-memo"],
       links: [
         { title: "Project Blue Book records (National Archives)", url: "https://www.archives.gov/research/military/air-force/ufos" },
         { title: "Chronicling America: 1896–97 airship newspaper reports", url: "https://chroniclingamerica.loc.gov/search/pages/results/?andtext=airship&date1=1896&date2=1897&dateFilterType=yearRange" }
       ]
     },
     {
-      number: 2, title: "What Fell in Roswell?",
+      number: 2, title: "What Fell in Roswell?", tags: ["Roswell"],
       summary: "Two weeks after Arnold, something comes down in the New Mexico desert. We sort the 1947 record from the story that grew around it.",
-      listenUrl: "/podcast/#episodes",
-      cases: ["roswell", "roswell-reports", "aztec-hoax", "twining-memo"],
+            cases: ["roswell", "roswell-reports", "aztec-hoax", "twining-memo"],
       links: [
         { title: "Roswell Reports sound recordings (National Archives, NAID 566843)", url: "https://catalog.archives.gov/id/566843" },
         { title: "FBI Vault: Roswell teletype", url: "https://vault.fbi.gov/Roswell%20UFO" },
@@ -2080,30 +2121,27 @@ window.FIELD_GUIDE = {
       ]
     },
     {
-      number: 3, title: "The Book Is Opened",
+      number: 3, title: "The Book Is Opened", tags: ["Air Force"],
       summary: "The Air Force starts keeping files on flying saucers, and Project Blue Book begins.",
-      listenUrl: "/podcast/#episodes",
-      cases: ["twining-memo", "project-blue-book", "mantell", "chiles-whitted", "estimate-of-situation", "gorman-dogfight", "lubbock-lights", "washington-1952", "robertson-panel"],
+            cases: ["twining-memo", "project-blue-book", "mantell", "chiles-whitted", "estimate-of-situation", "gorman-dogfight", "lubbock-lights", "washington-1952", "robertson-panel"],
       links: [
         { title: "Project Blue Book records (National Archives)", url: "https://www.archives.gov/research/military/air-force/ufos" },
         { title: "CIA: Robertson Panel report (1953)", url: "https://www.cia.gov/readingroom/document/cia-rdp78-02646r000600150001-5" }
       ]
     },
     {
-      number: 4, title: "True Believers",
+      number: 4, title: "True Believers", tags: [],
       summary: "Contactees, saucer clubs and civilian investigators build a movement of their own.",
-      listenUrl: "/podcast/#episodes",
-      cases: ["contactees", "civilian-investigators", "flatwoods", "kelly-hopkinsville", "robertson-panel", "aztec-hoax"],
+            cases: ["contactees", "civilian-investigators", "flatwoods", "kelly-hopkinsville", "robertson-panel", "aztec-hoax"],
       links: [
         { title: "George Adamski (Wikipedia overview)", url: "https://en.wikipedia.org/wiki/George_Adamski" },
         { title: "CIA: 'The National Investigations Committee on Aerial Phenomena (NICAP)'", url: "https://cia.gov/readingroom/document/cia-rdp81r00560r000100010001-0" }
       ]
     },
     {
-      number: 5, title: "Case Closed",
+      number: 5, title: "Case Closed", tags: ["Air Force"],
       summary: "The Condon Report and the end of Project Blue Book in 1969.",
-      listenUrl: "/podcast/#episodes",
-      cases: ["michigan-1966", "hearing-1966", "condon-committee", "symposium-1968", "blue-book-closes", "mcminnville", "rb-47"],
+            cases: ["michigan-1966", "hearing-1966", "condon-committee", "symposium-1968", "blue-book-closes", "mcminnville", "rb-47"],
       links: [
         { title: "1966 House Armed Services UFO hearing (GovInfo)", url: "https://www.govinfo.gov/app/details/CHRG-89hhrg50066O" },
         { title: "1968 House UFO symposium (GovInfo)", url: "https://www.govinfo.gov/content/pkg/CHRG-90hhrg97818/pdf/CHRG-90hhrg97818.pdf" },
@@ -2111,20 +2149,18 @@ window.FIELD_GUIDE = {
       ]
     },
     {
-      number: 6, title: "Close Encounters",
+      number: 6, title: "Close Encounters", tags: [],
       summary: "Landings, abductions and the scientist who gave us a scale for them.",
-      listenUrl: "/podcast/#episodes",
-      cases: ["socorro", "betty-barney-hill", "levelland", "kelly-hopkinsville", "pascagoula", "travis-walton", "trans-en-provence"],
+            cases: ["socorro", "betty-barney-hill", "levelland", "kelly-hopkinsville", "pascagoula", "travis-walton", "trans-en-provence"],
       links: [
         { title: "Project Blue Book: Socorro, 1964 (via The Black Vault)", url: "https://www.theblackvault.com/casefiles/desks-project-blue-book-socorro-new-mexico-ufo-landing-24-april-1964/" },
         { title: "GEIPAN case archive (France)", url: "https://www.cnes-geipan.fr" }
       ]
     },
     {
-      number: 7, title: "Revival",
+      number: 7, title: "Revival", tags: ["Roswell"],
       summary: "Decades later, Roswell comes back, and the Air Force goes back to interview the witnesses.",
-      listenUrl: "/podcast/#episodes",
-      cases: ["roswell", "roswell-reports", "mj-12", "alien-autopsy", "aaro-hrr"],
+            cases: ["roswell", "roswell-reports", "mj-12", "alien-autopsy", "aaro-hrr"],
       links: [
         { title: "Roswell Reports sound recordings (National Archives, NAID 566843)", url: "https://catalog.archives.gov/id/566843" },
         { title: "GAO report on Roswell records (1995)", url: "https://www.gao.gov/products/nsiad-95-187" },
@@ -2132,29 +2168,26 @@ window.FIELD_GUIDE = {
       ]
     },
     {
-      number: 8, title: "The Truth Is Out There",
+      number: 8, title: "The Truth Is Out There", tags: [],
       summary: "UFOs move into prime time and popular culture.",
-      listenUrl: "/podcast/#episodes",
-      cases: ["bob-lazar", "travis-walton", "gulf-breeze", "alien-autopsy", "phoenix-lights", "cia-haines", "disclosure-project"],
+            cases: ["bob-lazar", "travis-walton", "gulf-breeze", "alien-autopsy", "phoenix-lights", "cia-haines", "disclosure-project"],
       links: [
         { title: "CIA's Role in the Study of UFOs, 1947–90 (Haines)", url: "https://www.cia.gov/resources/csi/studies-in-intelligence/archives/vol-40-no-5/the-cias-role-in-the-study-of-ufos-1947-90/" }
       ]
     },
     {
-      number: 9, title: "Confirmation",
+      number: 9, title: "Confirmation", tags: ["Navy"],
       summary: "Navy cockpit videos, a secret Pentagon program and the 2017 story that changed the conversation.",
-      listenUrl: "/podcast/#episodes",
-      cases: ["nimitz", "aatip", "gimbal-gofast", "nyt-2017", "pyramids-2019", "navy-release-2020", "odni-2021"],
+            cases: ["nimitz", "aatip", "gimbal-gofast", "nyt-2017", "pyramids-2019", "navy-release-2020", "odni-2021"],
       links: [
         { title: "Navy FOIA reading room: UAP videos", url: "https://www.navair.navy.mil/foia/documents" },
         { title: "ODNI Preliminary Assessment (2021)", url: "https://www.dni.gov/files/ODNI/documents/assessments/Prelimary-Assessment-UAP-20210625.pdf" }
       ]
     },
     {
-      number: 10, title: "Full Disclosure",
+      number: 10, title: "Full Disclosure", tags: ["Congress"],
       summary: "Congress holds hearings and witnesses testify under oath. What we know now, and what's still claim.",
-      listenUrl: "/podcast/#episodes",
-      cases: ["hearing-2022", "aaro-founded", "grusch-2023", "disclosure-act", "aaro-hrr", "hearing-2024", "hearing-2025", "aaro-reports", "pursue-2026"],
+            cases: ["hearing-2022", "aaro-founded", "grusch-2023", "disclosure-act", "aaro-hrr", "hearing-2024", "hearing-2025", "aaro-reports", "pursue-2026"],
       links: [
         { title: "House Oversight hearings: 2023, 2024 and 2025", url: "https://oversight.house.gov/hearing/restoring-public-trust-through-uap-transparency-and-whistleblower-protection/" },
         { title: "AARO official site", url: "https://www.aaro.mil" },

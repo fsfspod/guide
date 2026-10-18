@@ -1,13 +1,15 @@
-# Field Guide for the Friendly Skeptic
+# Flying Saucers for the Friendly Skeptic
 
-A field guide to UFOs, UAP and the declassified record. Live at **friendlyskeptic.com/guide**, published by GitHub Pages. Companion to the podcast at friendlyskeptic.com/podcast.
+The podcast and field guide to UFOs, UAP and the declassified record. Live at **friendlyskeptic.com/guide** (the Podcast page is friendlyskeptic.com/guide/#podcast), published by GitHub Pages.
 
 ## What's in this repository
 
 | File | What it does |
 |---|---|
 | `index.html` | The design and page layout. You rarely need to touch it. |
-| `content.js` | **All the words on the site**: cases, timeline, archives, glossary, episodes. Edit this one. |
+| `content.js` | **All the words on the site**: cases, timeline, archives, episodes, the show's recordings and merch. Edit this one. |
+| `images/cover.jpg` | The podcast album art. |
+| `merch/` | Merch product photos for the Podcast page. |
 | `favicon.svg` | The little saucer icon in the browser tab. |
 | `map.js` | The Map page (Earth view and Orbit view). |
 | `map-data.js` | Coastlines and globe shapes for the Map. Generated; don't edit by hand. |
@@ -39,7 +41,15 @@ The case appears automatically under its topics, on the timeline and in search, 
 
 ### Release a podcast episode
 
-Find the episode in `episodes: [ ... ]` and add `released: true` (and `length: "mm:ss"` if you like). Its **Coming soon** label becomes a **Listen** button.
+Find the episode in `episodes: [ ... ]` and add `audio: "https://..."` (the episode's audio file from your podcast host) and `length: "mm:ss"`. The "In production" label becomes "Out now" with a player. Each episode's `cases` and `links` make up its "Explore this episode" reading list, and its `tags` link to recording topics.
+
+### Add a recording to the show's Sources
+
+Copy a line in `recordings: [ ... ]` and fill in `name`, `topic` (one of `recordingTopics`), `where`, `credit`, `url`, `link`, and optionally `extra`.
+
+### Update merch
+
+Edit `merch` in `content.js`: `shopUrl`, and each item's `name`, `desc` and `img` (put photos in the `merch` folder).
 
 ### Add a timeline milestone without a case page
 
