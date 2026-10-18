@@ -433,6 +433,7 @@ a.tl-item:hover { border-color: var(--mustard); }
 .site-foot .wrap { padding-block: 36px; display: grid; gap: 14px; font-size: 14px; color: var(--muted); }
 .site-foot .logo { font-size: 17px; }
 .disclaimer { max-width: 80ch; }
+.copyright { margin: 0; padding-top: 14px; border-top: 1px solid rgba(255,255,255,.12); font-family: var(--f-mono); font-size: 12.5px; letter-spacing: .04em; }
 
 .fade-in { animation: rise .35s ease both; }
 @keyframes rise { from { opacity: .4; transform: translateY(6px); } to { opacity: 1; transform: none; } }
@@ -463,6 +464,7 @@ a.tl-item:hover { border-color: var(--mustard); }
     <a class="logo" href="#lobby">Flying Saucers <span class="accent">for the Friendly Skeptic</span></a>
     <p class="disclaimer" id="foot-text"></p>
     <p class="disclaimer">Government documents linked here are released by federal agencies. Linking to them does not imply endorsement by the Department of War, Department of Defense, NASA, the National Archives or any other agency.</p>
+    <p class="copyright">&copy; <span id="foot-yr">2026</span> Flying Saucers for the Friendly Skeptic. All rights reserved.</p>
   </div>
 </footer>
 
@@ -503,6 +505,7 @@ a.tl-item:hover { border-color: var(--mustard); }
   const eraOf = y => D.eras.find(e => y >= e.from && y <= e.to) || D.eras[D.eras.length - 1];
   const minYear = cases[0].year, maxYear = cases[cases.length - 1].year;
 
+  document.getElementById("foot-yr").textContent = new Date().getFullYear();
   document.getElementById("foot-text").textContent =
     `${D.site.name} · A podcast and field guide to UFOs, UAP and the declassified record. ${cases.length} entries, ${D.readingRoom.length} archives. Last updated ${D.site.lastUpdated}.`;
 
