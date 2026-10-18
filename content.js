@@ -1957,7 +1957,7 @@ window.FIELD_GUIDE = {
      ------------------------------------------------------------------ */
   episodes: [
     {
-      number: 1, title: "Summer of Saucers", length: "16:10", released: true,
+      number: 1, title: "Summer of Saucers",
       summary: "Kenneth Arnold's 1947 sighting gives us the flying saucer, with stops at the 1896 airships, WWII foo fighters and the 1952 Washington radar blips along the way.",
       listenUrl: "/podcast/#episodes",
       cases: ["kenneth-arnold", "airship-wave-1896", "foo-fighters", "washington-1952", "maury-island", "twining-memo"],
