@@ -9,6 +9,8 @@ A field guide to UFOs, UAP and the declassified record. Live at **friendlyskepti
 | `index.html` | The design and page layout. You rarely need to touch it. |
 | `content.js` | **All the words on the site**: cases, timeline, archives, glossary, episodes. Edit this one. |
 | `favicon.svg` | The little saucer icon in the browser tab. |
+| `map.js` | The Map page (Earth view and Orbit view). |
+| `map-data.js` | Coastlines and globe shapes for the Map. Generated; don't edit by hand. |
 
 There is no build step. GitHub Pages serves these files as they are, usually within a minute or two of a change.
 
@@ -31,6 +33,7 @@ Copy any block inside `cases: [ ... ]` (from `{` to the matching `},`), paste it
 - `teaser`, `story`, `documented`, `claimed`, `explanation`
 - `sources`: `{ title: "...", url: "https://..." }`
 - `related`: ids of other cases
+- `coords: [latitude, longitude]` to pin it on the Map (for example `coords: [33.39, -104.52]`). For space cases use `orbit: "leo"` (Earth orbit), `"translunar"` (on the way to the Moon) or `"moon"` instead.
 
 The case appears automatically under its topics, on the timeline and in search, and gets a catalog number.
 
