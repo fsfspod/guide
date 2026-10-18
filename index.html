@@ -555,6 +555,16 @@ a.tl-item:hover { border-color: var(--mustard); }
   }
 
   /* ---------------- Views ---------------- */
+  function merchSection() {
+    return D.merch ? `<section class="section"><div class="wrap">
+      <div class="sec-head"><div class="left"><span class="tag-badge">${esc(D.merch.note)}</span><h2>Merch</h2></div><p class="lede">Gear for people who want to believe, pending further evidence.</p></div>
+      <div class="pd-merch">${D.merch.items.map(m => `<a class="pd-item" href="${esc(D.merch.shopUrl)}" target="_blank" rel="noopener">
+        <div class="art"><img src="${esc(m.img)}" alt="${esc(m.name)} with the Flying Saucers for the Friendly Skeptic badge" width="480" height="480" loading="lazy"></div>
+        <div class="body"><h3>${esc(m.name)}</h3><p>${esc(m.desc)}</p><span class="shop">Shop now &rarr;</span></div></a>`).join("")}</div>
+      <div class="btn-row" style="margin-top:28px"><a class="btn btn-primary" href="${esc(D.merch.shopUrl)}" target="_blank" rel="noopener">Visit the shop &#8599;</a></div>
+    </div></section>` : "";
+  }
+
   function viewLobby() {
     const today = new Date();
     const dayIndex = Math.floor(today.getTime() / 86400000);
@@ -596,6 +606,8 @@ a.tl-item:hover { border-color: var(--mustard); }
       </div>
       <div class="wings">${wings.map(w => `<a class="wing" href="${w.href}"><span class="room">${w.room}</span><h3>${w.title}</h3><p>${w.text}</p><span class="count">${w.count}</span></a>`).join("")}</div>
     </div></section>
+
+    ${merchSection()}
 
     <section class="section"><div class="wrap">
       <div class="sec-head">
@@ -996,13 +1008,7 @@ a.tl-item:hover { border-color: var(--mustard); }
       <div class="pd-listen"><span>Coming soon to</span>${(D.listenOn || []).map(x => `<span class="chip">${esc(x)}</span>`).join("")}</div>
     </div></section>
 
-    ${D.merch ? `<section class="section"><div class="wrap">
-      <div class="sec-head"><div class="left"><span class="tag-badge">${esc(D.merch.note)}</span><h2>Merch</h2></div><p class="lede">Gear for people who want to believe, pending further evidence.</p></div>
-      <div class="pd-merch">${D.merch.items.map(m => `<a class="pd-item" href="${esc(D.merch.shopUrl)}" target="_blank" rel="noopener">
-        <div class="art"><img src="${esc(m.img)}" alt="${esc(m.name)} with the Flying Saucers for the Friendly Skeptic badge" width="480" height="480" loading="lazy"></div>
-        <div class="body"><h3>${esc(m.name)}</h3><p>${esc(m.desc)}</p><span class="shop">Shop now &rarr;</span></div></a>`).join("")}</div>
-      <div class="btn-row" style="margin-top:28px"><a class="btn btn-primary" href="${esc(D.merch.shopUrl)}" target="_blank" rel="noopener">Visit the shop &#8599;</a></div>
-    </div></section>` : ""}
+    ${merchSection()}
 
     <section class="section pd-dark" id="pd-sources"><div class="wrap">
       <div class="sec-head"><div class="left"><span class="tag-badge">Every recording we use</span><h2>Sources</h2></div>
