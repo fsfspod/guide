@@ -252,8 +252,6 @@ a.tl-item:hover { border-color: var(--mustard); }
 .rr .top { display: flex; justify-content: space-between; gap: 10px; font-family: var(--f-mono); font-size: 12.5px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
 .rr h3 { font-size: 26px; }
 .rr p { font-size: 15.5px; color: var(--cream-dim); }
-.rr .caution { padding: 10px 12px; border-left: 3px solid var(--coral); background: rgba(221,127,111,.08); font-size: 14.5px; color: var(--cream); border-radius: 0 8px 8px 0; }
-.rr .caution b { color: var(--coral); font-family: var(--f-mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; display: block; }
 .rr .links { display: flex; flex-wrap: wrap; gap: 6px; }
 .three { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-bottom: 36px; }
 .three > div { padding: 20px; border-radius: var(--radius); border: 2px solid var(--line); display: grid; gap: 8px; align-content: start; }
@@ -789,7 +787,6 @@ a.tl-item:hover { border-color: var(--mustard); }
       <div class="top"><span>${esc(s.agency)}</span><span>${esc(TYPES[s.type] || s.type)}${s.year ? " · " + esc(s.year) : ""}</span></div>
       <h3>${esc(s.title)}</h3>
       <p>${esc(s.about)}</p>
-      <div class="caution"><b>What it doesn't prove</b>${esc(s.caution)}</div>
       ${s.cases.length ? `<div class="links">${s.cases.map(id => byId[id] ? `<a class="chip" href="#case-${id}">${esc(byId[id].title)}</a>` : "").join("")}</div>` : ""}
       <a class="btn" href="${esc(s.url)}" target="_blank" rel="noopener" style="justify-self:start">Open the archive &#8599;</a>
     </article>`;
@@ -801,7 +798,7 @@ a.tl-item:hover { border-color: var(--mustard); }
       let type = "all";
       const draw = () => {
         const t = q.value.trim().toLowerCase();
-        const rows = D.readingRoom.filter(s => (type === "all" || s.type === type) && (!t || [s.title, s.agency, s.about, s.caution].join(" ").toLowerCase().includes(t)));
+        const rows = D.readingRoom.filter(s => (type === "all" || s.type === type) && (!t || [s.title, s.agency, s.about].join(" ").toLowerCase().includes(t)));
         holder.innerHTML = rows.length ? rows.map(rrCard).join("") : `<div class="empty">No archives match that search. Try an agency name like FBI or NASA.</div>`;
       };
       q.addEventListener("input", draw);
@@ -822,7 +819,7 @@ a.tl-item:hover { border-color: var(--mustard); }
       <div class="three">
         <div><h3>Where it came from</h3><p>Every entry names the agency or archive that released it, so you can find the original yourself.</p></div>
         <div><h3>Who said it</h3><p>Check the author and the date. A 1953 CIA memo and a 2023 sworn statement are very different kinds of evidence.</p></div>
-        <div><h3>What it doesn't prove</h3><p>A real document is a starting point. Each card notes the limits of what it can tell you.</p></div>
+        <div><h3>What it doesn't prove</h3><p>A real document is a starting point, not proof on its own. Read it for what it actually says.</p></div>
       </div>
       <div class="toolbar">
         <label class="eyebrow" for="rr-q">Search the archives</label>
