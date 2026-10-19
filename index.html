@@ -1081,10 +1081,13 @@ a.tl-item:hover { border-color: var(--mustard); }
         const r = await fetch(CONTACT_ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" },
           body: JSON.stringify({ name: d.name, email: d.email, comments: d.comments, _replyto: d.email, _subject: "Website message from " + d.name, _template: "table", _captcha: "false" }) });
         const j = await r.json().catch(() => ({}));
-        if (!r.ok || j.success === false || j.success === "false") throw new Error(j.message || "send failed");
+        if (!r.ok || j.success === false || j.success === "false") { const er = new Error(j.message || ("HTTP " + r.status)); er.server = j.message; throw er; }
         f.reset(); msg.textContent = "Thanks! Your message is on its way. We'll get back to you soon.";
       } catch (e) {
-        msg.className = "contact-msg err"; msg.textContent = "Sorry, that didn't go through. Please try again, or email contact@friendlyskeptic.com.";
+        console.warn("Contact form:", e.message);
+        msg.className = "contact-msg err";
+        if (/activat/i.test(e.server || "")) msg.textContent = "Almost set up: the form is waiting for its one-time activation. (Site owner: check contact@friendlyskeptic.com for FormSubmit's \u201cActivate Form\u201d email.)";
+        else msg.textContent = "Sorry, that didn't go through" + (e.server ? " (" + e.server + ")" : "") + ". Please try again, or email contact@friendlyskeptic.com.";
       } finally { btn.disabled = false; }
     });
   }
