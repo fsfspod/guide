@@ -2105,7 +2105,7 @@ window.FIELD_GUIDE = {
       number: 1, title: "Summer of Saucers", tags: ["Air Force"],
       audio: "audio/fsfs-episode-01.mp3", length: "16:36",
       summary: "Kenneth Arnold's 1947 sighting gives us the flying saucer, with stops at the 1896 airships, WWII foo fighters and the 1952 Washington radar blips along the way.",
-            cases: ["kenneth-arnold", "airship-wave-1896", "foo-fighters", "washington-1952", "twining-memo"],
+            cases: ["kenneth-arnold", "airship-wave-1896", "foo-fighters", "washington-1952"],
       links: [
         { title: "Project Blue Book records (National Archives)", url: "https://www.archives.gov/research/military/air-force/ufos" },
         { title: "Chronicling America: 1896–97 airship newspaper reports", url: "https://chroniclingamerica.loc.gov/search/pages/results/?andtext=airship&date1=1896&date2=1897&dateFilterType=yearRange" }
@@ -2124,7 +2124,7 @@ window.FIELD_GUIDE = {
     },
     {
       number: 3, title: "The Book Is Opened", tags: ["Air Force"],
-      audio: "audio/fsfs-episode-03.mp3", length: "17:24",
+      audio: "audio/fsfs-episode-03.mp3?v=2", length: "17:04",
       summary: "The Air Force starts keeping files on flying saucers, and Project Blue Book begins.",
             cases: ["twining-memo", "project-blue-book", "mantell", "chiles-whitted", "estimate-of-situation", "lubbock-lights", "washington-1952", "robertson-panel"],
       links: [
