@@ -2124,6 +2124,7 @@ window.FIELD_GUIDE = {
     },
     {
       number: 3, title: "The Book Is Opened", tags: ["Air Force"],
+      audio: "audio/fsfs-episode-03.mp3", length: "17:24",
       summary: "The Air Force starts keeping files on flying saucers, and Project Blue Book begins.",
             cases: ["twining-memo", "project-blue-book", "mantell", "chiles-whitted", "estimate-of-situation", "gorman-dogfight", "lubbock-lights", "washington-1952", "robertson-panel"],
       links: [
