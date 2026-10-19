@@ -369,6 +369,8 @@ a.tl-item:hover { border-color: var(--mustard); }
 .pd-ep { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 8px 22px; align-items: center; background: var(--hall); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 22px; }
 .pd-ep.released { border: 2px solid var(--mustard); }
 .pd-no { font-family: var(--f-display); font-weight: 900; font-size: 46px; line-height: 1; color: var(--mustard); min-width: 2ch; text-align: center; }
+.pd-art { width: 128px; height: 128px; border-radius: 8px; object-fit: cover; display: block; border: 1px solid var(--line); }
+.pd-art.tall { grid-row: 1 / span 2; align-self: start; }
 .pd-ep h3 { font-size: 28px; margin-bottom: 4px; }
 .pd-ep p { color: var(--cream-dim); font-size: 16px; }
 .pd-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
@@ -390,7 +392,7 @@ a.tl-item:hover { border-color: var(--mustard); }
 .pd-listen .chip { cursor: default; }
 .pd-listen .chip.live { cursor: pointer; border-color: var(--mustard); color: var(--cream); }
 .pd-listen + .pd-listen { margin-top: 12px; }
-@media (max-width: 600px) { .pd-ep { grid-template-columns: auto minmax(0, 1fr); gap: 10px 16px; } .pd-status { grid-column: 2; justify-self: start; } .pd-player, .pd-more { grid-column: 1 / -1; } .pd-no { font-size: 36px; } }
+@media (max-width: 600px) { .pd-ep { grid-template-columns: auto minmax(0, 1fr); gap: 10px 16px; } .pd-status { grid-column: 2; justify-self: start; } .pd-player, .pd-more { grid-column: 1 / -1; } .pd-no { font-size: 36px; } .pd-art { width: 76px; height: 76px; } .pd-art.tall { grid-row: auto; } }
 .pd-merch { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 20px; }
 .pd-item { background: var(--cream); color: var(--ink); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; border: 2px solid var(--ink); box-shadow: 6px 6px 0 var(--shadow); text-decoration: none; transition: transform .15s ease, box-shadow .15s ease; }
 .pd-item:hover { transform: translate(-2px, -2px); box-shadow: 8px 8px 0 var(--shadow); }
@@ -478,7 +480,7 @@ a.tl-item:hover { border-color: var(--mustard); }
   </div>
 </div>
 
-<script src="content.js?v=2026-10-19h"></script>
+<script src="content.js?v=2026-10-19i"></script>
 <script>
 (function () {
   const D = window.FIELD_GUIDE;
@@ -1005,7 +1007,7 @@ a.tl-item:hover { border-color: var(--mustard); }
         <p class="lede">Each episode takes one case or one question and works through the evidence. Tap a topic tag to jump to the recordings behind it.</p>
       </div>
       <div class="pd-eps">${D.episodes.map(e => `<article class="pd-ep${e.audio ? " released" : ""}">
-        <div class="pd-no">${e.number}</div>
+        ${e.art ? `<img class="pd-art${e.audio ? " tall" : ""}" src="${esc(e.art)}" alt="Episode ${e.number} artwork: ${esc(e.title)}" width="600" height="600" loading="lazy">` : `<div class="pd-no">${e.number}</div>`}
         <div><h3>${esc(e.title)}</h3><p>${esc(e.summary)}</p>
           ${(e.tags || []).length ? `<div class="pd-tags">${e.tags.map(t => `<button class="pd-tag" type="button" data-topic="${esc(t)}">${esc(t)} sources</button>`).join("")}</div>` : ""}</div>
         ${e.audio ? `<span class="pd-status live">Out now${e.length ? " · " + esc(e.length) : ""}</span>` : `<span class="pd-status">${e.comingOn ? "Out " + esc(e.comingOn) : "In production"}</span>`}

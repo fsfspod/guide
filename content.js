@@ -2106,12 +2106,15 @@ window.FIELD_GUIDE = {
      "Explore this episode" research list. Add `audio: "https://..."` and
      `length: "mm:ss"` when an episode is released to show its player.
      Add a block for each new episode. Set listenUrl once it's out.
+     art (optional): square episode artwork in images/episodes; it replaces
+     the episode number on the card.
      releaseAt (optional): the episode stays "Coming" until this moment,
      then its player appears on its own. Use UTC with a Z, e.g.
      1:00 a.m. MDT = 07:00Z, 1:00 a.m. MST = 08:00Z.
      ------------------------------------------------------------------ */
   episodes: [
     {
+      art: "images/episodes/episode-01.jpg",
       number: 1, title: "Summer of Saucers", tags: ["Air Force"],
       audio: "audio/fsfs-episode-01.mp3", length: "16:36",
       summary: "Kenneth Arnold's 1947 sighting gives us the flying saucer, with stops at the 1896 airships, WWII foo fighters and the 1952 Washington radar blips along the way.",
@@ -2122,6 +2125,7 @@ window.FIELD_GUIDE = {
       ]
     },
     {
+      art: "images/episodes/episode-02.jpg",
       number: 2, title: "What Fell in Roswell?", tags: ["Roswell"],
       releaseAt: "2026-10-26T07:00:00Z",
       audio: "audio/fsfs-episode-02.mp3", length: "20:27",
@@ -2134,6 +2138,7 @@ window.FIELD_GUIDE = {
       ]
     },
     {
+      art: "images/episodes/episode-03.jpg",
       number: 3, title: "The Book Is Opened", tags: ["Air Force"],
       releaseAt: "2026-11-02T08:00:00Z",
       audio: "audio/fsfs-episode-03.mp3?v=2", length: "17:04",
