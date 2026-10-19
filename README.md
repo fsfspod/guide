@@ -41,7 +41,7 @@ The case appears automatically under its topics, on the timeline and in search, 
 
 ### Release a podcast episode
 
-Find the episode in `episodes: [ ... ]` and add `audio: "https://..."` (the episode's audio file from your podcast host) and `length: "mm:ss"`. The "In production" label becomes "Out now" with a player. Each episode's `cases` and `links` make up its "Explore this episode" reading list, and its `tags` link to recording topics.
+Find the episode in `episodes: [ ... ]` and add `audio: "https://..."` (the episode's audio file from your podcast host) and `length: "mm:ss"`. The "In production" label becomes "Out now" with a player. Its `tags` link to recording topics. (`cases` and `links` are kept in the file but no longer shown on the page.)
 
 ### Add a recording to the show's Sources
 
