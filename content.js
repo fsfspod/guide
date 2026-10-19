@@ -2103,6 +2103,7 @@ window.FIELD_GUIDE = {
   episodes: [
     {
       number: 1, title: "Summer of Saucers", tags: ["Air Force"],
+      audio: "audio/fsfs-episode-01.mp3", length: "16:36",
       summary: "Kenneth Arnold's 1947 sighting gives us the flying saucer, with stops at the 1896 airships, WWII foo fighters and the 1952 Washington radar blips along the way.",
             cases: ["kenneth-arnold", "airship-wave-1896", "foo-fighters", "washington-1952", "maury-island", "twining-memo"],
       links: [
@@ -2112,6 +2113,7 @@ window.FIELD_GUIDE = {
     },
     {
       number: 2, title: "What Fell in Roswell?", tags: ["Roswell"],
+      audio: "audio/fsfs-episode-02.mp3", length: "20:27",
       summary: "Two weeks after Arnold, something comes down in the New Mexico desert. We sort the 1947 record from the story that grew around it.",
             cases: ["roswell", "roswell-reports", "aztec-hoax", "twining-memo"],
       links: [
