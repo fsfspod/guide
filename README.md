@@ -64,3 +64,7 @@ Add an entry to `extraTimeline` with `year`, `date`, `title`, `text`, and `link`
 ### Add a Document Room file
 
 Copy the Twining memo block inside `documents: [ ... ]`. Each guide note has a number `n` that matches a pin on the document. To use a scanned page, add the image to the repository (for example `docs/roswell-teletype.jpg`) and list it under `pages` with each pin's position as percentages across (`x`) and down (`y`) the page. Remove a title from `upcomingDocuments` once its file is live.
+
+### Contact form
+
+The Contact page (`#contact`, linked from the footer only) sends messages through [FormSubmit](https://formsubmit.co) to contact@friendlyskeptic.com. The address is set in `CONTACT_ENDPOINT` in `index.html`. The very first submission sends an activation email to that inbox; click its link once and every message after that is delivered.

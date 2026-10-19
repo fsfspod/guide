@@ -434,6 +434,18 @@ a.tl-item:hover { border-color: var(--mustard); }
 .site-foot { border-top: 2px solid var(--mustard); background: var(--ink); }
 .site-foot .wrap { padding-block: 36px; display: grid; gap: 14px; font-size: 14px; color: var(--muted); }
 .site-foot .logo { font-size: 17px; }
+.foot-links { display: flex; gap: 18px; flex-wrap: wrap; }
+.foot-links a { color: var(--cream); font-family: var(--f-mono); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; text-decoration: none; border-bottom: 1px solid var(--mustard); padding-bottom: 2px; }
+.foot-links a:hover { color: var(--mustard); }
+.contact-form { display: grid; gap: 18px; max-width: 620px; }
+.contact-form label { display: grid; gap: 6px; font-family: var(--f-mono); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--cream-dim); }
+.contact-form input, .contact-form textarea { font: inherit; font-family: var(--f-body); font-size: 17px; text-transform: none; letter-spacing: normal; color: var(--cream); background: var(--hall); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; width: 100%; box-sizing: border-box; }
+.contact-form textarea { min-height: 170px; resize: vertical; }
+.contact-form input:focus, .contact-form textarea:focus { outline: 2px solid var(--mustard); outline-offset: 1px; border-color: var(--mustard); }
+.contact-form .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.contact-form .btn[disabled] { opacity: .6; cursor: wait; }
+.contact-msg { font-size: 16px; color: var(--cream); min-height: 1.4em; }
+.contact-msg.err { color: #f0a58a; }
 .disclaimer { max-width: 80ch; }
 .copyright { margin: 0; padding-top: 14px; border-top: 1px solid rgba(255,255,255,.12); font-family: var(--f-mono); font-size: 12.5px; letter-spacing: .04em; }
 
@@ -464,6 +476,7 @@ a.tl-item:hover { border-color: var(--mustard); }
 <footer class="site-foot">
   <div class="wrap">
     <a class="logo" href="#lobby">Flying Saucers <span class="accent">for the Friendly Skeptic</span></a>
+    <nav class="foot-links" aria-label="Footer"><a href="#contact">Contact us</a></nav>
     <p class="disclaimer" id="foot-text"></p>
     <p class="disclaimer">Government documents linked here are released by federal agencies. Linking to them does not imply endorsement by the Department of War, Department of Defense, NASA, the National Archives or any other agency.</p>
     <p class="copyright">&copy; <span id="foot-yr">2026</span> Flying Saucers for the Friendly Skeptic. All rights reserved.</p>
@@ -1038,6 +1051,44 @@ a.tl-item:hover { border-color: var(--mustard); }
     </div></section>`;
   }
 
+  /* Contact form: sent by FormSubmit (formsubmit.co) to contact@friendlyskeptic.com */
+  const CONTACT_ENDPOINT = "https://formsubmit.co/ajax/contact@friendlyskeptic.com";
+  function viewContact() {
+    return `<section class="page-head"><div class="wrap"><h1>Contact us</h1><p class="lede">Questions, corrections, a sighting of your own, or an idea for an episode? Send us a note.</p></div></section>
+    <section class="section"><div class="wrap">
+      <form class="contact-form" id="contact-form" novalidate>
+        <label>Name<input name="name" type="text" autocomplete="name" required maxlength="120"></label>
+        <label>Email<input name="email" type="email" autocomplete="email" required maxlength="200"></label>
+        <label>Comments<textarea name="comments" required maxlength="5000"></textarea></label>
+        <div class="hp" aria-hidden="true"><label>Leave this empty<input name="_honey" type="text" tabindex="-1" autocomplete="off"></label></div>
+        <div><button class="btn btn-primary" type="submit">Send</button></div>
+        <p class="contact-msg" id="contact-msg" role="status" aria-live="polite"></p>
+      </form>
+    </div></section>`;
+  }
+  function wireContact() {
+    const f = document.getElementById("contact-form"); if (!f) return;
+    const msg = document.getElementById("contact-msg"), btn = f.querySelector("button");
+    f.addEventListener("submit", async ev => {
+      ev.preventDefault();
+      const d = Object.fromEntries(new FormData(f));
+      if (d._honey) return;
+      msg.className = "contact-msg err";
+      if (!d.name.trim() || !d.email.trim() || !d.comments.trim()) { msg.textContent = "Please fill in your name, email and comments."; return; }
+      if (!f.email.checkValidity()) { msg.textContent = "That email address doesn't look right."; return; }
+      btn.disabled = true; msg.className = "contact-msg"; msg.textContent = "Sending…";
+      try {
+        const r = await fetch(CONTACT_ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" },
+          body: JSON.stringify({ name: d.name, email: d.email, comments: d.comments, _replyto: d.email, _subject: "Website message from " + d.name, _template: "table", _captcha: "false" }) });
+        const j = await r.json().catch(() => ({}));
+        if (!r.ok || j.success === false || j.success === "false") throw new Error(j.message || "send failed");
+        f.reset(); msg.textContent = "Thanks! Your message is on its way. We'll get back to you soon.";
+      } catch (e) {
+        msg.className = "contact-msg err"; msg.textContent = "Sorry, that didn't go through. Please try again, or email contact@friendlyskeptic.com.";
+      } finally { btn.disabled = false; }
+    });
+  }
+
   function viewMissing() {
     return `<section class="page-head"><div class="wrap"><h1>Unidentified page</h1><p class="lede">We couldn't find that entry. It may have been renamed.</p><div class="btn-row"><a class="btn btn-primary" href="#lobby">Back to the start</a></div></div></section>`;
   }
@@ -1060,10 +1111,12 @@ a.tl-item:hover { border-color: var(--mustard); }
     else if (h === "documents" || h.startsWith("doc-")) { html = viewLobby(); }
     else if (h === "map") { html = viewMap(); nav = "map"; }
     else if (h === "podcast" || h === "listening-booth") { html = viewPodcast(); nav = "podcast"; }
+    else if (h === "contact") { html = viewContact(); }
     else html = viewMissing();
     app.innerHTML = `<div class="fade-in">${html}</div>`;
     document.querySelectorAll("[data-nav]").forEach(a => { if (a.dataset.nav === nav) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current"); });
     if (!pendingEra && !pendingRR) window.scrollTo(0, 0);
+    if (h === "contact") wireContact();
     app.querySelectorAll("[data-rr]").forEach(a => a.addEventListener("click", () => { pendingRR = a.dataset.rr; }));
     try { localStorage.setItem("fgfs-last", h); } catch (e) {}
   }
