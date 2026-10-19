@@ -478,10 +478,18 @@ a.tl-item:hover { border-color: var(--mustard); }
   </div>
 </div>
 
-<script src="content.js?v=2026-10-19f"></script>
+<script src="content.js?v=2026-10-19g"></script>
 <script>
 (function () {
   const D = window.FIELD_GUIDE;
+  // Scheduled releases: hide an episode's player until its releaseAt time.
+  D.episodes.forEach(e => {
+    const t = e.releaseAt ? Date.parse(e.releaseAt) : NaN;
+    if (!isNaN(t) && Date.now() < t) {
+      e.audio = undefined;
+      e.comingOn = new Date(t).toLocaleDateString("en-US", { month: "short", day: "numeric", timeZone: "America/Denver" });
+    }
+  });
   const SHOW_DOCS = !!(D.site && D.site.showDocumentRoom);
   if (SHOW_DOCS) document.querySelector('.nav a[href="#podcast"]').insertAdjacentHTML("beforebegin", '<a href="#documents" data-nav="documents">Document Room</a>');
   const app = document.getElementById("app");
@@ -1000,7 +1008,7 @@ a.tl-item:hover { border-color: var(--mustard); }
         <div class="pd-no">${e.number}</div>
         <div><h3>${esc(e.title)}</h3><p>${esc(e.summary)}</p>
           ${(e.tags || []).length ? `<div class="pd-tags">${e.tags.map(t => `<button class="pd-tag" type="button" data-topic="${esc(t)}">${esc(t)} sources</button>`).join("")}</div>` : ""}</div>
-        ${e.audio ? `<span class="pd-status live">Out now${e.length ? " · " + esc(e.length) : ""}</span>` : `<span class="pd-status">In production</span>`}
+        ${e.audio ? `<span class="pd-status live">Out now${e.length ? " · " + esc(e.length) : ""}</span>` : `<span class="pd-status">${e.comingOn ? "Out " + esc(e.comingOn) : "In production"}</span>`}
         ${e.audio ? `<div class="pd-player"><audio controls preload="metadata" src="${esc(e.audio)}" aria-label="Play episode ${e.number}: ${esc(e.title)}">Your browser can't play this audio. <a href="${esc(e.audio)}">Open the audio file</a>.</audio></div>` : ""}
         <details class="pd-more"><summary>Explore this episode</summary><div class="pd-list">
           ${e.cases.map(id => byId[id] ? `<a href="#case-${id}"><span>${byId[id].cat} · ${esc(byId[id].date)}</span>${esc(byId[id].title)}</a>` : "").join("")}

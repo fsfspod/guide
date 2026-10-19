@@ -2106,6 +2106,9 @@ window.FIELD_GUIDE = {
      "Explore this episode" research list. Add `audio: "https://..."` and
      `length: "mm:ss"` when an episode is released to show its player.
      Add a block for each new episode. Set listenUrl once it's out.
+     releaseAt (optional): the episode stays "Coming" until this moment,
+     then its player appears on its own. Use UTC with a Z, e.g.
+     1:00 a.m. MDT = 07:00Z, 1:00 a.m. MST = 08:00Z.
      ------------------------------------------------------------------ */
   episodes: [
     {
@@ -2120,6 +2123,7 @@ window.FIELD_GUIDE = {
     },
     {
       number: 2, title: "What Fell in Roswell?", tags: ["Roswell"],
+      releaseAt: "2026-10-26T07:00:00Z",
       audio: "audio/fsfs-episode-02.mp3", length: "20:27",
       summary: "Two weeks after Arnold, something comes down in the New Mexico desert. We sort the 1947 record from the story that grew around it.",
             cases: ["roswell", "roswell-reports"],
@@ -2131,6 +2135,7 @@ window.FIELD_GUIDE = {
     },
     {
       number: 3, title: "The Book Is Opened", tags: ["Air Force"],
+      releaseAt: "2026-11-02T08:00:00Z",
       audio: "audio/fsfs-episode-03.mp3?v=2", length: "17:04",
       summary: "The Air Force starts keeping files on flying saucers, and Project Blue Book begins.",
             cases: ["twining-memo", "project-blue-book", "mantell", "chiles-whitted", "estimate-of-situation", "lubbock-lights", "washington-1952", "robertson-panel"],
