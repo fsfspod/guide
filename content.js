@@ -2098,8 +2098,7 @@ window.FIELD_GUIDE = {
   listenOn: [
     { name: "Spotify", url: "https://open.spotify.com/show/57w75u62SqyfHz3Gy2oKlr" },
     { name: "Apple Podcasts", url: "https://podcasts.apple.com/us/podcast/flying-saucers-for-the-friendly-skeptic/id6824664958" },
-    { name: "RSS", url: "https://anchor.fm/s/118c07c40/podcast/rss" },
-    "YouTube"
+    { name: "RSS", url: "https://anchor.fm/s/118c07c40/podcast/rss" }
   ],
 
   /* ------------------------------------------------------------------
