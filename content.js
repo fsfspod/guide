@@ -2092,7 +2092,13 @@ window.FIELD_GUIDE = {
     ]
   },
 
-  listenOn: ["Apple Podcasts", "Spotify", "YouTube", "RSS"],
+  /* listenOn: add a url to a platform once the show is live there, e.g.
+     { name: "Spotify", url: "https://open.spotify.com/show/..." }.
+     Platforms without a url show under "Coming soon to". */
+  listenOn: [
+    { name: "RSS", url: "https://anchor.fm/s/118c07c40/podcast/rss" },
+    "Apple Podcasts", "Spotify", "YouTube"
+  ],
 
   /* ------------------------------------------------------------------
      EPISODES: the Podcast page. `cases` and `links` form each episode's
