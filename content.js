@@ -2209,7 +2209,8 @@ window.FIELD_GUIDE = {
       ]
     },
     {
-      number: 10, title: "Disclosure?", tags: ["Congress"],
+      art: "images/episodes/episode-10.jpg",
+      number: 10, title: "Disclosure", tags: ["Congress"],
       summary: "Congress holds hearings and witnesses testify under oath. What we know now, and what's still claim.",
             cases: ["pyramids-2019", "navy-release-2020", "odni-2021", "hearing-2022", "aaro-founded", "balloons-2023", "nasa-uap-study", "grusch-2023", "disclosure-act", "aaro-hrr", "hearing-2024", "nj-drones-2024", "hearing-2025", "aaro-reports", "pursue-2026"],
       links: [
