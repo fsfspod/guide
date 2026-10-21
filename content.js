@@ -2111,12 +2111,19 @@ window.FIELD_GUIDE = {
      releaseAt (optional): the episode stays "Coming" until this moment,
      then its player appears on its own. Use UTC with a Z, e.g.
      1:00 a.m. MDT = 07:00Z, 1:00 a.m. MST = 08:00Z.
+     published (optional): the release date, e.g. "2026-10-18", for an
+     episode that went out without a releaseAt. Search engines show it.
+     EPISODE PAGES: every episode also gets its own page at
+     friendlyskeptic.com/guide/episodes/<number>-<title>/ , built
+     automatically a minute or two after you commit. Changing a title
+     changes that address; add slug: "2-what-fell-in-roswell" to keep
+     the old one.
      ------------------------------------------------------------------ */
   episodes: [
     {
       art: "images/episodes/episode-01.jpg",
       number: 1, title: "Summer of Saucers", tags: ["Air Force"],
-      audio: "audio/fsfs-episode-01.mp3", length: "16:36",
+      audio: "audio/fsfs-episode-01.mp3", length: "16:36", published: "2026-10-18",
       summary: "Kenneth Arnold's 1947 sighting gives us the flying saucer, with stops at the 1896 airships, WWII foo fighters and the 1952 Washington radar blips along the way.",
             cases: ["kenneth-arnold", "airship-wave-1896", "foo-fighters", "washington-1952"],
       links: [

@@ -373,6 +373,9 @@ a.tl-item:hover { border-color: var(--mustard); }
 .pd-art.tall { grid-row: 1 / span 2; align-self: start; }
 .pd-ep h3 { font-size: 28px; margin-bottom: 4px; }
 .pd-ep p { color: var(--cream-dim); font-size: 16px; }
+.pd-ep h3 a.pd-title { color: inherit; text-decoration: none; }
+.pd-ep h3 a.pd-title:hover { color: var(--mustard); }
+.pd-notes { margin-top: 6px; font-family: var(--f-mono); font-size: 12.5px !important; letter-spacing: .08em; text-transform: uppercase; }
 .pd-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
 .pd-tag { font-family: var(--f-mono); font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase; padding: 2px 9px; border-radius: 999px; border: 1px solid var(--muted); color: var(--cream-dim); background: transparent; cursor: pointer; }
 .pd-tag:hover { border-color: var(--mustard); color: var(--mustard); }
@@ -494,7 +497,7 @@ a.tl-item:hover { border-color: var(--mustard); }
   </div>
 </div>
 
-<script src="content.js?v=2026-10-21f"></script>
+<script src="content.js?v=2026-10-21g"></script>
 <script>
 (function () {
   const D = window.FIELD_GUIDE;
@@ -510,6 +513,9 @@ a.tl-item:hover { border-color: var(--mustard); }
   if (SHOW_DOCS) document.querySelector('.nav a[href="#podcast"]').insertAdjacentHTML("beforebegin", '<a href="#documents" data-nav="documents">Document Room</a>');
   const app = document.getElementById("app");
   const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
+  // Each episode's own page (built by scripts/build-episodes.js). Keep in sync with epSlug() there.
+  const episodeUrl = e => "episodes/" + (e.slug || e.number + "-" + String(e.title).toLowerCase().normalize("NFKD").replace(/[\u0300-\u036f]/g, "").replace(/['’]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")) + "/";
 
   const STATUS = {
     explained:  { label: "Explained",          text: "A mundane cause is well established." },
@@ -1021,7 +1027,8 @@ a.tl-item:hover { border-color: var(--mustard); }
       </div>
       <div class="pd-eps">${D.episodes.map(e => `<article class="pd-ep${e.audio ? " released" : ""}${e.art ? " has-art" : ""}">
         ${e.art ? `<img class="pd-art${e.audio ? " tall" : ""}" src="${esc(e.art)}" alt="Episode ${e.number} artwork: ${esc(e.title)}" width="600" height="600" loading="lazy">` : `<div class="pd-no">${e.number}</div>`}
-        <div><h3>Episode ${e.number}: ${esc(e.title)}</h3><p>${esc(e.summary)}</p>
+        <div><h3><a class="pd-title" href="${episodeUrl(e)}">Episode ${e.number}: ${esc(e.title)}</a></h3><p>${esc(e.summary)}</p>
+          <p class="pd-notes"><a href="${episodeUrl(e)}">Show notes &amp; sources &rarr;</a></p>
           ${(e.tags || []).length ? `<div class="pd-tags">${e.tags.map(t => `<button class="pd-tag" type="button" data-topic="${esc(t)}">${esc(t)} sources</button>`).join("")}</div>` : ""}</div>
         ${e.audio ? `<span class="pd-status live">Out now${e.length ? " · " + esc(e.length) : ""}</span>` : `<span class="pd-status">${e.comingOn ? "Out " + esc(e.comingOn) : "In production"}</span>`}
         ${e.audio ? `<div class="pd-player"><audio controls preload="metadata" src="${esc(e.audio)}" aria-label="Play episode ${e.number}: ${esc(e.title)}">Your browser can't play this audio. <a href="${esc(e.audio)}">Open the audio file</a>.</audio></div>` : ""}
