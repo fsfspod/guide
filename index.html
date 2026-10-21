@@ -363,6 +363,9 @@ a.tl-item:hover { border-color: var(--mustard); }
 .pd-hero .copy { display: grid; grid-template-columns: minmax(0, 1fr); gap: 22px; justify-items: start; align-items: start; min-width: 0; }
 .pd-hero h1 { max-width: none; }
 .pd-hero .lede { color: var(--cream); font-size: 19px; }
+.pd-hero .btn-platform { background: var(--cream); color: var(--ink); border-color: var(--ink); box-shadow: 4px 4px 0 var(--shadow); font-size: 16px; padding: 10px 20px; }
+.pd-hero .btn-platform:hover { box-shadow: 6px 6px 0 var(--shadow); }
+.pd-hero .pd-platforms { margin-top: -8px; }
 @media (max-width: 860px) { .pd-hero .wrap { grid-template-columns: 1fr; gap: 34px; padding-block: 36px 46px; } .pd-hero img { max-width: 380px; margin: 0 auto; } }
 .pd-dark { background: var(--ink); }
 .pd-eps { display: grid; gap: 14px; }
@@ -1017,6 +1020,8 @@ a.tl-item:hover { border-color: var(--mustard); }
           <button class="btn btn-primary" type="button" data-scroll="pd-episodes">Start listening</button>
           <button class="btn" type="button" data-scroll="pd-sources">Check our sources</button>
         </div>
+        ${(() => { const L = (D.listenOn || []).map(x => typeof x === "string" ? { name: x } : x).filter(x => x.url && /spotify|apple/i.test(x.name));
+          return L.length ? `<div class="btn-row pd-platforms">${L.map(x => `<a class="btn btn-platform" href="${esc(x.url)}" target="_blank" rel="noopener">Listen on ${esc(x.name)} <span aria-hidden="true">&#8599;</span></a>`).join("")}</div>` : ""; })()}
         <ul class="ticks"><li>No prior knowledge needed</li><li>Primary sources first</li><li>Curious, never gullible</li></ul>
       </div>
     </div></section>
