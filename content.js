@@ -2152,6 +2152,7 @@ window.FIELD_GUIDE = {
     {
       art: "images/episodes/episode-04.jpg",
       number: 4, title: "True Believers", tags: [],
+      releaseAt: "2026-11-09T08:00:00Z",
       summary: "Contactees, saucer clubs and civilian investigators build a movement of their own.",
             cases: ["contactees", "civilian-investigators", "flatwoods", "kelly-hopkinsville", "robertson-panel", "aztec-hoax"],
       links: [
