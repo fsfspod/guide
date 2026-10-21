@@ -13,8 +13,10 @@ The podcast and field guide to UFOs, UAP and the declassified record. Live at **
 | `favicon.svg` | The little saucer icon in the browser tab. |
 | `map.js` | The Map page (Earth view and Orbit view). |
 | `map-data.js` | Coastlines and globe shapes for the Map. Generated; don't edit by hand. |
+| `episodes/`, `sitemap.xml` | One page per podcast episode, and the list of pages for search engines. Built automatically from `content.js`; don't edit by hand. |
+| `scripts/build-episodes.js` | The script that builds them. |
 
-There is no build step. GitHub Pages serves these files as they are, usually within a minute or two of a change.
+There is no build step for you to run. GitHub Pages serves these files as they are, usually within a minute or two of a change.
 
 ## How to update the site
 
@@ -42,6 +44,15 @@ The case appears automatically under its topics, on the timeline and in search, 
 ### Release a podcast episode
 
 Find the episode in `episodes: [ ... ]` and add `audio: "https://..."` (the episode's audio file from your podcast host) and `length: "mm:ss"`. The "In production" label becomes "Out now" with a player. Its `tags` link to recording topics. (`cases` and `links` are kept in the file but no longer shown on the page.)
+
+### Episode pages (automatic)
+
+Every episode also has its own page, e.g. friendlyskeptic.com/guide/episodes/2-what-fell-in-roswell/, plus a list of all episodes at friendlyskeptic.com/guide/episodes/. These pages are what Google finds and shows in search.
+
+You never edit them directly. When you commit a change to `content.js`, a GitHub Action (`.github/workflows/build-episode-pages.yml`) runs `scripts/build-episodes.js`, which rebuilds the `episodes` folder and `sitemap.xml` and commits them for you about a minute later. It also runs once a day so scheduled releases flip to "Out now" on their own. You can watch it under the repository's **Actions** tab.
+
+- Changing an episode's `title` changes its page address. To keep the old address, add `slug: "2-what-fell-in-roswell"` to that episode.
+- `published: "2026-10-18"` sets the release date search engines show, for an episode that went out without a `releaseAt`.
 
 ### Add a recording to the show's Sources
 

@@ -1,0 +1,43 @@
+# Rebuilds the episode pages and sitemap.xml from content.js.
+# Runs when content.js (or the design) changes, and once a day so
+# scheduled releases (releaseAt) show as "Out now" on their own.
+name: Build episode pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - content.js
+      - index.html
+      - scripts/build-episodes.js
+  schedule:
+    - cron: "17 9 * * *"   # daily, ~3 a.m. Mountain
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-episode-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node scripts/build-episodes.js
+      - name: Commit any changes
+        run: |
+          git add episodes sitemap.xml
+          if git diff --cached --quiet; then
+            echo "Episode pages already up to date."
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "Rebuild episode pages"
+            git push
+          fi
