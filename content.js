@@ -2163,7 +2163,7 @@ window.FIELD_GUIDE = {
       art: "images/episodes/episode-05.jpg",
       number: 5, title: "Case Closed", tags: ["Air Force"],
       summary: "The Condon Report and the end of Project Blue Book in 1969.",
-            cases: ["michigan-1966", "hearing-1966", "condon-committee", "symposium-1968", "blue-book-closes", "mcminnville", "rb-47"],
+            cases: ["betty-barney-hill", "socorro", "michigan-1966", "hearing-1966", "condon-committee", "symposium-1968", "blue-book-closes", "mcminnville", "rb-47"],
       links: [
         { title: "1966 House Armed Services UFO hearing (GovInfo)", url: "https://www.govinfo.gov/app/details/CHRG-89hhrg50066O" },
         { title: "1968 House UFO symposium (GovInfo)", url: "https://www.govinfo.gov/content/pkg/CHRG-90hhrg97818/pdf/CHRG-90hhrg97818.pdf" },
@@ -2172,45 +2172,44 @@ window.FIELD_GUIDE = {
     },
     {
       number: 6, title: "Close Encounters", tags: [],
-      summary: "Landings, abductions and the scientist who gave us a scale for them.",
-            cases: ["socorro", "betty-barney-hill", "levelland", "kelly-hopkinsville", "pascagoula", "travis-walton", "trans-en-provence"],
+      summary: "Two fishermen in Pascagoula, a logger missing for five days in Arizona, and the former 'swamp gas' scientist who gave us the three kinds of close encounters.",
+            cases: ["pascagoula", "travis-walton", "coyne-helicopter"],
       links: [
-        { title: "Project Blue Book: Socorro, 1964 (via The Black Vault)", url: "https://www.theblackvault.com/casefiles/desks-project-blue-book-socorro-new-mexico-ufo-landing-24-april-1964/" },
-        { title: "GEIPAN case archive (France)", url: "https://www.cnes-geipan.fr" }
+        { title: "Pascagoula incident (Wikipedia overview)", url: "https://en.wikipedia.org/wiki/Pascagoula_incident" },
+        { title: "Travis Walton incident (Wikipedia overview)", url: "https://en.wikipedia.org/wiki/Travis_Walton_incident" }
       ]
     },
     {
-      number: 7, title: "Revival", tags: ["Roswell"],
-      summary: "Decades later, Roswell comes back, and the Air Force goes back to interview the witnesses.",
-            cases: ["roswell", "roswell-reports", "mj-12", "alien-autopsy", "aaro-hrr"],
+      number: 7, title: "Secrets and Documents", tags: [],
+      summary: "Airmen chase lights into an English forest, secret 'Majestic 12' papers surface, and Communion puts the gray alien on the bestseller lists.",
+            cases: ["rendlesham", "mj-12", "gulf-breeze", "bob-lazar", "roswell"],
       links: [
-        { title: "Roswell Reports sound recordings (National Archives, NAID 566843)", url: "https://catalog.archives.gov/id/566843" },
-        { title: "GAO report on Roswell records (1995)", url: "https://www.gao.gov/products/nsiad-95-187" },
+        { title: "Top 10 UFO documents at The National Archives, including the Halt memo (Dr David Clarke)", url: "https://drdavidclarke.co.uk/2018/03/15/top-10-ufo-documents-at-the-national-archives/" },
         { title: "FBI Vault: Majestic 12", url: "https://vault.fbi.gov/Majestic%2012" }
       ]
     },
     {
       number: 8, title: "The Truth Is Out There", tags: [],
-      summary: "UFOs move into prime time and popular culture.",
-            cases: ["bob-lazar", "travis-walton", "gulf-breeze", "alien-autopsy", "phoenix-lights", "cia-haines", "disclosure-project"],
+      summary: "The X-Files hits prime time, Fox airs an 'alien autopsy,' and thousands of people watch lights over Phoenix.",
+            cases: ["phoenix-lights", "alien-autopsy", "roswell-reports", "cia-haines", "disclosure-project"],
       links: [
         { title: "CIA's Role in the Study of UFOs, 1947–90 (Haines)", url: "https://www.cia.gov/resources/csi/studies-in-intelligence/archives/vol-40-no-5/the-cias-role-in-the-study-of-ufos-1947-90/" }
       ]
     },
     {
-      number: 9, title: "Confirmation", tags: ["Navy"],
-      summary: "Navy cockpit videos, a secret Pentagon program and the 2017 story that changed the conversation.",
-            cases: ["nimitz", "aatip", "gimbal-gofast", "nyt-2017", "pyramids-2019", "navy-release-2020", "odni-2021"],
+      number: 9, title: "The Quiet Reopening", tags: ["Navy"],
+      summary: "A Navy pilot's 'Tic Tac,' a secret Pentagon program and the 2017 New York Times story that restarted the conversation.",
+            cases: ["nimitz", "ohare-2006", "aatip", "stephenville", "gimbal-gofast", "nyt-2017"],
       links: [
-        { title: "Navy FOIA reading room: UAP videos", url: "https://www.navair.navy.mil/foia/documents" },
-        { title: "ODNI Preliminary Assessment (2021)", url: "https://www.dni.gov/files/ODNI/documents/assessments/Prelimary-Assessment-UAP-20210625.pdf" }
+        { title: "Navy FOIA reading room: UAP videos", url: "https://www.navair.navy.mil/foia/documents" }
       ]
     },
     {
-      number: 10, title: "Full Disclosure", tags: ["Congress"],
+      number: 10, title: "Disclosure?", tags: ["Congress"],
       summary: "Congress holds hearings and witnesses testify under oath. What we know now, and what's still claim.",
-            cases: ["hearing-2022", "aaro-founded", "grusch-2023", "disclosure-act", "aaro-hrr", "hearing-2024", "hearing-2025", "aaro-reports", "pursue-2026"],
+            cases: ["pyramids-2019", "navy-release-2020", "odni-2021", "hearing-2022", "aaro-founded", "balloons-2023", "nasa-uap-study", "grusch-2023", "disclosure-act", "aaro-hrr", "hearing-2024", "nj-drones-2024", "hearing-2025", "aaro-reports", "pursue-2026"],
       links: [
+        { title: "ODNI Preliminary Assessment (2021)", url: "https://www.dni.gov/files/ODNI/documents/assessments/Prelimary-Assessment-UAP-20210625.pdf" },
         { title: "House Oversight hearings: 2023, 2024 and 2025", url: "https://oversight.house.gov/hearing/restoring-public-trust-through-uap-transparency-and-whistleblower-protection/" },
         { title: "AARO official site", url: "https://www.aaro.mil" },
         { title: "PURSUE: Department of War UAP file releases", url: "https://www.war.gov/UFO/" }
