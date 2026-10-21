@@ -2200,7 +2200,8 @@ window.FIELD_GUIDE = {
       ]
     },
     {
-      number: 9, title: "The Quiet Reopening", tags: ["Navy"],
+      art: "images/episodes/episode-09.jpg",
+      number: 9, title: "Back on the Radar", tags: ["Navy"],
       summary: "A Navy pilot's 'Tic Tac,' a secret Pentagon program and the 2017 New York Times story that restarted the conversation.",
             cases: ["nimitz", "ohare-2006", "aatip", "stephenville", "gimbal-gofast", "nyt-2017"],
       links: [
