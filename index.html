@@ -1022,7 +1022,7 @@ a.tl-item:hover { border-color: var(--mustard); }
       </div>
       <div class="pd-eps">${D.episodes.map(e => `<article class="pd-ep${e.audio ? " released" : ""}${e.art ? " has-art" : ""}">
         ${e.art ? `<img class="pd-art${e.audio ? " tall" : ""}" src="${esc(e.art)}" alt="Episode ${e.number} artwork: ${esc(e.title)}" width="600" height="600" loading="lazy">` : `<div class="pd-no">${e.number}</div>`}
-        <div><h3>${esc(e.title)}</h3><p>${esc(e.summary)}</p>
+        <div><h3>Episode ${e.number}: ${esc(e.title)}</h3><p>${esc(e.summary)}</p>
           ${(e.tags || []).length ? `<div class="pd-tags">${e.tags.map(t => `<button class="pd-tag" type="button" data-topic="${esc(t)}">${esc(t)} sources</button>`).join("")}</div>` : ""}</div>
         ${e.audio ? `<span class="pd-status live">Out now${e.length ? " · " + esc(e.length) : ""}</span>` : `<span class="pd-status">${e.comingOn ? "Out " + esc(e.comingOn) : "In production"}</span>`}
         ${e.audio ? `<div class="pd-player"><audio controls preload="metadata" src="${esc(e.audio)}" aria-label="Play episode ${e.number}: ${esc(e.title)}">Your browser can't play this audio. <a href="${esc(e.audio)}">Open the audio file</a>.</audio></div>` : ""}
