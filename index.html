@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<meta property="og:image" content="https://friendlyskeptic.com/guide/images/cover.jpg">
+<meta property="og:image" content="https://friendlyskeptic.com/guide/images/cover.jpg?v=2">
 <meta property="og:title" content="Flying Saucers for the Friendly Skeptic">
 <meta property="og:description" content="A podcast and field guide to UFOs, UAP and the declassified record.">
 <title>Flying Saucers for the Friendly Skeptic</title>
@@ -24,8 +24,8 @@ img { max-width: 100%; }
   --ink: #1c2421;
   --hall: #222c29;
   --hall-2: #2a3632;
-  --teal: #2e8a7e;
-  --teal-deep: #236e65;
+  --teal: #1b4a42;
+  --teal-deep: #133a34;
   --cream: #f3ead6;
   --cream-dim: #c9c2b0;
   --mustard: #e8b45c;
@@ -557,7 +557,7 @@ a.tl-item:hover { border-color: var(--mustard); }
       trees += `<path d="M${x} ${base - h} L${x + w / 2} ${base - h * 0.55} L${x + w * 0.3} ${base - h * 0.55} L${x + w * 0.62} ${base - h * 0.15} L${x + w * 0.12} ${base - h * 0.15} L${x + w * 0.12} ${base} L${x - w * 0.12} ${base} L${x - w * 0.12} ${base - h * 0.15} L${x - w * 0.62} ${base - h * 0.15} L${x - w * 0.3} ${base - h * 0.55} L${x - w / 2} ${base - h * 0.55} Z" fill="#1c2421"/>`;
     });
     return `<svg viewBox="0 0 400 440" role="img" aria-label="Field guide cover: a retro flying saucer hovers over pine trees under a full moon while a lone figure with binoculars watches.">
-      <rect width="400" height="440" fill="#2e8a7e"/>
+      <rect width="400" height="440" fill="#1b4a42"/>
       <rect x="0" y="0" width="400" height="440" fill="url(#grain)" opacity=".5"/>
       <defs>
         <pattern id="grain" width="9" height="9" patternUnits="userSpaceOnUse"><circle cx="2" cy="3" r=".9" fill="#f3ead6" opacity=".18"/><circle cx="7" cy="7" r=".8" fill="#1c2421" opacity=".15"/></pattern>
@@ -1008,7 +1008,7 @@ a.tl-item:hover { border-color: var(--mustard); }
     const released = D.episodes.filter(e => e.audio).length;
     return `
     <section class="hero pd-hero"><div class="wrap">
-      <img src="images/cover.jpg" alt="Podcast cover: a retro flying saucer beams light down on a lone figure among pine trees under a full moon." width="760" height="760">
+      <img src="images/cover.jpg?v=2" alt="Podcast cover: a retro flying saucer beams light down on a lone figure among pine trees under a full moon." width="760" height="760">
       <div class="copy">
         <p class="eyebrow">A podcast for UFO &amp; UAP beginners</p>
         <h1>Keep looking up. <em>Keep asking why.</em></h1>

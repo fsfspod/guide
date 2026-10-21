@@ -104,7 +104,7 @@ function page({ title, description, canonical, image, imageAlt, jsonld, body, og
 <meta property="og:image" content="${esc(image)}">
 <meta property="og:image:alt" content="${esc(imageAlt)}">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#2e8a7e">
+<meta name="theme-color" content="#1b4a42">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 ${fontsHref ? `<link rel="stylesheet" href="${esc(fontsHref)}">` : ""}
@@ -144,7 +144,7 @@ const seriesLd = {
   "@type": "PodcastSeries",
   name: D.site.podcastName || D.site.name,
   url: SITE_URL + "episodes/",
-  image: abs(D.site.shareImage || "images/cover.jpg"),
+  image: abs(D.site.shareImage || "images/cover.jpg?v=2"),
   ...(rss ? { webFeed: rss } : {}),
   ...(listenOn.length ? { sameAs: listenOn.filter(x => !/rss/i.test(x.name)).map(x => x.url) } : {})
 };
@@ -173,8 +173,8 @@ const RELEASE_SCRIPT = `<script>
 function episodePage(e, i) {
   const prev = eps[i - 1], next = eps[i + 1];
   const epCases = (e.cases || []).map(id => byId[id]).filter(Boolean);
-  const art = e.art ? local(e.art) : local("images/cover.jpg");
-  const artAbs = e.art ? abs(e.art) : abs(D.site.shareImage || "images/cover.jpg");
+  const art = e.art ? local(e.art) : local("images/cover.jpg?v=2");
+  const artAbs = e.art ? abs(e.art) : abs(D.site.shareImage || "images/cover.jpg?v=2");
   const audioSrc = e.audio ? local(e.audio) : "";
   const title = `Episode ${e.number}: ${e.title} | ${D.site.podcastName || D.site.name}`;
   const description = e.summary || `Episode ${e.number} of ${D.site.name}.`;
@@ -258,7 +258,7 @@ function listPage() {
     itemListElement: eps.map((e, i) => ({ "@type": "ListItem", position: i + 1, url: e.url, name: `Episode ${e.number}: ${e.title}` })) };
   const body = `
 <section class="hero pd-hero"><div class="wrap">
-  <img src="${BASE}images/cover.jpg" alt="Podcast cover: a retro flying saucer beams light down on a lone figure among pine trees under a full moon." width="760" height="760">
+  <img src="${BASE}images/cover.jpg?v=2" alt="Podcast cover: a retro flying saucer beams light down on a lone figure among pine trees under a full moon." width="760" height="760">
   <div class="copy">
     <p class="eyebrow">A podcast for UFO &amp; UAP beginners</p>
     <h1>Every episode. <em>Every source.</em></h1>
@@ -279,7 +279,7 @@ ${eps.some(e => e.scheduled) ? RELEASE_SCRIPT : ""}`;
   return page({
     title: `Podcast Episodes | ${D.site.podcastName || D.site.name}`,
     description: "Every episode of Flying Saucers for the Friendly Skeptic, a beginner's podcast about UFOs and UAP, with show notes, the cases covered and links to the original sources.",
-    canonical: url, image: abs(D.site.shareImage || "images/cover.jpg"), imageAlt: "Flying Saucers for the Friendly Skeptic podcast cover",
+    canonical: url, image: abs(D.site.shareImage || "images/cover.jpg?v=2"), imageAlt: "Flying Saucers for the Friendly Skeptic podcast cover",
     jsonld: [seriesFull, listLd], body
   });
 }

@@ -35,7 +35,7 @@ window.FIELD_GUIDE = {
     tagline: "A self-guided tour of UFOs, UAP and the declassified record.",
     podcastName: "Flying Saucers for the Friendly Skeptic",
     podcastUrl: "#podcast",
-    shareImage: "https://friendlyskeptic.com/guide/images/cover.jpg",
+    shareImage: "https://friendlyskeptic.com/guide/images/cover.jpg?v=2",
     lastUpdated: "October 2026",
     showDocumentRoom: false   // set to true to bring back the Document Room
   },
