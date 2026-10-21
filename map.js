@@ -58,7 +58,7 @@ window.FGMap = (function () {
       [-.46, .42, .09, .09, 0, 91], [.02, -.70, .38, .05, .08, 97], [.04, -.22, .08, .06, 0, 103], [-.72, .25, .1, .2, .2, 109]
     ].map(([x, y, rx, ry, r, n]) => `<path d="${blob(x, y, rx, ry, r, n)}"/>`).join("");
     const lp = ringPt(Math.PI * 1.02), tm = q(.5);
-    const ORBIT_BASE = `<rect x="-50" y="-60" width="1100" height="680" fill="#121a17"/>${stars}
+    const ORBIT_BASE = `<rect x="-600" y="-300" width="2200" height="1160" fill="#121a17"/>${stars}
       <path d="${O.ringBack}" fill="none" stroke="rgba(232,180,92,.35)" stroke-width="1.6" stroke-dasharray="5 6"/>
       <circle cx="${O.EX}" cy="${O.EY}" r="${O.ER + 7}" fill="none" stroke="rgba(143,208,198,.18)" stroke-width="10"/>
       <path d="${O.earthSphere}" fill="#1f3d38"/><path d="${O.earthGrat}" fill="none" stroke="rgba(243,234,214,.08)" stroke-width=".7"/>
@@ -94,10 +94,14 @@ window.FGMap = (function () {
     // ---- views ----
     const AR = 1000 / 560;
     const fit = ([x, y, w, h], pad) => { w *= pad; h *= pad; const cx = x + w / pad / 2, cy = y + h / pad / 2; if (w / h > AR) h = w / AR; else w = h * AR; return [cx - w / 2, cy - h / 2, w, h]; };
-    const VB = { world: [0, -20, 1000, 560] };
+    // World view frames the globe itself (plus a little breathing room), so it
+    // stretches to the card's full width instead of sitting letterboxed.
+    const SB = d3.geoPath(proj).bounds({ type: "Sphere" }), SP = 16;
+    const VB = { world: [SB[0][0] - SP, SB[0][1] - SP, SB[1][0] - SB[0][0] + SP * 2, SB[1][1] - SB[0][1] + SP * 2] };
     ["usa", "europe", "south"].forEach(k => VB[k] = fit(B.views[k], 1.08));
     const ORBIT_VB = [0, -20, 1000, 560];
     let mode = state.mode, view = state.view, vb = (mode === "orbit" ? ORBIT_VB : VB[view]).slice(), sel = null, era = "all";
+    const VB_CUR = () => vb;
     const onStat = new Set(Object.keys(COLORS));
     const ICON_ORBIT = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="4.5"/><ellipse cx="12" cy="12" rx="10.5" ry="4" transform="rotate(-18 12 12)"/></svg>`;
     const ICON_EARTH = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5c3 3.2 3 15.8 0 19M12 2.5c-3 3.2-3 15.8 0 19"/></svg>`;
@@ -113,14 +117,22 @@ window.FGMap = (function () {
     root.querySelectorAll("[data-stat]").forEach(b => b.addEventListener("click", () => { const k = b.dataset.stat; onStat.has(k) ? onStat.delete(k) : onStat.add(k); if (!onStat.size) Object.keys(COLORS).forEach(x => onStat.add(x)); root.querySelectorAll("[data-stat]").forEach(x => x.setAttribute("aria-pressed", onStat.has(x.dataset.stat))); sel = null; draw(); }));
     root.querySelectorAll("[data-era]").forEach(b => b.addEventListener("click", () => { era = b.dataset.era; root.querySelectorAll("[data-era]").forEach(x => x.setAttribute("aria-pressed", x === b)); sel = null; draw(); }));
 
+    // Grow a viewBox to the svg's on-screen shape (centered), so pins, labels
+    // and "in view" counts match what is actually visible.
+    const disp = v => {
+      const r = svg.clientWidth && svg.clientHeight ? svg.clientWidth / svg.clientHeight : AR;
+      let [x, y, w, h] = v;
+      if (w / h < r) { const nw = h * r; x -= (nw - w) / 2; w = nw; } else { const nh = w / r; y -= (nh - h) / 2; h = nh; }
+      return [x, y, w, h];
+    };
     const eraOf = y => eras.find(e => y >= e.from && y <= e.to);
     const PX = p => mode === "earth" ? p.x : p.ox, PY = p => mode === "earth" ? p.yy : p.oy;
     const visible = () => pts.filter(p => PX(p) != null && onStat.has(p.s) && (era === "all" || eraOf(p.y)?.id === era));
-    const inView = p => PX(p) >= vb[0] && PX(p) <= vb[0] + vb[2] && PY(p) >= vb[1] && PY(p) <= vb[1] + vb[3];
+    const inView = p => { const vb = disp(VB_CUR()); return PX(p) >= vb[0] && PX(p) <= vb[0] + vb[2] && PY(p) >= vb[1] && PY(p) <= vb[1] + vb[3]; };
     const key = g => g.items.map(p => p.id).sort().join(",");
 
     function clusters(list) {
-      const px = svg.getBoundingClientRect().width || 800, unit = vb[2] / px, R = 13 * unit, out = [];
+      const px = svg.getBoundingClientRect().width || 800, unit = disp(vb)[2] / px, R = 13 * unit, out = [];
       list.forEach(p => {
         const cx = PX(p), cy = PY(p), hit = out.find(g => Math.hypot(g.x - cx, g.y - cy) < R);
         if (hit) { hit.items.push(p); hit.x = (hit.x * (hit.items.length - 1) + cx) / hit.items.length; hit.y = (hit.y * (hit.items.length - 1) + cy) / hit.items.length; }
@@ -130,6 +142,7 @@ window.FGMap = (function () {
     }
     function clearLabel() { labelsG.innerHTML = ""; }
     function label(g, unit) {
+      const vb = disp(VB_CUR());
       const n = g.items.length, c = g.items[0].c;
       const t1 = n > 1 ? `${n} entries here` : (c.title.length > 38 ? c.title.slice(0, 37) + "…" : c.title);
       const t2 = n > 1 ? g.items.map(p => p.y).sort((a, b) => a - b).filter((v, i, a) => a.indexOf(v) === i).slice(0, 4).join(", ") + (n > 4 ? "…" : "") : `${c.date} · ${STATUS[c.status].label}`;
@@ -141,7 +154,7 @@ window.FGMap = (function () {
     }
     function draw() {
       if (!svg.isConnected) return;
-      svg.setAttribute("viewBox", vb.join(" "));
+      svg.setAttribute("viewBox", disp(vb).join(" "));
       const list = visible(), { out, unit } = clusters(list);
       pinsG.innerHTML = ""; clearLabel();
       out.sort((a, b) => a.items.length - b.items.length).forEach(g => {
@@ -184,7 +197,7 @@ window.FGMap = (function () {
         if (!svg.isConnected) return;
         const k = dur ? Math.min(1, (now - t0) / dur) : 1, e = k < .5 ? 2 * k * k : 1 - Math.pow(-2 * k + 2, 2) / 2;
         vb = from.map((v, i) => v + (target[i] - v) * e);
-        svg.setAttribute("viewBox", vb.join(" "));
+        svg.setAttribute("viewBox", disp(vb).join(" "));
         if (k < 1) requestAnimationFrame(step); else draw();
       };
       requestAnimationFrame(step);
