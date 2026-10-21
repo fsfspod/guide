@@ -2192,6 +2192,7 @@ window.FIELD_GUIDE = {
       ]
     },
     {
+      art: "images/episodes/episode-08.jpg",
       number: 8, title: "The Truth Is Out There", tags: [],
       summary: "The X-Files hits prime time, Fox airs an 'alien autopsy,' and thousands of people watch lights over Phoenix.",
             cases: ["phoenix-lights", "alien-autopsy", "roswell-reports", "cia-haines", "disclosure-project"],
