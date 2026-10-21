@@ -1018,7 +1018,6 @@ a.tl-item:hover { border-color: var(--mustard); }
     <section class="section pd-dark" id="pd-episodes"><div class="wrap">
       <div class="sec-head">
         <div class="left"><span class="tag-badge">Season 1 · ${D.episodes.length} episodes · ${released ? `${released} out now` : "in production"}</span><h2>Episodes</h2></div>
-        <p class="lede">Each episode takes one case or one question and works through the evidence. Tap a topic tag to jump to the recordings behind it.</p>
       </div>
       <div class="pd-eps">${D.episodes.map(e => `<article class="pd-ep${e.audio ? " released" : ""}${e.art ? " has-art" : ""}">
         ${e.art ? `<img class="pd-art${e.audio ? " tall" : ""}" src="${esc(e.art)}" alt="Episode ${e.number} artwork: ${esc(e.title)}" width="600" height="600" loading="lazy">` : `<div class="pd-no">${e.number}</div>`}
