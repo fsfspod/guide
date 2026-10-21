@@ -2150,6 +2150,7 @@ window.FIELD_GUIDE = {
       ]
     },
     {
+      art: "images/episodes/episode-04.jpg",
       number: 4, title: "True Believers", tags: [],
       summary: "Contactees, saucer clubs and civilian investigators build a movement of their own.",
             cases: ["contactees", "civilian-investigators", "flatwoods", "kelly-hopkinsville", "robertson-panel", "aztec-hoax"],
@@ -2159,6 +2160,7 @@ window.FIELD_GUIDE = {
       ]
     },
     {
+      art: "images/episodes/episode-05.jpg",
       number: 5, title: "Case Closed", tags: ["Air Force"],
       summary: "The Condon Report and the end of Project Blue Book in 1969.",
             cases: ["michigan-1966", "hearing-1966", "condon-committee", "symposium-1968", "blue-book-closes", "mcminnville", "rb-47"],
