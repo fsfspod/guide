@@ -2182,7 +2182,8 @@ window.FIELD_GUIDE = {
       ]
     },
     {
-      number: 7, title: "Secrets and Documents", tags: [],
+      art: "images/episodes/episode-07.jpg",
+      number: 7, title: "Fax or Fiction?", tags: [],
       summary: "Airmen chase lights into an English forest, secret 'Majestic 12' papers surface, and Communion puts the gray alien on the bestseller lists.",
             cases: ["rendlesham", "mj-12", "gulf-breeze", "bob-lazar", "roswell"],
       links: [
