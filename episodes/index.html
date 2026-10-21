@@ -20,7 +20,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@400;900&amp;family=Karla:ital,wght@0,400;0,600;0,700;1,400&amp;family=IBM+Plex+Mono:wght@400;600&amp;family=Special+Elite&amp;display=swap">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"PodcastSeries","name":"Flying Saucers for the Friendly Skeptic","url":"https://friendlyskeptic.com/guide/episodes/","image":"https://friendlyskeptic.com/guide/images/cover.jpg?v=2","webFeed":"https://anchor.fm/s/118c07c40/podcast/rss","sameAs":["https://open.spotify.com/show/57w75u62SqyfHz3Gy2oKlr","https://podcasts.apple.com/us/podcast/flying-saucers-for-the-friendly-skeptic/id6824664958"],"description":"A podcast for UFO and UAP beginners: the history, the evidence and the declassified record, with sources for everything."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"PodcastSeries","name":"Flying Saucers for the Friendly Skeptic","url":"https://friendlyskeptic.com/guide/episodes/","image":"https://friendlyskeptic.com/guide/images/cover.jpg?v=2","webFeed":"https://anchor.fm/s/118c07c40/podcast/rss","sameAs":["https://open.spotify.com/show/57w75u62SqyfHz3Gy2oKlr","https://podcasts.apple.com/us/podcast/flying-saucers-for-the-friendly-skeptic/id6824664958","https://www.iheart.com/podcast/269-flying-saucers-for-the-fri-348138673","https://music.amazon.com/podcasts/42d93d02-6fd1-4861-a039-a51adc348518"],"description":"A podcast for UFO and UAP beginners: the history, the evidence and the declassified record, with sources for everything."}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"url":"https://friendlyskeptic.com/guide/episodes/1-summer-of-saucers/","name":"Episode 1: Summer of Saucers"},{"@type":"ListItem","position":2,"url":"https://friendlyskeptic.com/guide/episodes/2-what-fell-in-roswell/","name":"Episode 2: What Fell in Roswell?"},{"@type":"ListItem","position":3,"url":"https://friendlyskeptic.com/guide/episodes/3-the-book-is-opened/","name":"Episode 3: The Book Is Opened"},{"@type":"ListItem","position":4,"url":"https://friendlyskeptic.com/guide/episodes/4-true-believers/","name":"Episode 4: True Believers"},{"@type":"ListItem","position":5,"url":"https://friendlyskeptic.com/guide/episodes/5-case-closed/","name":"Episode 5: Case Closed"},{"@type":"ListItem","position":6,"url":"https://friendlyskeptic.com/guide/episodes/6-close-encounters/","name":"Episode 6: Close Encounters"},{"@type":"ListItem","position":7,"url":"https://friendlyskeptic.com/guide/episodes/7-fax-or-fiction/","name":"Episode 7: Fax or Fiction?"},{"@type":"ListItem","position":8,"url":"https://friendlyskeptic.com/guide/episodes/8-the-truth-is-out-there/","name":"Episode 8: The Truth Is Out There"},{"@type":"ListItem","position":9,"url":"https://friendlyskeptic.com/guide/episodes/9-back-on-the-radar/","name":"Episode 9: Back on the Radar"},{"@type":"ListItem","position":10,"url":"https://friendlyskeptic.com/guide/episodes/10-disclosure/","name":"Episode 10: Disclosure"}]}</script>
 <style>
 [hidden] { display: none !important; }
@@ -373,9 +373,14 @@ a.tl-item:hover { border-color: var(--mustard); }
 .pd-hero .copy { display: grid; grid-template-columns: minmax(0, 1fr); gap: 22px; justify-items: start; align-items: start; min-width: 0; }
 .pd-hero h1 { max-width: none; }
 .pd-hero .lede { color: var(--cream); font-size: 19px; }
-.pd-hero .btn-platform { background: var(--cream); color: var(--ink); border-color: var(--ink); box-shadow: 4px 4px 0 var(--shadow); font-size: 16px; padding: 10px 20px; }
-.pd-hero .btn-platform:hover { box-shadow: 6px 6px 0 var(--shadow); }
-.pd-hero .pd-platforms { margin-top: -8px; }
+.pd-platforms { display: grid; gap: 10px; }
+.pd-platforms-label { margin: 0; font-family: var(--f-mono); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--cream-dim); }
+.pd-logos { display: flex; flex-wrap: wrap; gap: 12px; }
+.pd-logo { display: inline-grid; place-items: center; width: 50px; height: 50px; border-radius: 12px; background: var(--cream); color: var(--ink); border: 2px solid var(--ink); box-shadow: 3px 3px 0 var(--shadow); text-decoration: none; transition: transform .12s, box-shadow .12s; }
+.pd-logo svg { width: 26px; height: 26px; fill: currentColor; }
+.pd-logo.text { width: auto; padding: 0 14px; font-family: var(--f-mono); font-size: 13px; }
+.pd-logo:hover { transform: translate(-1px, -1px); box-shadow: 5px 5px 0 var(--shadow); }
+.pd-logo:focus-visible { outline: 3px solid var(--mustard); outline-offset: 3px; }
 @media (max-width: 860px) { .pd-hero .wrap { grid-template-columns: 1fr; gap: 34px; padding-block: 36px 46px; } .pd-hero img { max-width: 380px; margin: 0 auto; } }
 .pd-dark { background: var(--ink); }
 .pd-eps { display: grid; gap: 14px; }
@@ -502,7 +507,7 @@ a.tl-item:hover { border-color: var(--mustard); }
     <p class="eyebrow">A podcast for UFO &amp; UAP beginners</p>
     <h1>Every episode. <em>Every source.</em></h1>
     <p class="lede">From the first reported flying saucer to declassified footage from Navy fighter pilots, this is your guide to UFOs, UAP and how we got here. No prior knowledge needed.</p>
-    <div class="pd-listen"><span>Listen on</span><a class="chip live" href="https://open.spotify.com/show/57w75u62SqyfHz3Gy2oKlr" target="_blank" rel="noopener">Spotify &#8599;</a><a class="chip live" href="https://podcasts.apple.com/us/podcast/flying-saucers-for-the-friendly-skeptic/id6824664958" target="_blank" rel="noopener">Apple Podcasts &#8599;</a><a class="chip live" href="https://anchor.fm/s/118c07c40/podcast/rss" target="_blank" rel="noopener">RSS &#8599;</a></div>
+    <div class="pd-listen"><span>Listen on</span><a class="chip live" href="https://open.spotify.com/show/57w75u62SqyfHz3Gy2oKlr" target="_blank" rel="noopener">Spotify &#8599;</a><a class="chip live" href="https://podcasts.apple.com/us/podcast/flying-saucers-for-the-friendly-skeptic/id6824664958" target="_blank" rel="noopener">Apple Podcasts &#8599;</a><a class="chip live" href="https://www.iheart.com/podcast/269-flying-saucers-for-the-fri-348138673" target="_blank" rel="noopener">iHeartRadio &#8599;</a><a class="chip live" href="https://music.amazon.com/podcasts/42d93d02-6fd1-4861-a039-a51adc348518" target="_blank" rel="noopener">Amazon Music &#8599;</a><a class="chip live" href="https://anchor.fm/s/118c07c40/podcast/rss" target="_blank" rel="noopener">RSS &#8599;</a></div>
   </div>
 </div></section>
 <section class="section pd-dark ep-list"><div class="wrap">

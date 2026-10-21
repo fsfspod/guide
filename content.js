@@ -2098,6 +2098,8 @@ window.FIELD_GUIDE = {
   listenOn: [
     { name: "Spotify", url: "https://open.spotify.com/show/57w75u62SqyfHz3Gy2oKlr" },
     { name: "Apple Podcasts", url: "https://podcasts.apple.com/us/podcast/flying-saucers-for-the-friendly-skeptic/id6824664958" },
+    { name: "iHeartRadio", url: "https://www.iheart.com/podcast/269-flying-saucers-for-the-fri-348138673" },
+    { name: "Amazon Music", url: "https://music.amazon.com/podcasts/42d93d02-6fd1-4861-a039-a51adc348518" },
     { name: "RSS", url: "https://anchor.fm/s/118c07c40/podcast/rss" }
   ],
 
