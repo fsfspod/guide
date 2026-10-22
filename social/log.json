@@ -14,6 +14,17 @@
       "publishAt": "2026-10-26T09:00:00-06:00",
       "image": "social/posts/episode-02.jpg",
       "metricoolUuid": "4808458927607729877"
+    },
+    {
+      "type": "welcome",
+      "id": "welcome",
+      "publishAt": "2026-10-21T19:15:00-06:00",
+      "image": "social/posts/welcome.jpg",
+      "networks": [
+        "instagram",
+        "facebook"
+      ],
+      "metricoolUuid": "9121823784808039440"
     }
   ]
 }
