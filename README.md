@@ -13,8 +13,8 @@ The podcast and field guide to UFOs, UAP and the declassified record. Live at **
 | `favicon.svg` | The little saucer icon in the browser tab. |
 | `map.js` | The Map page (Earth view and Orbit view). |
 | `map-data.js` | Coastlines and globe shapes for the Map. Generated; don't edit by hand. |
-| `episodes/`, `sitemap.xml` | One page per podcast episode, and the list of pages for search engines. Built automatically from `content.js`; don't edit by hand. |
-| `scripts/build-episodes.js` | The script that builds them. |
+| `case/`, `cases/`, `topics/`, `episodes/`, `assets/pages.css`, `sitemap.xml` | One page per case, topic and podcast episode, a list of every case, and the list of pages for search engines. Built automatically from `content.js`; don't edit by hand. |
+| `scripts/build-pages.js` | The script that builds them. `scripts/page-dates.json` records when each page last changed. |
 
 There is no build step for you to run. GitHub Pages serves these files as they are, usually within a minute or two of a change.
 
@@ -45,12 +45,21 @@ The case appears automatically under its topics, on the timeline and in search, 
 
 Find the episode in `episodes: [ ... ]` and add `audio: "https://..."` (the episode's audio file from your podcast host) and `length: "mm:ss"`. The "In production" label becomes "Out now" with a player. Its `tags` link to recording topics. (`cases` and `links` are kept in the file but no longer shown on the page.)
 
-### Episode pages (automatic)
+### Case, topic and episode pages (automatic)
 
-Every episode also has its own page, e.g. friendlyskeptic.com/guide/episodes/2-what-fell-in-roswell/, plus a list of all episodes at friendlyskeptic.com/guide/episodes/. These pages are what Google finds and shows in search.
+Every case, topic and episode has its own real web page, which is what Google and AI search tools find and show:
 
-You never edit them directly. When you commit a change to `content.js`, a GitHub Action (`.github/workflows/build-episode-pages.yml`) runs `scripts/build-episodes.js`, which rebuilds the `episodes` folder and `sitemap.xml` and commits them for you about a minute later. It also runs once a day so scheduled releases flip to "Out now" on their own. You can watch it under the repository's **Actions** tab.
+- Cases: friendlyskeptic.com/guide/case/roswell/ (the address is the case's `id`)
+- Every case on one page: friendlyskeptic.com/guide/cases/
+- Topics: friendlyskeptic.com/guide/topics/hoaxes/
+- Episodes: friendlyskeptic.com/guide/episodes/2-what-fell-in-roswell/, plus friendlyskeptic.com/guide/episodes/
 
+You never edit them directly. When you commit a change to `content.js`, a GitHub Action (`.github/workflows/build-pages.yml`) runs `scripts/build-pages.js`, which rebuilds them and `sitemap.xml` and commits them for you about a minute later. It also runs once a day so scheduled releases flip to "Out now" on their own. You can watch it under the repository's **Actions** tab.
+
+- Clicking a case anywhere in the guide opens its page. Old links like friendlyskeptic.com/guide/#case-roswell forward there automatically.
+- **Don't change a case's `id`** once it's live: the id is its web address, and search engines will lose the old one.
+- Each case's search title is written for you, e.g. "Roswell (1947): What Really Happened". To write your own, add `seoTitle: "What Was the Roswell Incident? The 1947 Crash Explained"`. To replace the search snippet, add `seoDescription: "..."` (aim for under 160 characters).
+- If an episode lists a case in its `cases`, the case page links to that episode under "Hear it on the podcast".
 - Changing an episode's `title` changes its page address. To keep the old address, add `slug: "2-what-fell-in-roswell"` to that episode.
 - `published: "2026-10-18"` sets the release date search engines show, for an episode that went out without a `releaseAt`.
 
