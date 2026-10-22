@@ -4,6 +4,7 @@
 Usage (run from the repo root):
   python3 social/make_card.py episode 2               -> social/posts/episode-02.jpg
   python3 social/make_card.py case roswell            -> social/posts/case-roswell.jpg
+  python3 social/make_card.py welcome show          -> social/posts/welcome.jpg
   python3 social/make_card.py news spec.json          -> social/posts/news-<slug>.jpg
       spec.json: {"slug": "...", "headline": "...", "summary": "...",
                   "source": "...", "date": "October 21, 2026"}
@@ -107,6 +108,22 @@ h1{{font-size:{size}px;text-align:center}}
     meta = f"Episode {ep['number']}" + (f" · {ep['length']}" if ep.get("length") else "")
     body = f"""<div class="main"><span class="badge">New episode · Out now</span>
 <img class="art" src="{art}" alt=""><h1>{e(title)}</h1><p class="meta">{e(meta)}</p></div>
+{footer("Listen wherever you get your podcasts · Link in bio")}"""
+    return page(css, body)
+
+
+def welcome_card():
+    art = (SOCIAL / "cover-orange.jpg").as_uri()
+    css = """
+.main{align-items:center;gap:34px;padding-top:60px}
+.badge{align-self:center}
+.art{width:720px;height:720px;border:10px solid #f3ead6;box-shadow:18px 18px 0 #0f1412;transform:rotate(-1.5deg);display:block;object-fit:cover}
+h1{font-size:96px;text-align:center}
+.meta{font-family:Plex;font-size:26px;letter-spacing:.1em;text-transform:uppercase;color:#c9c2b0;margin-top:-14px;text-align:center}
+"""
+    body = f"""<div class="main"><span class="badge">Welcome aboard</span>
+<img class="art" src="{art}" alt=""><h1>Welcome, <em>skeptics</em></h1>
+<p class="meta">A beginner's guide to UFOs &amp; UAP<br>New episodes every Monday</p></div>
 {footer("Listen wherever you get your podcasts · Link in bio")}"""
     return page(css, body)
 
@@ -215,6 +232,9 @@ def main():
             over = render(case_card(c, opts.get("--record"), opts.get("--explain"), level), out)
             if not over:
                 break
+    elif kind == "welcome":
+        out = out or SOCIAL / "posts" / "welcome.jpg"
+        over = render(welcome_card(), out)
     elif kind == "news":
         n = json.load(open(arg))
         out = out or SOCIAL / "posts" / f"news-{n['slug']}.jpg"
