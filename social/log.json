@@ -1,7 +1,19 @@
 {
   "note": "Instagram drafts created for @friendlyskepticpodcast via Metricool. Used to avoid repeating episodes, cases or news stories.",
   "posts": [
-    { "type": "case", "id": "foo-fighters", "publishAt": "2026-10-23T18:00:00-06:00", "image": "social/posts/case-foo-fighters.jpg" },
-    { "type": "episode", "id": "2", "publishAt": "2026-10-26T09:00:00-06:00", "image": "social/posts/episode-02.jpg" }
+    {
+      "type": "case",
+      "id": "foo-fighters",
+      "publishAt": "2026-10-23T18:00:00-06:00",
+      "image": "social/posts/case-foo-fighters.jpg",
+      "metricoolUuid": "3621248865534822958"
+    },
+    {
+      "type": "episode",
+      "id": "2",
+      "publishAt": "2026-10-26T09:00:00-06:00",
+      "image": "social/posts/episode-02.jpg",
+      "metricoolUuid": "4808458927607729877"
+    }
   ]
 }
