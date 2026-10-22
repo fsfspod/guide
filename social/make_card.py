@@ -113,7 +113,7 @@ h1{{font-size:{size}px;text-align:center}}
 
 
 def welcome_card():
-    art = (SOCIAL / "cover-orange.jpg").as_uri()
+    art = (ROOT / "images" / "cover.jpg").as_uri()
     css = """
 .main{align-items:center;gap:34px;padding-top:60px}
 .badge{align-self:center}
