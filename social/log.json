@@ -25,6 +25,13 @@
         "facebook"
       ],
       "metricoolUuid": "9121823784808039440"
+    },
+    {
+      "type": "case",
+      "id": "roswell",
+      "publishAt": "2026-10-29T18:00:00-06:00",
+      "image": "social/posts/case-roswell.jpg",
+      "metricoolUuid": "3402253180695889230"
     }
   ]
 }
