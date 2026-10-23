@@ -376,6 +376,31 @@ a.tl-item:hover { border-color: var(--mustard); }
 .pd-logo.text { width: auto; padding: 0 14px; font-family: var(--f-mono); font-size: 13px; }
 .pd-logo:hover { transform: translate(-1px, -1px); box-shadow: 5px 5px 0 var(--shadow); }
 .pd-logo:focus-visible { outline: 3px solid var(--mustard); outline-offset: 3px; }
+.pd-band { background: var(--teal-deep); border-bottom: 2px solid var(--ink); }
+.pd-band .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 32px; padding-block: 22px; }
+.pd-band-title { font-size: clamp(32px, 4.4vw, 48px); margin: 0; color: var(--cream); }
+.pd-band .pd-platforms { grid-auto-flow: column; align-items: center; gap: 16px; }
+@media (max-width: 700px) { .pd-band .pd-platforms { grid-auto-flow: row; } }
+.ep-strip { background: var(--hall); border-bottom: 2px solid var(--ink); }
+.ep-strip .wrap { padding-block: 18px 20px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; }
+.ep-strip-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.ep-strip-head h2 { font-size: 22px; margin: 0; color: var(--cream); }
+.ep-strip-head h2 span { font-family: var(--f-mono); font-size: 13px; letter-spacing: .06em; text-transform: uppercase; color: var(--cream-dim); }
+.ep-strip-head a { font-family: var(--f-mono); font-size: 13px; letter-spacing: .06em; text-transform: uppercase; color: var(--mustard); white-space: nowrap; }
+.ep-strip-row { list-style: none; margin: 0; padding: 4px 4px 8px; display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); gap: 12px; }
+.ep-tile { position: relative; display: grid; gap: 6px; text-decoration: none; color: var(--cream-dim); }
+.ep-art { position: relative; display: block; aspect-ratio: 1; background: var(--hall-2); border: 2px solid var(--ink); border-radius: 6px; overflow: hidden; box-shadow: 3px 3px 0 var(--shadow); transition: transform .12s, box-shadow .12s; }
+.ep-art img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.ep-tile:not(.out) .ep-art img { filter: grayscale(.55) brightness(.7); }
+.ep-num { position: absolute; left: 4px; top: 4px; min-width: 24px; height: 24px; padding: 0 6px; display: grid; place-items: center; border-radius: 999px; background: var(--ink); color: var(--cream); font-family: var(--f-mono); font-size: 12px; font-weight: 600; }
+.ep-tile.out .ep-num { background: var(--mustard); color: var(--ink); }
+.ep-st { font-family: var(--f-mono); font-size: 11px; letter-spacing: .05em; text-transform: uppercase; text-align: center; white-space: nowrap; }
+.ep-tile.out .ep-st { color: var(--mustard); font-weight: 600; }
+.ep-tile:hover .ep-art, .ep-tile:focus-visible .ep-art { transform: translate(-2px, -2px); box-shadow: 5px 5px 0 var(--shadow); }
+.ep-tile:focus-visible { outline: none; }
+.ep-tile:focus-visible .ep-art { outline: 3px solid var(--mustard); outline-offset: 2px; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+@media (max-width: 860px) { .ep-strip-row { grid-template-columns: repeat(10, 84px); overflow-x: auto; scroll-snap-type: x mandatory; } .ep-strip-row li { scroll-snap-align: start; } }
 @media (max-width: 860px) { .pd-hero .wrap { grid-template-columns: 1fr; gap: 34px; padding-block: 36px 46px; } .pd-hero img { max-width: 380px; margin: 0 auto; } }
 .pd-dark { background: var(--ink); }
 .pd-eps { display: grid; gap: 14px; }
@@ -617,6 +642,46 @@ a.tl-item:hover { border-color: var(--mustard); }
     </div></section>` : "";
   }
 
+  /* Podcast header (now the field guide's home page header) and its pieces. */
+  function platformLogos() {
+    return (() => { const L = (D.listenOn || []).map(x => typeof x === "string" ? { name: x } : x).filter(x => x.url);
+          return L.length ? `<div class="pd-platforms"><p class="pd-platforms-label">Listen wherever you get your podcasts</p><div class="pd-logos">${L.map(x => { const k = Object.keys(PLATFORM_ICONS).find(k => x.name.toLowerCase().includes(k));
+            return `<a class="pd-logo${k ? "" : " text"}" href="${esc(x.url)}" target="_blank" rel="noopener" aria-label="Listen on ${esc(x.name)}" title="${esc(x.name)}">${k ? `<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="${PLATFORM_ICONS[k]}"/></svg>` : esc(x.name)}</a>`; }).join("")}</div></div>` : ""; })();
+  }
+  // Episode release state, matching scripts/build-pages.js: a releaseAt in the future means "coming".
+  function epState(e) {
+    const t = e.releaseAt ? Date.parse(e.releaseAt) : NaN;
+    if (e.audio && !(t > Date.now())) return { out: true, label: "Out now" };
+    if (t > Date.now()) return { out: false, label: "Out " + new Date(t).toLocaleDateString("en-US", { month: "short", day: "numeric" }) };
+    return { out: false, label: "Coming soon" };
+  }
+  function podcastHero() {
+    return `
+    <section class="hero pd-hero"><div class="wrap">
+      <img src="images/cover.jpg?v=2" alt="Podcast cover: a retro flying saucer beams light down on a lone figure among pine trees under a full moon." width="760" height="760">
+      <div class="copy">
+        <p class="eyebrow">A podcast about UFOs &amp; UAP</p>
+        <h1>Keep looking up. <em>Keep asking why.</em></h1>
+        <p class="lede">A podcast about UFOs and UAP, from the first flying saucer reports to declassified Navy footage, made for beginners and friendly skeptics. It's also a searchable field guide for curious researchers: ${cases.length} cases, a timeline, a map and the original records.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="#podcast">Start listening</a>
+          <a class="btn btn-primary" href="#galleries">Explore the field guide</a>
+          <button class="btn" type="button" data-open-search>Search the cases</button>
+        </div>
+        ${platformLogos()}
+      </div>
+    </div></section>`;
+  }
+  function episodeStrip() {
+    return `
+    <section class="ep-strip" aria-labelledby="ep-strip-h"><div class="wrap">
+      <div class="ep-strip-head"><h2 id="ep-strip-h">Season 1 <span>· ${D.episodes.length} episodes</span></h2><a href="episodes/">All episodes &rarr;</a></div>
+      <ol class="ep-strip-row">${D.episodes.map(e => { const st = epState(e); return `<li><a class="ep-tile${st.out ? " out" : ""}" href="${episodeUrl(e)}" title="Episode ${e.number}: ${esc(e.title)}">
+        <span class="ep-art">${e.art ? `<img src="${esc(e.art)}" alt="" width="600" height="600" loading="lazy">` : ""}<span class="ep-num">${e.number}</span></span>
+        <span class="ep-st">${esc(st.label)}</span><span class="sr-only">Episode ${e.number}: ${esc(e.title)}</span></a></li>`; }).join("")}</ol>
+    </div></section>`;
+  }
+
   function viewLobby() {
     const today = new Date();
     const dayIndex = Math.floor(today.getTime() / 86400000);
@@ -631,25 +696,8 @@ a.tl-item:hover { border-color: var(--mustard); }
     ];
     if (SHOW_DOCS) wings.splice(2, 0, { href: "#documents", room: "Read a real file", title: "The Document Room", text: "Guided walkthroughs of real declassified documents. Learn to read the stamps, routing lines and redactions yourself.", count: `${D.documents.length} ${D.documents.length === 1 ? "file" : "files"} · more on the way` });
     return `
-    <section class="hero">
-      <div class="wrap">
-        <div class="copy">
-          <div class="headline">
-          <p class="eyebrow">A field guide to UFOs &amp; UAP</p>
-          <h1>Wander the record. <em>Weigh the evidence.</em></h1>
-          </div>
-          <div class="aside">
-          <p class="lede">${esc(D.site.tagline)} Explore at your own pace by subject, by year or straight from the source files, from the phantom airships of 1896 to the declassified releases of 2026.</p>
-          <div class="btn-row">
-            <a class="btn btn-primary" href="#galleries">Start the tour</a>
-            <a class="btn btn-primary" href="#corridor">Walk the timeline</a>
-            <a class="btn" href="${esc(D.site.podcastUrl)}">Hear the podcast</a>
-          </div>
-          <ul class="ticks"><li>No prior knowledge needed</li><li>Primary sources first</li><li>Curious, never gullible</li></ul>
-          </div>
-        </div>
-      </div>
-    </section>
+    ${podcastHero()}
+    ${episodeStrip()}
 
     <section class="section"><div class="wrap">
       <div class="sec-head">
@@ -966,21 +1014,9 @@ a.tl-item:hover { border-color: var(--mustard); }
     });
     const released = D.episodes.filter(e => e.audio).length;
     return `
-    <section class="hero pd-hero"><div class="wrap">
-      <img src="images/cover.jpg?v=2" alt="Podcast cover: a retro flying saucer beams light down on a lone figure among pine trees under a full moon." width="760" height="760">
-      <div class="copy">
-        <p class="eyebrow">A podcast for UFO &amp; UAP beginners</p>
-        <h1>Keep looking up. <em>Keep asking why.</em></h1>
-        <p class="lede">From the first reported flying saucer to declassified footage from Navy fighter pilots, this is your guide to UFOs, UAP and how we got here.</p>
-        <div class="btn-row">
-          <button class="btn btn-primary" type="button" data-scroll="pd-episodes">Start listening</button>
-          <button class="btn" type="button" data-scroll="pd-sources">Check our sources</button>
-        </div>
-        ${(() => { const L = (D.listenOn || []).map(x => typeof x === "string" ? { name: x } : x).filter(x => x.url);
-          return L.length ? `<div class="pd-platforms"><p class="pd-platforms-label">Listen wherever you get your podcasts</p><div class="pd-logos">${L.map(x => { const k = Object.keys(PLATFORM_ICONS).find(k => x.name.toLowerCase().includes(k));
-            return `<a class="pd-logo${k ? "" : " text"}" href="${esc(x.url)}" target="_blank" rel="noopener" aria-label="Listen on ${esc(x.name)}" title="${esc(x.name)}">${k ? `<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="${PLATFORM_ICONS[k]}"/></svg>` : esc(x.name)}</a>`; }).join("")}</div></div>` : ""; })()}
-        <ul class="ticks"><li>No prior knowledge needed</li><li>Primary sources first</li><li>Curious, never gullible</li></ul>
-      </div>
+    <section class="pd-band"><div class="wrap">
+      <h1 class="pd-band-title">The Podcast</h1>
+      ${platformLogos()}
     </div></section>
 
     <section class="section pd-dark" id="pd-episodes"><div class="wrap">
@@ -1094,6 +1130,7 @@ a.tl-item:hover { border-color: var(--mustard); }
     document.querySelectorAll("[data-nav]").forEach(a => { if (a.dataset.nav === nav) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current"); });
     if (!pendingEra && !pendingRR) window.scrollTo(0, 0);
     if (h === "contact") wireContact();
+    app.querySelectorAll("[data-open-search]").forEach(b => b.addEventListener("click", () => openSearch()));
     app.querySelectorAll("[data-rr]").forEach(a => a.addEventListener("click", () => { pendingRR = a.dataset.rr; }));
     try { localStorage.setItem("fgfs-last", h); } catch (e) {}
   }
