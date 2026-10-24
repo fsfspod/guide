@@ -32,6 +32,21 @@
       "publishAt": "2026-10-29T18:00:00-06:00",
       "image": "social/posts/case-roswell.jpg",
       "metricoolUuid": "3402253180695889230"
+    },
+    {
+      "type": "news",
+      "id": "pursue-release-07-2026-10-24",
+      "story": "Pentagon/Department of War posts PURSUE release 07 (Oct 23, 2026): federal agents' black triangle report, Skinwalker Ranch 2010 report, historical files.",
+      "sources": [
+        "https://www.war.gov/UFO/",
+        "https://www.axios.com/2026/10/23/new-ufo-documents-flying-triangle",
+        "https://www.washingtontimes.com/news/2026/oct/23/pentagon-releases-latest-batch-ufo-files/",
+        "https://www.newsnationnow.com/space/ufo/latest-ufo-files-oct-23/",
+        "https://www.aa.com.tr/en/americas/pentagon-releases-7th-batch-of-ufo-files/4098640"
+      ],
+      "publishAt": "2026-10-24T12:00:00-06:00",
+      "image": "social/posts/news-pursue-release-07-2026-10-24.jpg",
+      "metricoolUuid": "-491486781743741781"
     }
   ]
 }
