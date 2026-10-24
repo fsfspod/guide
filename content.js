@@ -2084,11 +2084,12 @@ window.FIELD_GUIDE = {
     shopUrl: "https://fsfspod.printful.me/",
     note: "Printed on demand by Printful",
     items: [
-      { name: "Sticker", desc: "Our round saucer badge on a bubble-free vinyl sticker.", img: "merch/sticker.jpg" },
-      { name: "Black Glossy Mug", desc: "The saucer badge on a glossy black ceramic mug.", img: "merch/mug.jpg" },
-      { name: "Dad Hat", desc: "A black dad hat with the badge on the front.", img: "merch/hat.jpg" },
-      { name: "Hoodie", desc: "A relaxed, mid-weight unisex hooded sweatshirt.", img: "merch/hoodie.jpg" },
-      { name: "Eco Tote Bag", desc: "A black tote bag with the full badge.", img: "merch/tote.jpg" }
+      { name: "Abduction Hoodie", desc: "A tan hoodie with the full-color saucer-and-tractor-beam scene printed big on the back.", img: "merch/hoodie.jpg" },
+      { name: "Oversized Abduction Tee", desc: "A sand-colored boxy tee with the beam scene on the front and the round badge on the sleeve.", img: "merch/tshirt.jpg" },
+      { name: "Badge Tee", desc: "A navy tee with the show badge on the left chest.", img: "merch/jersey-tshirt.jpg" },
+      { name: "Two-Tone Cap", desc: "A cream cap with a navy brim and the show badge on the front.", img: "merch/cap.jpg" },
+      { name: "Eco Tote Bag", desc: "A natural canvas tote with the round night-sky badge.", img: "merch/tote.jpg" },
+      { name: "Sticker", desc: "The round night-sky badge as a vinyl sticker.", img: "merch/sticker.jpg" }
     ]
   },
 
