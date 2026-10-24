@@ -2084,12 +2084,12 @@ window.FIELD_GUIDE = {
     shopUrl: "https://fsfspod.printful.me/",
     note: "Printed on demand by Printful",
     items: [
-      { name: "Abduction Hoodie", desc: "A tan hoodie with the full-color saucer-and-tractor-beam scene printed big on the back.", img: "merch/hoodie.jpg" },
+      { name: "Abduction Hoodie", desc: "A tan hoodie with the full-color saucer-and-tractor-beam scene printed big on the back.", img: "merch/hoodie-2026.jpg" },
       { name: "Oversized Abduction Tee", desc: "A sand-colored boxy tee with the beam scene on the front and the round badge on the sleeve.", img: "merch/tshirt.jpg" },
       { name: "Badge Tee", desc: "A navy tee with the show badge on the left chest.", img: "merch/jersey-tshirt.jpg" },
       { name: "Two-Tone Cap", desc: "A cream cap with a navy brim and the show badge on the front.", img: "merch/cap.jpg" },
-      { name: "Eco Tote Bag", desc: "A natural canvas tote with the round night-sky badge.", img: "merch/tote.jpg" },
-      { name: "Sticker", desc: "The round night-sky badge as a vinyl sticker.", img: "merch/sticker.jpg" }
+      { name: "Eco Tote Bag", desc: "A natural canvas tote with the round night-sky badge.", img: "merch/tote-2026.jpg" },
+      { name: "Sticker", desc: "The round night-sky badge as a vinyl sticker.", img: "merch/sticker-2026.jpg" }
     ]
   },
 
