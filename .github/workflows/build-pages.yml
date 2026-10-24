@@ -39,5 +39,7 @@ jobs:
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git commit -m "Rebuild pages"
+            # A newer commit may have landed while this ran; replay on top of it.
+            git pull --rebase origin main
             git push
           fi
