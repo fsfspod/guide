@@ -417,7 +417,7 @@ a.tl-item:hover { border-color: var(--mustard); }
 .pd-listen + .pd-listen { margin-top: 12px; }
 @media (max-width: 600px) { .pd-ep { grid-template-columns: auto minmax(0, 1fr); gap: 10px 16px; } .pd-status { grid-column: 2; justify-self: start; } .pd-player, .pd-more { grid-column: 1 / -1; } .pd-no { font-size: 36px; } .pd-art { width: 76px; height: 76px; } .pd-art.tall { grid-row: auto; } }
 @media (max-width: 600px) { .pd-ep.has-art { grid-template-columns: minmax(0, 1fr); } .pd-ep.has-art > * { grid-column: 1 / -1; } .pd-ep.has-art .pd-art { width: 100%; height: auto; aspect-ratio: 1; grid-row: auto; margin-bottom: 6px; } .pd-ep.has-art .pd-status { justify-self: start; } }
-.pd-merch { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 20px; }
+.pd-merch { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
 .pd-item { background: var(--cream); color: var(--ink); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; border: 2px solid var(--ink); box-shadow: 6px 6px 0 var(--shadow); text-decoration: none; transition: transform .15s ease, box-shadow .15s ease; }
 .pd-item:hover { transform: translate(-2px, -2px); box-shadow: 8px 8px 0 var(--shadow); }
 .pd-item .art { aspect-ratio: 1; background: #fff; border-bottom: 2px solid var(--ink); }
@@ -426,7 +426,6 @@ a.tl-item:hover { border-color: var(--mustard); }
 .pd-item h3 { font-size: 22px; color: var(--ink); }
 .pd-item p { font-size: 14.5px; color: #4a514e; }
 .pd-item .shop { margin-top: auto; padding-top: 8px; font-family: var(--f-display); font-weight: 900; font-size: 16px; letter-spacing: .05em; text-transform: uppercase; }
-@media (max-width: 960px) { .pd-merch { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 @media (max-width: 560px) { .pd-merch { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; } }
 .pd-tools { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; margin-bottom: 18px; }
 .pd-tools .search-field { flex: 1 1 260px; min-width: 0; }
