@@ -1622,13 +1622,13 @@ window.FIELD_GUIDE = {
     {
       id: "pursue-2026",
       title: "PURSUE: The 2026 File Releases",
-      date: "February – September 2026", year: 2026,
+      date: "February – October 2026", year: 2026,
       place: "Department of War, war.gov/UFO",
       coords: [38.87, -77.06],
       galleries: ["government", "uap"],
       status: "record",
-      teaser: "A presidential directive sends hundreds of UFO files into public view in six releases.",
-      story: "In February 2026 President Trump directed agencies to identify and declassify UFO and UAP files. The Department of War launched PURSUE (the Presidential Unsealing and Reporting System for UAP Encounters) on May 8, 2026, with more than 150 files. Five more releases followed through September 18, 2026, drawing on the Pentagon, CIA, FBI, NASA, the Department of Energy, the State Department and others. Highlights include Apollo-era photos and transcripts, green orb reports near a military facility, an infrared video of objects near Iran, and a copy of the 1952 Tremonton film.",
+      teaser: "A presidential directive sends hundreds of UFO files into public view in seven releases so far.",
+      story: "In February 2026 President Trump directed agencies to identify and declassify UFO and UAP files. The Department of War launched PURSUE (the Presidential Unsealing and Reporting System for UAP Encounters) on May 8, 2026, with more than 150 files. Six more releases followed through October 23, 2026, drawing on the Pentagon, CIA, FBI, NASA, the Department of Energy, the State Department and others. Highlights include Apollo-era photos and transcripts, green orb reports near a military facility, an infrared video of objects near Iran, a copy of the 1952 Tremonton film, and an FBI report of a silent black triangle seen by federal agents near a secure site. The Department of War says more files will be released on a rolling basis.",
       documented: ["All releases are posted at war.gov/UFO with downloadable bundles."],
       claimed: ["Proof of non-human visitors."],
       explanation: "Officials said the files do not confirm extraterrestrial life and invited the public to draw its own conclusions. Skeptics noted much of the material was already public or showed ordinary effects. Many files are raw and unanalyzed, which makes them good practice for a friendly skeptic.",
@@ -1937,7 +1937,8 @@ window.FIELD_GUIDE = {
     { year: 2026, date: "June 12, 2026", title: "PURSUE Release 03", text: "CIA and FBI orb and disc reports.", link: "pursue-2026" },
     { year: 2026, date: "July 10, 2026", title: "PURSUE Release 04", text: "40 files, nearly half of them video.", link: "pursue-2026" },
     { year: 2026, date: "August 7, 2026", title: "PURSUE Release 05", text: "41 files spanning 1950 to 2026, including FBI witness forms.", link: "pursue-2026" },
-    { year: 2026, date: "September 18, 2026", title: "PURSUE Release 06", text: "Includes the 1952 Tremonton film the Robertson Panel reviewed.", link: "tremonton" }
+    { year: 2026, date: "September 18, 2026", title: "PURSUE Release 06", text: "Includes the 1952 Tremonton film the Robertson Panel reviewed.", link: "tremonton" },
+    { year: 2026, date: "October 23, 2026", title: "PURSUE Release 07", text: "Includes an FBI report of a silent black triangle seen by federal agents near a secure site, a declassified Skinwalker Ranch report, and NASA and Pentagon papers on handling suspected space-vehicle debris. The Department says more files will follow.", link: "pursue-2026" }
   ],
 
   /* ------------------------------------------------------------------
