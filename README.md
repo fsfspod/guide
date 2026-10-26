@@ -1,12 +1,12 @@
 # Flying Saucers for the Friendly Skeptic
 
-The podcast and field guide to UFOs, UAP and the declassified record. Live at **friendlyskeptic.com/guide** (the Podcast page is friendlyskeptic.com/guide/#podcast), published by GitHub Pages.
+The podcast and field guide to UFOs, UAP and the declassified record. Live at **friendlyskeptic.com** (the Podcast page is friendlyskeptic.com/#podcast), published by GitHub Pages. The home page is this repo's `index.html`, mirrored to the `fsfspod/fsfspod.github.io` repo (see `.github/workflows/sync-home.yml`); every other file, including `content.js`, the images and audio, and all the case, topic and episode pages, is served from this repo under friendlyskeptic.com/guide/. The old friendlyskeptic.com/guide/ address forwards to the home page.
 
 ## What's in this repository
 
 | File | What it does |
 |---|---|
-| `index.html` | The design and page layout. You rarely need to touch it. |
+| `index.html` | The design and page layout, and the site's home page. You rarely need to touch it. If you change it, the sync workflow copies it to the root repo (needs the `ROOT_REPO_TOKEN` secret). |
 | `content.js` | **All the words on the site**: cases, timeline, archives, episodes, the show's recordings and merch. Edit this one. |
 | `images/cover.jpg` | The podcast album art. |
 | `merch/` | Merch product photos for the Podcast page. |
@@ -56,7 +56,7 @@ Every case, topic and episode has its own real web page, which is what Google an
 
 You never edit them directly. When you commit a change to `content.js`, a GitHub Action (`.github/workflows/build-pages.yml`) runs `scripts/build-pages.js`, which rebuilds them and `sitemap.xml` and commits them for you about a minute later. It also runs once a day so scheduled releases flip to "Out now" on their own. You can watch it under the repository's **Actions** tab.
 
-- Clicking a case anywhere in the guide opens its page. Old links like friendlyskeptic.com/guide/#case-roswell forward there automatically.
+- Clicking a case anywhere in the guide opens its page. Old links like friendlyskeptic.com/guide/#case-roswell and friendlyskeptic.com/#case-roswell forward there automatically.
 - **Don't change a case's `id`** once it's live: the id is its web address, and search engines will lose the old one.
 - Each case's search title is written for you, e.g. "Roswell (1947): What Really Happened". To write your own, add `seoTitle: "What Was the Roswell Incident? The 1947 Crash Explained"`. To replace the search snippet, add `seoDescription: "..."` (aim for under 160 characters).
 - If an episode lists a case in its `cases`, the case page links to that episode under "Hear it on the podcast".

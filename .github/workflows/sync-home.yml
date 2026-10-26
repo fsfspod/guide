@@ -1,0 +1,70 @@
+# The field guide is the site's home page (friendlyskeptic.com/). GitHub Pages serves
+# the root from the fsfspod/fsfspod.github.io repo, so index.html is mirrored there.
+#
+# index.html is the ONLY file copied. It loads content.js, images, audio and the map
+# from /guide/ on this repo, so content edits show up on the home page on their own.
+# This workflow only matters when index.html itself (the design or code) changes.
+#
+# One-time setup: create a fine-grained personal access token with
+#   Repository access: fsfspod/fsfspod.github.io only
+#   Permissions: Contents = Read and write
+# and save it in THIS repo as an Actions secret named ROOT_REPO_TOKEN
+# (Settings > Secrets and variables > Actions). Until then the job skips itself.
+name: Sync home page to root repo
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - index.html
+      - .github/workflows/sync-home.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: sync-home
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    env:
+      ROOT_REPO_TOKEN: ${{ secrets.ROOT_REPO_TOKEN }}
+    steps:
+      - name: Check for the token
+        id: gate
+        run: |
+          if [ -z "$ROOT_REPO_TOKEN" ]; then
+            echo "::notice::ROOT_REPO_TOKEN is not set, so the home page was not mirrored to fsfspod/fsfspod.github.io. See the comments at the top of this workflow."
+            echo "go=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "go=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.gate.outputs.go == 'true'
+
+      - uses: actions/checkout@v4
+        if: steps.gate.outputs.go == 'true'
+        with:
+          repository: fsfspod/fsfspod.github.io
+          token: ${{ secrets.ROOT_REPO_TOKEN }}
+          path: root
+
+      - name: Copy index.html and push if it changed
+        if: steps.gate.outputs.go == 'true'
+        working-directory: root
+        run: |
+          cp ../index.html index.html
+          git add index.html
+          if git diff --cached --quiet; then
+            echo "Root home page already matches."
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "Sync home page from fsfspod/guide@${GITHUB_SHA::7}"
+            git pull --rebase origin main
+            git push
+          fi

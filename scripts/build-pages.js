@@ -33,6 +33,10 @@ const ROOT = path.resolve(__dirname, "..");
 const ORIGIN = "https://friendlyskeptic.com";
 const BASE = "/guide/";
 const SITE_URL = ORIGIN + BASE;
+// The field guide's app is the site's home page (served at / and mirrored from this repo).
+// Built pages live under BASE; every link back to "home" goes to the root.
+const HOME = "/";
+const HOME_URL = ORIGIN + HOME;
 const TZ = "America/Denver";
 const BRAND = "Friendly Skeptic";
 
@@ -171,13 +175,13 @@ ${jsonld.map(j => `<script type="application/ld+json">${JSON.stringify(j).replac
 <body>
 <header class="site-head">
   <div class="wrap">
-    <a class="logo" href="${BASE}"><span class="full">Flying Saucers <span class="accent">for the Friendly Skeptic</span></span><span class="short">Flying Saucers <span class="accent">FS</span></span></a>
+    <a class="logo" href="${HOME}"><span class="full">Flying Saucers <span class="accent">for the Friendly Skeptic</span></span><span class="short">Flying Saucers <span class="accent">FS</span></span></a>
     <nav class="nav" aria-label="Field guide menu">
-      <a href="${BASE}#galleries"${cur("topics")}>Topics</a>
-      <a href="${BASE}#corridor">Timeline</a>
-      <a href="${BASE}#map">Map</a>
+      <a href="${HOME}#galleries"${cur("topics")}>Topics</a>
+      <a href="${HOME}#corridor">Timeline</a>
+      <a href="${HOME}#map">Map</a>
       <a href="${BASE}episodes/"${cur("podcast")}>Podcast</a>
-      <a href="${BASE}#sources">Sources</a>
+      <a href="${HOME}#sources">Sources</a>
     </nav>
   </div>
 </header>
@@ -186,8 +190,8 @@ ${body}
 </main>
 <footer class="site-foot">
   <div class="wrap">
-    <a class="logo" href="${BASE}">Flying Saucers <span class="accent">for the Friendly Skeptic</span></a>
-    <nav class="foot-links" aria-label="Footer"><a href="${BASE}cases/">All cases</a><a href="${BASE}episodes/">All episodes</a><a href="${BASE}#podcast">Podcast &amp; merch</a><a href="${BASE}#contact">Contact us</a></nav>
+    <a class="logo" href="${HOME}">Flying Saucers <span class="accent">for the Friendly Skeptic</span></a>
+    <nav class="foot-links" aria-label="Footer"><a href="${BASE}cases/">All cases</a><a href="${BASE}episodes/">All episodes</a><a href="${HOME}#podcast">Podcast &amp; merch</a><a href="${HOME}#contact">Contact us</a></nav>
     <p class="disclaimer">Government audio and video used on this show are released by U.S. federal agencies. Their use here does not imply endorsement by the Department of War, Department of Defense, NASA, the National Archives or any other agency, of this podcast, its hosts or its merchandise.</p>
     <p class="copyright">&copy; ${new Date(NOW).getFullYear()} ${esc(D.site.name)}. All rights reserved.</p>
   </div>
@@ -266,7 +270,7 @@ function casePage(c, i, dates) {
     ...(dates ? { datePublished: dates.first, dateModified: dates.date } : {}),
     author: orgLd,
     publisher: orgLd,
-    isPartOf: { "@type": "WebSite", name: D.site.name, url: SITE_URL },
+    isPartOf: { "@type": "WebSite", name: D.site.name, url: HOME_URL },
     articleSection: c.galleries.map(g => gal[g]?.title).filter(Boolean),
     about: { "@type": "Thing", name: c.title, description: c.teaser },
     ...(c.coords ? { contentLocation: { "@type": "Place", name: c.place, geo: { "@type": "GeoCoordinates", latitude: c.coords[0], longitude: c.coords[1] } } }
@@ -275,7 +279,7 @@ function casePage(c, i, dates) {
 
   const body = `
 <section class="exhibit-head"><div class="wrap">
-  <nav class="crumbs" aria-label="Breadcrumb"><a href="${BASE}">Home</a> / <a href="${topicPath(g0)}">${esc(g0.title)}</a> / <a href="${BASE}cases/">${esc(c.cat)}</a></nav>
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="${HOME}">Home</a> / <a href="${topicPath(g0)}">${esc(g0.title)}</a> / <a href="${BASE}cases/">${esc(c.cat)}</a></nav>
   <div>${stamp(c.status, true)}</div>
   <h1>${esc(c.title)}</h1>
   <div class="placard-meta"><span><b>Catalog</b> ${esc(c.cat)}</span><span><b>When</b> ${esc(c.date)}</span><span><b>Where</b> ${esc(c.place)}</span></div>
@@ -289,7 +293,7 @@ function casePage(c, i, dates) {
   <aside class="facts">
     <div class="fact-box"><h3>Find it in the field guide</h3>
       <div class="chips">${c.galleries.filter(g => gal[g]).map(g => `<a class="chip" href="${topicPath(gal[g])}">${esc(gal[g].title)}</a>`).join("")}</div>
-      <div class="chips"><a class="chip" href="${BASE}#era-${esc(era.id)}">Timeline: ${esc(era.title)}</a>${c.coords || c.orbit ? `<a class="chip" href="${BASE}#map">See it on the map</a>` : ""}</div>
+      <div class="chips"><a class="chip" href="${HOME}#era-${esc(era.id)}">Timeline: ${esc(era.title)}</a>${c.coords || c.orbit ? `<a class="chip" href="${HOME}#map">See it on the map</a>` : ""}</div>
     </div>
     <div class="fact-box"><h3>What the stamp means</h3><p>${stamp(c.status)}&nbsp; ${esc(STATUS[c.status]?.text || "")}</p></div>
     ${heard.length ? `<div class="fact-box"><h3>Hear it on the podcast</h3><div class="chips">${heard.map(e => `<a class="chip" href="${epPath(e)}">Episode ${e.number}: ${esc(e.title)}</a>`).join("")}</div></div>` : ""}
@@ -325,7 +329,7 @@ ${rel.length ? `<section class="section"><div class="wrap">
 
   return page({
     title, description, canonical: c.url, ogType: "article", nav: "topics", body,
-    jsonld: [articleLd, crumbsLd([["Field guide", SITE_URL], [g0.title, ORIGIN + topicPath(g0)], [c.title, c.url]])]
+    jsonld: [articleLd, crumbsLd([["Field guide", HOME_URL], [g0.title, ORIGIN + topicPath(g0)], [c.title, c.url]])]
   });
 }
 
@@ -339,7 +343,7 @@ function topicPage(g, i) {
   const description = clip(`${g.blurb} ${items.length} cases, oldest first, each with the record, the claims and the best explanation so far.`);
   const body = `
 <section class="page-head"><div class="wrap">
-  <nav class="crumbs" aria-label="Breadcrumb"><a href="${BASE}">Home</a> / <a href="${BASE}cases/">All cases</a> / ${esc(g.title)}</nav>
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="${HOME}">Home</a> / <a href="${BASE}cases/">All cases</a> / ${esc(g.title)}</nav>
   <h1>${esc(g.title)}</h1>
   <p class="lede">${esc(g.blurb)} <span class="mono">${items.length} entries, oldest first.</span></p>
 </div></section>
@@ -358,9 +362,9 @@ function topicPage(g, i) {
     title, description, canonical: url, nav: "topics", body,
     jsonld: [
       { "@context": "https://schema.org", "@type": "CollectionPage", name: g.title, description: g.blurb, url,
-        isPartOf: { "@type": "WebSite", name: D.site.name, url: SITE_URL },
+        isPartOf: { "@type": "WebSite", name: D.site.name, url: HOME_URL },
         mainEntity: { "@type": "ItemList", itemListElement: items.map((c, n) => ({ "@type": "ListItem", position: n + 1, url: c.url, name: c.title })) } },
-      crumbsLd([["Field guide", SITE_URL], ["All cases", SITE_URL + "cases/"], [g.title, url]])
+      crumbsLd([["Field guide", HOME_URL], ["All cases", SITE_URL + "cases/"], [g.title, url]])
     ]
   });
 }
@@ -370,7 +374,7 @@ function casesIndexPage() {
   const url = SITE_URL + "cases/";
   const body = `
 <section class="page-head"><div class="wrap">
-  <nav class="crumbs" aria-label="Breadcrumb"><a href="${BASE}">Home</a> / All cases</nav>
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="${HOME}">Home</a> / All cases</nav>
   <h1>Every case</h1>
   <p class="lede">All ${cases.length} entries in the field guide, from the 1896 airship wave to the 2026 file releases. Each one sets out what's documented, what's claimed and the best explanation so far, with links to the original records.</p>
   <div class="chips topic-links">${D.galleries.map(g => `<a class="chip" href="${topicPath(g)}">${esc(g.title)}</a>`).join("")}</div>
@@ -386,9 +390,9 @@ ${D.eras.map(e => { const items = cases.filter(c => c.year >= e.from && c.year <
     canonical: url, nav: "topics", body,
     jsonld: [
       { "@context": "https://schema.org", "@type": "CollectionPage", name: "Every case", url,
-        isPartOf: { "@type": "WebSite", name: D.site.name, url: SITE_URL },
+        isPartOf: { "@type": "WebSite", name: D.site.name, url: HOME_URL },
         mainEntity: { "@type": "ItemList", itemListElement: cases.map((c, n) => ({ "@type": "ListItem", position: n + 1, url: c.url, name: c.title })) } },
-      crumbsLd([["Field guide", SITE_URL], ["All cases", url]])
+      crumbsLd([["Field guide", HOME_URL], ["All cases", url]])
     ]
   });
 }
@@ -458,7 +462,7 @@ ${e.scheduled ? RELEASE_SCRIPT : ""}`;
 
   return page({
     title, description, canonical: e.url, image: artAbs, imageAlt: `Episode ${e.number} artwork: ${e.title}`, ogType: "article", nav: "podcast", body,
-    jsonld: [episodeLd, crumbsLd([["Field guide", SITE_URL], ["Podcast episodes", SITE_URL + "episodes/"], [`Episode ${e.number}: ${e.title}`, e.url]])]
+    jsonld: [episodeLd, crumbsLd([["Field guide", HOME_URL], ["Podcast episodes", SITE_URL + "episodes/"], [`Episode ${e.number}: ${e.title}`, e.url]])]
   });
 }
 
@@ -535,11 +539,11 @@ for (const [url, file, render] of pages) {
 }
 // The guide's home page changes whenever content.js does.
 const homeHash = crypto.createHash("sha1").update(fs.readFileSync(path.join(ROOT, "content.js")) + indexHtml).digest("hex").slice(0, 16);
-const oldHome = dates[SITE_URL];
-newDates[SITE_URL] = oldHome && oldHome.hash === homeHash ? oldHome : { hash: homeHash, date: today, first: (oldHome && oldHome.first) || today };
+const oldHome = dates[HOME_URL];
+newDates[HOME_URL] = oldHome && oldHome.hash === homeHash ? oldHome : { hash: homeHash, date: today, first: (oldHome && oldHome.first) || today };
 fs.writeFileSync(DATES_FILE, JSON.stringify(newDates, null, 1) + "\n");
 
-const urls = [SITE_URL, ...pages.map(p => p[0])];
+const urls = [HOME_URL, ...pages.map(p => p[0])];
 fs.writeFileSync(path.join(ROOT, "sitemap.xml"),
   `<?xml version="1.0" encoding="UTF-8"?>\n<!-- Built by scripts/build-pages.js. Don't edit by hand. -->\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
   urls.map(u => `  <url><loc>${esc(u)}</loc><lastmod>${newDates[u].date}</lastmod></url>`).join("\n") + `\n</urlset>\n`);
