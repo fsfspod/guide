@@ -570,8 +570,8 @@ a.tl-item:hover { border-color: var(--mustard); }
   const caseUrl = id => BASE + "case/" + encodeURIComponent(id) + "/";
 
   const STATUS = {
-    explained:  { label: "Possibly explained",         text: "A mundane cause is well established." },
-    likely:     { label: "Probably explained", text: "A mundane cause is likely but not proven." },
+    explained:  { label: "Possibly explained",         text: "The best-supported answer is a down-to-earth one. Read the sources and decide if you agree." },
+    likely:     { label: "Probably explained", text: "A down-to-earth answer looks likely, but it isn't nailed down." },
     unresolved: { label: "Unresolved",         text: "No good explanation has been found yet." },
     disputed:   { label: "Disputed",           text: "The basic facts themselves are argued over." },
     hoax:       { label: "Hoax",               text: "Shown or admitted to be faked." },
@@ -731,7 +731,7 @@ a.tl-item:hover { border-color: var(--mustard); }
     <section class="section"><div class="wrap">
       <div class="sec-head">
         <div class="left"><span class="tag-badge">How to read an entry</span><h2>Every case gets a stamp</h2></div>
-        <p class="lede">Each entry is marked with where the evidence stands today. Stamps change when new evidence comes in, which is the whole point.</p>
+        <p class="lede">Each entry is marked with where the evidence stands today, not with a final verdict. Stamps change when new evidence comes in, and even "Possibly explained" is an invitation to read the sources and decide for yourself.</p>
       </div>
       <div class="legend">${Object.entries(STATUS).map(([k, v]) => `<div>${stamp(k)}<p>${v.text} <span class="mono">(${cases.filter(c => c.status === k).length})</span></p></div>`).join("")}</div>
     </div></section>`;

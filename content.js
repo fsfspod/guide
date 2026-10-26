@@ -9,8 +9,8 @@
      and give it a new unique `id` (lowercase, dashes, no spaces).
    - `galleries` uses gallery ids from the `galleries` list below.
    - `status` must be one of:
-       explained   = a mundane cause is well established
-       likely      = a mundane cause is probable but not proven
+       explained   = the best-supported answer is a down-to-earth one (shown as "Possibly explained")
+       likely      = a down-to-earth answer looks likely but isn't nailed down
        unresolved  = no good explanation yet
        disputed    = the key facts themselves are argued over
        hoax        = shown or admitted to be faked

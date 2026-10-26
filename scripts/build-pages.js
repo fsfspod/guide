@@ -82,8 +82,8 @@ const COVER = abs(D.site.shareImage || "images/cover.jpg?v=2");
 
 /* Case catalog numbers, same order as the guide (FG-001…) */
 const STATUS = {
-  explained:  { label: "Possibly explained",         text: "A mundane cause is well established." },
-  likely:     { label: "Probably explained", text: "A mundane cause is likely but not proven." },
+  explained:  { label: "Possibly explained",         text: "The best-supported answer is a down-to-earth one. Read the sources and decide if you agree." },
+  likely:     { label: "Probably explained", text: "A down-to-earth answer looks likely, but it isn't nailed down." },
   unresolved: { label: "Unresolved",         text: "No good explanation has been found yet." },
   disputed:   { label: "Disputed",           text: "The basic facts themselves are argued over." },
   hoax:       { label: "Hoax",               text: "Shown or admitted to be faked." },
@@ -92,8 +92,8 @@ const STATUS = {
 // The second half of each case's search title, by stamp. A case can override
 // its whole title with `seoTitle` in content.js.
 const TITLE_HOOK = {
-  explained: "What Really Happened",
-  likely: "What Really Happened",
+  explained: "What the Evidence Shows",
+  likely: "What the Evidence Shows",
   unresolved: "The Evidence and Open Questions",
   disputed: "The Evidence and the Debate",
   hoax: "How the Hoax Was Exposed",
@@ -310,7 +310,7 @@ function casePage(c, i, dates) {
 </div></section>
 
 <section class="section"><div class="wrap">
-  <div class="sec-head"><div class="left"><span class="tag-badge">Where to look</span><h2>Check the sources</h2></div><p class="lede">Go to the originals. Every link opens the archive or record in a new tab.</p></div>
+  <div class="sec-head"><div class="left"><span class="tag-badge">Where to look</span><h2>Check the sources</h2></div><p class="lede">Go to the originals and make up your own mind. Every link opens the archive or record in a new tab.</p></div>
   <ul class="src-list">
     ${c.sources.map(s => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener"><span>${esc(s.title)}</span><span class="arrow">Open &#8599;</span></a></li>`).join("\n    ")}
     ${files.map(f => `<li><a href="${esc(f.url)}" target="_blank" rel="noopener"><span>${esc(f.title)} <span class="mono" style="color:var(--muted)">(${esc(f.agency)})</span></span><span class="arrow">Open &#8599;</span></a></li>`).join("\n    ")}
@@ -339,7 +339,7 @@ function topicPage(g, i) {
   const items = cases.filter(c => c.galleries.includes(g.id));
   const prev = D.galleries[(i - 1 + D.galleries.length) % D.galleries.length];
   const next = D.galleries[(i + 1) % D.galleries.length];
-  const title = `${g.title}: ${items.length} UFO & UAP Cases Explained | ${BRAND}`;
+  const title = `${g.title}: ${items.length} UFO & UAP Cases, Examined | ${BRAND}`;
   const description = clip(`${g.blurb} ${items.length} cases, oldest first, each with the record, the claims and the best explanation so far.`);
   const body = `
 <section class="page-head"><div class="wrap">
@@ -386,7 +386,7 @@ ${D.eras.map(e => { const items = cases.filter(c => c.year >= e.from && c.year <
 </div></section>` : ""; }).join("")}`;
   return page({
     title: `Every UFO & UAP Case, 1896 to Today: A Skeptic's Field Guide | ${BRAND}`,
-    description: clip(`All ${cases.length} UFO and UAP cases in the Friendly Skeptic field guide, from Roswell and Blue Book to the Navy videos and AARO, with the evidence, the claims and the best explanation for each.`),
+    description: clip(`All ${cases.length} UFO and UAP cases in the Friendly Skeptic field guide, from Roswell and Blue Book to the Navy videos and AARO, with the evidence, the claims and the best explanation so far for each.`),
     canonical: url, nav: "topics", body,
     jsonld: [
       { "@context": "https://schema.org", "@type": "CollectionPage", name: "Every case", url,

@@ -58,7 +58,7 @@ You never edit them directly. When you commit a change to `content.js`, a GitHub
 
 - Clicking a case anywhere in the guide opens its page. Old links like friendlyskeptic.com/guide/#case-roswell and friendlyskeptic.com/#case-roswell forward there automatically.
 - **Don't change a case's `id`** once it's live: the id is its web address, and search engines will lose the old one.
-- Each case's search title is written for you, e.g. "Roswell (1947): What Really Happened". To write your own, add `seoTitle: "What Was the Roswell Incident? The 1947 Crash Explained"`. To replace the search snippet, add `seoDescription: "..."` (aim for under 160 characters).
+- Each case's search title is written for you, e.g. "Roswell (1947): What the Evidence Shows". To write your own, add `seoTitle: "What Was the Roswell Incident? The 1947 Crash, Examined"`. To replace the search snippet, add `seoDescription: "..."` (aim for under 160 characters).
 - If an episode lists a case in its `cases`, the case page links to that episode under "Hear it on the podcast".
 - Changing an episode's `title` changes its page address. To keep the old address, add `slug: "2-what-fell-in-roswell"` to that episode.
 - `published: "2026-10-18"` sets the release date search engines show, for an episode that went out without a `releaseAt`.
