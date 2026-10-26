@@ -6,7 +6,7 @@
    ===================================================================== */
 window.FGMap = (function () {
   const NS = "http://www.w3.org/2000/svg";
-  const COLORS = { unresolved: "#e8b45c", disputed: "#dd7f6f", likely: "#9cc7a4", explained: "#8fd0c6", hoax: "#ef6b6b", record: "#f3ead6" };
+  const COLORS = { unresolved: "#e8b45c", disputed: "#dd7f6f", explained: "#8fd0c6", hoax: "#ef6b6b", record: "#f3ead6" };
   const VIEWS = [["world", "World"], ["usa", "United States"], ["europe", "Europe"], ["south", "Latin America"]];
   const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   let state = { mode: "earth", view: "world" }; // remembered between visits in this session

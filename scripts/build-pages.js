@@ -82,8 +82,7 @@ const COVER = abs(D.site.shareImage || "images/cover.jpg?v=2");
 
 /* Case catalog numbers, same order as the guide (FG-001…) */
 const STATUS = {
-  explained:  { label: "Possibly explained",         text: "The best-supported answer is a down-to-earth one. Read the sources and decide if you agree." },
-  likely:     { label: "Probably explained", text: "A down-to-earth answer looks likely, but it isn't nailed down." },
+  explained:  { label: "Possibly explained",         text: "A down-to-earth explanation fits the evidence best so far, but it may not be the last word. Read the sources and decide if you agree." },
   unresolved: { label: "Unresolved",         text: "No good explanation has been found yet." },
   disputed:   { label: "Disputed",           text: "The basic facts themselves are argued over." },
   hoax:       { label: "Hoax",               text: "Shown or admitted to be faked." },
@@ -93,7 +92,6 @@ const STATUS = {
 // its whole title with `seoTitle` in content.js.
 const TITLE_HOOK = {
   explained: "What the Evidence Shows",
-  likely: "What the Evidence Shows",
   unresolved: "The Evidence and Open Questions",
   disputed: "The Evidence and the Debate",
   hoax: "How the Hoax Was Exposed",

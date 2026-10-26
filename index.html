@@ -117,7 +117,6 @@ p { margin: 0; }
 .stamp { --c: var(--cream); display: inline-block; font-family: var(--f-mono); font-weight: 600; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--c); background: var(--ink); border: 2px solid var(--c); padding: 3px 9px; border-radius: 4px; box-shadow: 3px 3px 0 var(--shadow); transform: rotate(-3deg); white-space: nowrap; }
 .stamp.big { font-size: 15px; padding: 5px 13px; border-width: 3px; box-shadow: 4px 4px 0 var(--shadow); transform: rotate(-5deg); }
 .s-explained { --c: var(--sky); }
-.s-likely { --c: var(--sage); }
 .s-unresolved { --c: var(--mustard); }
 .s-disputed { --c: var(--coral); }
 .s-hoax { --c: #ef6b6b; }
@@ -570,8 +569,7 @@ a.tl-item:hover { border-color: var(--mustard); }
   const caseUrl = id => BASE + "case/" + encodeURIComponent(id) + "/";
 
   const STATUS = {
-    explained:  { label: "Possibly explained",         text: "The best-supported answer is a down-to-earth one. Read the sources and decide if you agree." },
-    likely:     { label: "Probably explained", text: "A down-to-earth answer looks likely, but it isn't nailed down." },
+    explained:  { label: "Possibly explained",         text: "A down-to-earth explanation fits the evidence best so far, but it may not be the last word. Read the sources and decide if you agree." },
     unresolved: { label: "Unresolved",         text: "No good explanation has been found yet." },
     disputed:   { label: "Disputed",           text: "The basic facts themselves are argued over." },
     hoax:       { label: "Hoax",               text: "Shown or admitted to be faked." },

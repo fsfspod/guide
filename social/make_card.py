@@ -25,7 +25,6 @@ W, H = 1080, 1350
 
 STATUS = {
     "explained": ("Possibly explained", "#8fd0c6"),
-    "likely": ("Probably explained", "#9cc7a4"),
     "unresolved": ("Unresolved", "#e8b45c"),
     "disputed": ("Disputed", "#dd7f6f"),
     "hoax": ("Hoax", "#ef6b6b"),

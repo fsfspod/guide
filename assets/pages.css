@@ -94,7 +94,6 @@ p { margin: 0; }
 .stamp { --c: var(--cream); display: inline-block; font-family: var(--f-mono); font-weight: 600; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--c); background: var(--ink); border: 2px solid var(--c); padding: 3px 9px; border-radius: 4px; box-shadow: 3px 3px 0 var(--shadow); transform: rotate(-3deg); white-space: nowrap; }
 .stamp.big { font-size: 15px; padding: 5px 13px; border-width: 3px; box-shadow: 4px 4px 0 var(--shadow); transform: rotate(-5deg); }
 .s-explained { --c: var(--sky); }
-.s-likely { --c: var(--sage); }
 .s-unresolved { --c: var(--mustard); }
 .s-disputed { --c: var(--coral); }
 .s-hoax { --c: #ef6b6b; }
