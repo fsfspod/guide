@@ -82,7 +82,7 @@ const COVER = abs(D.site.shareImage || "images/cover.jpg?v=2");
 
 /* Case catalog numbers, same order as the guide (FG-001…) */
 const STATUS = {
-  explained:  { label: "Explained",          text: "A mundane cause is well established." },
+  explained:  { label: "Possibly explained",         text: "A mundane cause is well established." },
   likely:     { label: "Probably explained", text: "A mundane cause is likely but not proven." },
   unresolved: { label: "Unresolved",         text: "No good explanation has been found yet." },
   disputed:   { label: "Disputed",           text: "The basic facts themselves are argued over." },
