@@ -53,6 +53,18 @@
       "publishAt": "2026-10-24T12:00:00-06:00",
       "image": "social/posts/news-pursue-release-07-2026-10-24.jpg",
       "metricoolUuid": "-491486781743741781"
+    },
+    {
+      "type": "episode",
+      "id": "2",
+      "publishAt": "2026-10-27T15:15:00-06:00",
+      "format": "reel",
+      "video": "social/posts/reel-episode-02.mp4",
+      "networks": [
+        "instagram",
+        "facebook"
+      ],
+      "note": "Episode 2 'out now' Reel, published directly (not a draft) at Brendan's request"
     }
   ]
 }
