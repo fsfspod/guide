@@ -57,14 +57,15 @@
     {
       "type": "episode",
       "id": "2",
-      "publishAt": "2026-10-27T15:15:00-06:00",
+      "publishAt": "2026-10-27T15:10:00-06:00",
       "format": "reel",
       "video": "social/posts/reel-episode-02.mp4",
       "networks": [
         "instagram",
         "facebook"
       ],
-      "note": "Episode 2 'out now' Reel, published directly (not a draft) at Brendan's request"
+      "note": "Episode 2 'out now' Reel, published directly (not a draft) at Brendan's request",
+      "metricoolUuid": "-7803422343684995621"
     }
   ]
 }
