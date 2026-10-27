@@ -31,7 +31,13 @@
       "id": "roswell",
       "publishAt": "2026-10-29T18:00:00-06:00",
       "image": "social/posts/case-roswell.jpg",
-      "metricoolUuid": "3402253180695889230"
+      "metricoolUuid": "3402253180695889230",
+      "format": "reel",
+      "video": "social/posts/reel-case-roswell.mp4",
+      "networks": [
+        "instagram",
+        "facebook"
+      ]
     },
     {
       "type": "news",
