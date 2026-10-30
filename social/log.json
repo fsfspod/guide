@@ -66,6 +66,30 @@
       ],
       "note": "Episode 2 'out now' Reel, published directly (not a draft) at Brendan's request",
       "metricoolUuid": "-7803422343684995621"
+    },
+    {
+      "type": "episode",
+      "id": "3",
+      "publishAt": "2026-11-02T09:00:00-07:00",
+      "format": "reel",
+      "video": "social/posts/reel-episode-03.mp4",
+      "networks": [
+        "instagram",
+        "facebook"
+      ],
+      "metricoolUuid": "-2079162408195243895"
+    },
+    {
+      "type": "case",
+      "id": "washington-1952",
+      "publishAt": "2026-11-05T18:00:00-07:00",
+      "format": "reel",
+      "video": "social/posts/reel-case-washington-1952.mp4",
+      "networks": [
+        "instagram",
+        "facebook"
+      ],
+      "metricoolUuid": "3500379818632301130"
     }
   ]
 }
