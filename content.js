@@ -2173,6 +2173,7 @@ window.FIELD_GUIDE = {
     {
       art: "images/episodes/episode-05.jpg",
       number: 5, title: "Case Closed", tags: ["Air Force"],
+      releaseAt: "2026-11-16T08:00:00Z",
       summary: "The Condon Report and the end of Project Blue Book in 1969.",
             cases: ["betty-barney-hill", "socorro", "michigan-1966", "hearing-1966", "condon-committee", "symposium-1968", "blue-book-closes", "mcminnville", "rb-47"],
       links: [
@@ -2184,6 +2185,7 @@ window.FIELD_GUIDE = {
     {
       art: "images/episodes/episode-06.jpg",
       number: 6, title: "Close Encounters", tags: [],
+      releaseAt: "2026-11-23T08:00:00Z",
       summary: "Two fishermen in Pascagoula, a logger missing for five days in Arizona, and the former 'swamp gas' scientist who gave us the three kinds of close encounters.",
             cases: ["pascagoula", "travis-walton", "coyne-helicopter"],
       links: [
@@ -2194,6 +2196,7 @@ window.FIELD_GUIDE = {
     {
       art: "images/episodes/episode-07.jpg",
       number: 7, title: "Fax or Fiction?", tags: [],
+      releaseAt: "2026-11-30T08:00:00Z",
       summary: "Airmen chase lights into an English forest, secret 'Majestic 12' papers surface, and Communion puts the gray alien on the bestseller lists.",
             cases: ["rendlesham", "mj-12", "gulf-breeze", "bob-lazar", "roswell"],
       links: [
@@ -2204,6 +2207,7 @@ window.FIELD_GUIDE = {
     {
       art: "images/episodes/episode-08.jpg",
       number: 8, title: "The Truth Is Out There", tags: [],
+      releaseAt: "2026-12-07T08:00:00Z",
       summary: "The X-Files hits prime time, Fox airs an 'alien autopsy,' and thousands of people watch lights over Phoenix.",
             cases: ["phoenix-lights", "alien-autopsy", "roswell-reports", "cia-haines", "disclosure-project"],
       links: [
@@ -2213,6 +2217,7 @@ window.FIELD_GUIDE = {
     {
       art: "images/episodes/episode-09.jpg",
       number: 9, title: "Back on the Radar", tags: ["Navy"],
+      releaseAt: "2026-12-14T08:00:00Z",
       summary: "A Navy pilot's 'Tic Tac,' a secret Pentagon program and the 2017 New York Times story that restarted the conversation.",
             cases: ["nimitz", "ohare-2006", "aatip", "stephenville", "gimbal-gofast", "nyt-2017"],
       links: [
@@ -2222,6 +2227,7 @@ window.FIELD_GUIDE = {
     {
       art: "images/episodes/episode-10.jpg",
       number: 10, title: "Disclosure", tags: ["Congress"],
+      releaseAt: "2026-12-21T08:00:00Z",
       summary: "Congress holds hearings and witnesses testify under oath. What we know now, and what's still claim.",
             cases: ["pyramids-2019", "navy-release-2020", "odni-2021", "hearing-2022", "aaro-founded", "balloons-2023", "nasa-uap-study", "grusch-2023", "disclosure-act", "aaro-hrr", "hearing-2024", "nj-drones-2024", "hearing-2025", "aaro-reports", "pursue-2026"],
       links: [
