@@ -90,6 +90,30 @@
         "facebook"
       ],
       "metricoolUuid": "3500379818632301130"
+    },
+    {
+      "type": "episode",
+      "id": "4",
+      "publishAt": "2026-11-09T09:00:00-07:00",
+      "format": "reel",
+      "video": "social/posts/reel-episode-04.mp4",
+      "networks": [
+        "instagram",
+        "facebook"
+      ],
+      "metricoolUuid": "3847614879608163093"
+    },
+    {
+      "type": "case",
+      "id": "kelly-hopkinsville",
+      "publishAt": "2026-11-12T18:00:00-07:00",
+      "format": "reel",
+      "video": "social/posts/reel-case-kelly-hopkinsville.mp4",
+      "networks": [
+        "instagram",
+        "facebook"
+      ],
+      "metricoolUuid": "4986369675741971806"
     }
   ]
 }
