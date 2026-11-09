@@ -114,6 +114,23 @@
         "facebook"
       ],
       "metricoolUuid": "4986369675741971806"
+    },
+    {
+      "type": "news",
+      "id": "trump-60-minutes-ufo-2026-11-09",
+      "story": "Trump on CBS 60 Minutes (Nov 8, 2026) recounts Air Force pilots describing a round object passing an F-22 at three times its speed; says he's not aware of a secret UFO program.",
+      "sources": [
+        "https://www.cbsnews.com/news/read-the-full-transcript-of-ross-douthats-interview-with-president-trump/",
+        "https://www.yahoo.com/news/science/articles/trump-says-air-force-pilots-155734984.html"
+      ],
+      "publishAt": "2026-11-09T17:00:00-07:00",
+      "format": "reel",
+      "video": "social/posts/reel-news-trump-60-minutes-ufo-2026-11-09.mp4",
+      "networks": [
+        "instagram",
+        "facebook"
+      ],
+      "metricoolUuid": "-5332390125728347225"
     }
   ]
 }
