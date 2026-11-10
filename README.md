@@ -43,7 +43,7 @@ The case appears automatically under its topics, on the timeline and in search, 
 
 ### Release a podcast episode
 
-Find the episode in `episodes: [ ... ]` and add `audio: "https://..."` (the episode's audio file from your podcast host) and `length: "mm:ss"`. The "In production" label becomes "Out now" with a player. Its `tags` link to recording topics. (`cases` and `links` are kept in the file but no longer shown on the page.)
+**This is automatic.** `scripts/sync-feed.js` reads the podcast RSS feed (the `RSS` link in `listenOn`) every Monday, plus daily, and fills in `audio` and `length` for any episode that is in the feed but missing them. Episodes that already have `audio` are never changed. To run it right away, open the repo's **Actions** tab, choose **Build pages** and click **Run workflow**. To do it by hand instead, find the episode in `episodes: [ ... ]` and add `audio: "https://..."` (the episode's audio file from your podcast host) and `length: "mm:ss"`. The "In production" label becomes "Out now" with a player. Its `tags` link to recording topics. (`cases` and `links` are kept in the file but no longer shown on the page.)
 
 ### Case, topic and episode pages (automatic)
 

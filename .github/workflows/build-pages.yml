@@ -1,6 +1,8 @@
 # Rebuilds the case, topic and episode pages and sitemap.xml from content.js.
-# Runs when content.js (or the design) changes, and once a day so
-# scheduled releases (releaseAt) show as "Out now" on their own.
+# Before building, scripts/sync-feed.js reads the podcast RSS feed and fills in
+# the audio and length of any episode that has been released but has none yet.
+# Runs when content.js (or the design) changes, every Monday (release day) and
+# once a day so scheduled releases (releaseAt) show as "Out now" on their own.
 name: Build pages
 
 on:
@@ -12,6 +14,8 @@ on:
       - scripts/build-pages.js
   schedule:
     - cron: "17 9 * * *"   # daily, ~3 a.m. Mountain
+    - cron: "30 10 * * 1"  # Mondays, 10:30 UTC: right after the 8:00-10:00 UTC episode releases
+    - cron: "0 16 * * 1"   # Mondays, 16:00 UTC: safety net if the feed was late
   workflow_dispatch:
 
 permissions:
@@ -29,16 +33,18 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - name: Pull new episodes from the RSS feed
+        run: node scripts/sync-feed.js
       - run: node scripts/build-pages.js
       - name: Commit any changes
         run: |
-          git add -A case cases topics episodes assets/pages.css sitemap.xml scripts/page-dates.json
+          git add -A content.js case cases topics episodes assets/pages.css sitemap.xml scripts/page-dates.json
           if git diff --cached --quiet; then
             echo "Pages already up to date."
           else
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git commit -m "Rebuild pages"
+            git commit -m "Sync episodes from RSS and rebuild pages"
             # A newer commit may have landed while this ran; replay on top of it.
             git pull --rebase origin main
             git push
