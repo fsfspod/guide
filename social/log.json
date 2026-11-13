@@ -131,6 +131,30 @@
         "facebook"
       ],
       "metricoolUuid": "-5332390125728347225"
+    },
+    {
+      "type": "episode",
+      "id": "5",
+      "publishAt": "2026-11-16T09:00:00-07:00",
+      "format": "reel",
+      "video": "social/posts/reel-episode-05.mp4",
+      "networks": [
+        "instagram",
+        "facebook"
+      ],
+      "metricoolUuid": "-1132267821908276575"
+    },
+    {
+      "type": "case",
+      "id": "betty-barney-hill",
+      "publishAt": "2026-11-19T18:00:00-07:00",
+      "format": "reel",
+      "video": "social/posts/reel-case-betty-barney-hill.mp4",
+      "networks": [
+        "instagram",
+        "facebook"
+      ],
+      "metricoolUuid": "5447619662797753912"
     }
   ]
 }
