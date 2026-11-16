@@ -2175,6 +2175,7 @@ window.FIELD_GUIDE = {
       art: "images/episodes/episode-05.jpg",
       number: 5, title: "Case Closed", tags: ["Air Force"],
       releaseAt: "2026-11-16T08:00:00Z",
+      audio: "https://anchor.fm/s/118c07c40/podcast/play/128137985/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-9-29%2F435373878-44100-2-d45358fa3b9f.m4a", length: "19:01",
       summary: "The Condon Report and the end of Project Blue Book in 1969.",
             cases: ["betty-barney-hill", "socorro", "michigan-1966", "hearing-1966", "condon-committee", "symposium-1968", "blue-book-closes", "mcminnville", "rb-47"],
       links: [
