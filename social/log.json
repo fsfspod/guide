@@ -155,6 +155,30 @@
         "facebook"
       ],
       "metricoolUuid": "5447619662797753912"
+    },
+    {
+      "type": "episode",
+      "id": "6",
+      "publishAt": "2026-11-23T09:00:00-07:00",
+      "format": "reel",
+      "video": "social/posts/reel-episode-06.mp4",
+      "networks": [
+        "instagram",
+        "facebook"
+      ],
+      "metricoolUuid": "145877025727728792"
+    },
+    {
+      "type": "case",
+      "id": "travis-walton",
+      "publishAt": "2026-11-26T18:00:00-07:00",
+      "format": "reel",
+      "video": "social/posts/reel-case-travis-walton.mp4",
+      "networks": [
+        "instagram",
+        "facebook"
+      ],
+      "metricoolUuid": "-5634951224354978245"
     }
   ]
 }
