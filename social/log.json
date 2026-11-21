@@ -179,6 +179,25 @@
         "facebook"
       ],
       "metricoolUuid": "-5634951224354978245"
+    },
+    {
+      "type": "news",
+      "id": "pursue-release-08-2026-11-21",
+      "tier": 1,
+      "story": "Pentagon/Department of War posts PURSUE release 08 (Nov 20, 2026): 43 files incl. 1952 CIA saucer briefing, 2009 BAASS 'exotic material' vault plan, three unresolved CENTCOM UAP videos.",
+      "sources": [
+        "https://www.war.gov/UFO/",
+        "https://www.cbsnews.com/news/ufo-files-pentagon-contractor/",
+        "https://www.livenowfox.com/news/pentagon-releases-eighth-batch-declassified-ufo-files"
+      ],
+      "publishAt": "2026-11-21T12:00:00-07:00",
+      "format": "reel",
+      "video": "social/posts/reel-news-pursue-release-08-2026-11-21.mp4",
+      "networks": [
+        "instagram",
+        "facebook"
+      ],
+      "metricoolUuid": "1811582889268954259"
     }
   ]
 }
