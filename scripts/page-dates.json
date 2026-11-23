@@ -555,7 +555,7 @@
   "first": "2026-10-22"
  },
  "https://friendlyskeptic.com/guide/episodes/": {
-  "hash": "8315fd6087ca521c",
+  "hash": "726e72560b40f2c3",
   "date": "2026-11-23",
   "first": "2026-10-22"
  },
@@ -585,7 +585,7 @@
   "first": "2026-10-22"
  },
  "https://friendlyskeptic.com/guide/episodes/6-close-encounters/": {
-  "hash": "901c61bab559c233",
+  "hash": "30bf4db49f8ee44f",
   "date": "2026-11-23",
   "first": "2026-10-22"
  },
@@ -610,8 +610,8 @@
   "first": "2026-10-22"
  },
  "https://friendlyskeptic.com/": {
-  "hash": "f13d38715c765fb8",
-  "date": "2026-11-16",
+  "hash": "50c93030eb253550",
+  "date": "2026-11-23",
   "first": "2026-10-26"
  }
 }

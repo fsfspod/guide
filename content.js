@@ -2188,6 +2188,7 @@ window.FIELD_GUIDE = {
       art: "images/episodes/episode-06.jpg",
       number: 6, title: "Close Encounters", tags: [],
       releaseAt: "2026-11-23T08:00:00Z",
+      audio: "https://anchor.fm/s/118c07c40/podcast/play/128383321/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-9-29%2F435372975-44100-2-64015d17b0b71.m4a", length: "14:14",
       summary: "Two fishermen in Pascagoula, a logger missing for five days in Arizona, and the former 'swamp gas' scientist who gave us the three kinds of close encounters.",
             cases: ["pascagoula", "travis-walton", "coyne-helicopter"],
       links: [
