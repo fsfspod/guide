@@ -198,6 +198,30 @@
         "facebook"
       ],
       "metricoolUuid": "1811582889268954259"
+    },
+    {
+      "type": "episode",
+      "id": "7",
+      "publishAt": "2026-11-30T09:00:00-07:00",
+      "format": "reel",
+      "video": "social/posts/reel-episode-07.mp4",
+      "networks": [
+        "instagram",
+        "facebook"
+      ],
+      "metricoolUuid": "7078620320176425254"
+    },
+    {
+      "type": "case",
+      "id": "rendlesham",
+      "publishAt": "2026-12-03T18:00:00-07:00",
+      "format": "reel",
+      "video": "social/posts/reel-case-rendlesham.mp4",
+      "networks": [
+        "instagram",
+        "facebook"
+      ],
+      "metricoolUuid": "8318595945802516331"
     }
   ]
 }
